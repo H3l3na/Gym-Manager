@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.UplatePage">
+    <ContentPage.BindingContext>
+        <vm:UplateViewModel></vm:UplateViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Uplate"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView ItemsSource="{Binding UplateList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Grid>
+                                    <Label HorizontalOptions="Start" Text="Iznos"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Iznos}"></Label>
+                                </Grid>
+                                <Grid>
+                                    <Label HorizontalOptions="Start" Text="Svrha"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Svrha}"></Label>
+                                </Grid>
+                                <Grid>
+                                    <Label HorizontalOptions="Start" Text="Datum uplate"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding DatumUplate}"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

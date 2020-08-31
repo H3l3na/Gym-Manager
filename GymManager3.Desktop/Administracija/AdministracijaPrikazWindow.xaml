@@ -1,0 +1,32 @@
+﻿<Window x:Class="GymManager3.Desktop.Administracija.AdministracijaPrikazWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymManager3.Desktop.Administracija"
+        mc:Ignorable="d"
+        Title="AdministracijaPrikazWindow" Height="450" Width="800">
+    <Grid>
+        <GroupBox Header="Lista administratora" HorizontalAlignment="Left" Height="353" Margin="0,53,0,0" VerticalAlignment="Top" Width="792">
+            <ListView Name="ListView1" SelectionChanged="ListView1_SelectionChanged" ItemsSource="{Binding listaAdministratora}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding AdministracijaID}"/>
+                        <GridViewColumn Header="Ime" DisplayMemberBinding="{Binding Ime}"/>
+                        <GridViewColumn Header="Prezime" DisplayMemberBinding="{Binding Prezime}"/>
+                        <GridViewColumn Header="Adresa" DisplayMemberBinding="{Binding Adresa}"/>
+                        <GridViewColumn Header="Mail" DisplayMemberBinding="{Binding Mail}"/>
+                        <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding Telefon}"/>
+                        <GridViewColumn Header="Datum zaposlenja" DisplayMemberBinding="{Binding DatumZaposlenja}"/>
+                        <GridViewColumn Header="Datum rođenja" DisplayMemberBinding="{Binding DatumRodjenja}"/>
+                        <GridViewColumn Header="Uloga" DisplayMemberBinding="{Binding Uloga}"/>
+                        <GridViewColumn Header="Korisničko ime" DisplayMemberBinding="{Binding KorisnickoIme}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <Button Content="Prikaži" HorizontalAlignment="Left" Margin="644,30,0,0" VerticalAlignment="Top" Width="75" Click="btnPrikazi_click"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="531,30,0,0" Click="btnDodaj_click"/>
+    </Grid>
+</Window>

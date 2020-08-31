@@ -1,0 +1,1 @@
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.UWP\GymManager3.MobileApp.UWP.csproj;x86

@@ -1,0 +1,56 @@
+﻿<Window x:Class="GymManager3.Desktop.Treninzi.TreninziDodajWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymManager3.Desktop.Treninzi"
+        mc:Ignorable="d"
+        Title="TreninziDodajWindow" Height="569.746" Width="800">
+    <Grid Margin="0,30,0,14">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="557*"/>
+            <ColumnDefinition Width="235*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Height="20" HorizontalAlignment="Left" Margin="165,81,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 120, 0, 0" Name="Naziv" Text="Naziv" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 168, 0, 0" Name="Tezina" Text="Tezina" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 216, 0, 0" Name="Opis" Text="Opis" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 264, 0, 0" Name="Preduvjeti" Text="Preduvjeti" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 312, 0, 0" Name="Cijena" Text="Cijena" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 360, 0, 0" Name="Trener" Text="Trener" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 408, 0, 0" Name="VrstaTreninga" Text="Vrsta treninga" VerticalAlignment="Top" Width="193"/>
+        
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxNaziv" VerticalAlignment="Top" Width="247" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,168,0,0" Name="textBoxTezina" VerticalAlignment="Top" Width="247" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,216,0,0" Name="textBoxOpis" VerticalAlignment="Top" Width="247" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,264,0,0" Name="textBoxPreduvjeti" VerticalAlignment="Top" Width="247" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,312,0,0"  Name="textBoxCijena" VerticalAlignment="Top" Width="247" />
+        <!--<ComboBox  ItemsSource="{Binding lista}" Name="cmbTreneri" Height="23" HorizontalAlignment="Left" Margin="165,360,0,0" VerticalAlignment="Top" Width="247" >
+            <ComboBox.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding TrenerId}"  Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Name="IdTrenera" Text="{Binding TrenerId}" />
+                        <TextBlock Name="NazivTrenera" Text="{Binding Ime}" />
+                        <TextBlock  Text=" " />
+                        <TextBlock Name="Prezime" Text="{Binding Prezime}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>-->
+        <ComboBox x:Name="cmbTreneri" SelectedValuePath="TrenerId" Height="23" HorizontalAlignment="Left" Margin="165,360,0,0" VerticalAlignment="Top" Width="247">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Ime}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding Prezime}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="cmbVrsteTreninga" DisplayMemberPath="Naziv" SelectedValuePath="VrstaTreningaId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,408,0,0"></ComboBox>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
+        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="46.764,411,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click" Grid.Column="1"/>
+    </Grid>
+</Window>

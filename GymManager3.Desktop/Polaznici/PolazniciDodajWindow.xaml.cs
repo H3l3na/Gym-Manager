@@ -1,0 +1,74 @@
+﻿using GymManager3.Model.Requests;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace GymManager3.Desktop.Polaznici
+{
+    /// <summary>
+    /// Interaction logic for PolazniciDodajWindow.xaml
+    /// </summary>
+    public partial class PolazniciDodajWindow : Window
+    {
+        APIService _service = new APIService("Polaznik");
+        APIService _serviceGradovi = new APIService("Grad");
+        public PolazniciDodajWindow()
+        {
+            InitializeComponent();
+            LoadGradovi();
+        }
+        private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
+        {
+            if (textBoxAdresa.Text == "" || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxUsername.Text == "" || passwordBoxPassPotvrda.Password == "" || passwordBoxPassword.Password == "")
+            {
+                errormessage.Text = "Molimo popunite sva polja";
+            }
+            else if (passwordBoxPassword.Password != passwordBoxPassPotvrda.Password)
+            {
+                errormessage.Text = "Passwordi se ne slažu";
+                passwordBoxPassPotvrda.Focus();
+            }
+            else
+            {
+                PolazniciInsertRequest request = new PolazniciInsertRequest()
+                {
+                    Ime = textBoxIme.Text,
+                    Prezime = textBoxPrezime.Text,
+                    GradId = (int)cmbGradovi.SelectedValue,
+                    KorisnickoIme = textBoxUsername.Text,
+                    Password = passwordBoxPassword.Password,
+                    PasswordPotvrda = passwordBoxPassPotvrda.Password,
+                    Telefon = textBoxTelefon.Text,
+                    Mail = textBoxMail.Text,
+                    Uloga = "Polaznik",
+                    DatumRodjenja= DateTime.ParseExact(textBoxDatumRodjenja.Text, "dd/MM/yyyy", null),
+                };
+                await _service.Insert<Model.Polaznik>(request);
+                Application.Current.MainWindow = new MainWindow();
+                Application.Current.MainWindow.Show();
+                Close();
+            }
+        }
+        private void btnNazad_click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow = new PolazniciPrikazWindow();
+            Application.Current.MainWindow.Show();
+            Close();
+        }
+        private async void LoadGradovi()
+        {
+            var listaGradova = await _serviceGradovi.Get<IEnumerable<Model.Grad>>(null);
+            cmbGradovi.ItemsSource = listaGradova;
+        }
+    }
+}

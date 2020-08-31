@@ -1,0 +1,8 @@
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\bin\Debug\netstandard2.0\GymManager3.Model.deps.json
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\bin\Debug\netstandard2.0\GymManager3.Model.dll
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\bin\Debug\netstandard2.0\GymManager3.Model.pdb
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\obj\Debug\netstandard2.0\GymManager3.Model.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\obj\Debug\netstandard2.0\GymManager3.Model.AssemblyInfo.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\obj\Debug\netstandard2.0\GymManager3.Model.dll
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\obj\Debug\netstandard2.0\GymManager3.Model.pdb
+C:\Users\User\source\repos\GymManager3\GymManager3.Model\obj\Debug\netstandard2.0\GymManager3.Model.csproj.CoreCompileInputs.cache
