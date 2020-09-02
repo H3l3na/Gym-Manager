@@ -8,5 +8,6 @@ namespace GymManager3.Model.Requests
     {
         public string Ime { get; set; }
         public string Prezime { get; set; }
+        public string KorisnickoIme { get; set; }
     }
 }

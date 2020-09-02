@@ -31,9 +31,28 @@ namespace GymManager3.WebAPI.Services
             {
                 query = query.Where(x => x.Prezime.StartsWith(request.Prezime));
             }
+            if (!string.IsNullOrWhiteSpace(request?.Prezime))
+            {
+                query = query.Where(x => x.KorisnickoIme.StartsWith(request.KorisnickoIme));
+            }
             var list = query.ToList();
             return _mapper.Map<List<Model.Polaznik>>(list);
         }
+
+        //NOVI KOD
+        //public List<Model.Polaznik> GetUsername(PolaznikUsernameSearchRequest request)
+        //{
+        //    var query = _context.Polaznik.AsQueryable();
+        //    Model.Polaznik p = new Model.Polaznik();
+        //    if (!string.IsNullOrWhiteSpace(request?.KorisnickoIme))
+        //    {
+        //        query = query.Where(x => x.KorisnickoIme.StartsWith(request.KorisnickoIme));
+        //    }
+           
+        //    var list = query.ToList();
+        //    return _mapper.Map<List<Model.Polaznik>>(list);
+        //}
+        //KRAJ NOVOG KODA
         public static string GenerateSalt()
         {
             var buf = new byte[16];
@@ -71,11 +90,11 @@ namespace GymManager3.WebAPI.Services
             var entity = _context.Polaznik.Find(id);
             return _mapper.Map<Model.Polaznik>(entity);
         }
-        public int GetByUsername(string username)
-        {
-            var entity = _context.Polaznik.Where(x => x.KorisnickoIme == username).FirstOrDefault();
-            return entity.PolaznikId;
-        }
+        //public Model.Polaznik GetByUsername(PolaznikUsernameSearchRequest request)
+        //{
+        //    var entity = _context.Polaznik.Where(x => x.KorisnickoIme == request.KorisnickoIme).FirstOrDefault();
+        //    return _mapper.Map<Model.Polaznik>(entity);
+        //}
         public Model.Polaznik Update(int id, PolazniciInsertRequest request)
         {
             var entity = _context.Polaznik.Find(id);

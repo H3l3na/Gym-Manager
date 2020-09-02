@@ -1,4 +1,5 @@
 ﻿using GymManager3.MobileApp.Views;
+using GymManager3.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +12,11 @@ namespace GymManager3.MobileApp.ViewModels
     public class LoginAsMemberVM: BaseViewModel
     {
         private readonly APIService _service = new APIService("Polaznik");
+        private readonly APIService _serviceAuth = new APIService("Auth");
         public LoginAsMemberVM()
         {
             LoginCommand = new Command(async () => await Login());
+            NazadCommand = new Command(() => Nazad());
 
         }
         string _username = string.Empty;
@@ -29,6 +32,11 @@ namespace GymManager3.MobileApp.ViewModels
             set { SetProperty(ref _password, value); }
         }
         public ICommand LoginCommand { get; set; }
+        public ICommand NazadCommand { get; set; }
+        public void Nazad()
+        {
+            Application.Current.MainPage = new NewLoginPage();
+        }
         async Task Login()
         {
             IsBusy = true;
@@ -36,10 +44,25 @@ namespace GymManager3.MobileApp.ViewModels
             APIService.Password = Password;
             try
             {
-                await _service.Get<dynamic>(null);
-                //var t = await _service.GetByUsername<int>(Username);
+                //PolaznikUsernameSearchRequest request = new PolaznikUsernameSearchRequest()
+                //{
+                //    KorisnickoIme = Username
+                //};
+                //PolazniciSearchRequest request = new PolazniciSearchRequest()
+                //{
+                //    KorisnickoIme=Username
+                //};
+                //await _service.Get<dynamic>(null);
+                //await _service.Get<dynamic>();
+                long t= await _serviceAuth.Auth<long>(Username, Password);
+                int id = unchecked((int)t);
+               // await Application.Current.MainPage.DisplayAlert("wait", id.ToString(), "ok");
+              //  int id = int.Parse(t);
+               // var entity = _service.Get<dynamic>(request);//await _service.Get<dynamic>(null);
+                 /*await _service.Get<dynamic>(request)*/;
 
-                Application.Current.MainPage = new PolaznikMainPage();
+              
+                Application.Current.MainPage = new PolaznikMainPage(id);
             }
             catch (Exception ex)
             {

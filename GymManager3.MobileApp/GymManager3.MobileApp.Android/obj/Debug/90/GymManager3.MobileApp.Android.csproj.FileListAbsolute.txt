@@ -488,3 +488,5 @@ C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileA
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.Android\obj\Debug\90\android\assets\System.Text.Encoding.CodePages.dll
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.Android\obj\Debug\90\android\assets\System.Text.Encoding.CodePages.pdb
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.Android\obj\Debug\90\GymManager3.MobileApp.Android.csprojAssemblyReference.cache
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.Android\obj\Debug\90\android\assets\Microsoft.CSharp.dll
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp.Android\obj\Debug\90\android\assets\Microsoft.CSharp.pdb

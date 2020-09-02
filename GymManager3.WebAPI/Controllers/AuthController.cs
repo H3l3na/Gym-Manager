@@ -17,10 +17,10 @@ namespace GymManager3.WebAPI.Controllers
         {
             _service = service;
         }
-        [HttpGet("{username},{pass},{ulogaId}")]
-        public string Auth(/*string username, string pass, int? ulogaId*/)
+        [HttpGet("{username},{pass}")]
+        public int Auth(string username, string pass)
         {
-            return _service.Auth(/*username, pass, ulogaId*/);
+            return _service.Auth(username, pass);
         }
     }
 }

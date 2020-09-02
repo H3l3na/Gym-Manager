@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.PolaznikUplateDetaljiPage">
+    <ContentPage.BindingContext>
+        <vm:PolaznikUplateDetaljiVM></vm:PolaznikUplateDetaljiVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+        <ScrollView>
+            <StackLayout Padding="5">
+                <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
+                <Label Text="Svrha" BackgroundColor="LightGray"></Label>
+                <Label Text="{Binding Svrha}" BackgroundColor="LightBlue"></Label>
+                <Label Text="Iznos" BackgroundColor="LightGray"></Label>
+                <Label Text="{Binding Iznos}" BackgroundColor="LightBlue"></Label>
+                <Label Text="Datum uplate" BackgroundColor="LightGray"></Label>
+                <Label Text="{Binding Datum}" BackgroundColor="LightBlue"></Label>
+                <Label Text="Evidentirao" BackgroundColor="LightGray"></Label>
+                <Label Text="{Binding Evidentirao}" BackgroundColor="LightBlue"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

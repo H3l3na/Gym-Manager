@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.RegistrationPage">
+    <ContentPage.BindingContext>
+        <vm:RegistrationVM></vm:RegistrationVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Command="{Binding NazadCommand}" Padding="5"  TextColor="White" BackgroundColor="Gray" Text="Nazad"></Button>
+            <Label Text="Ime:" />
+            <Entry Text="{Binding Ime}"></Entry>
+            <Label Text="Prezime:" />
+            <Entry Text="{Binding Prezime}"></Entry>
+            <Label Text="Mail:" />
+            <Entry Text="{Binding Mail}"></Entry>
+            <Label Text="Telefon:" />
+            <Entry Text="{Binding Telefon}"></Entry>
+            <Label Text="Adresa:" />
+            <Entry Text="{Binding Adresa}"></Entry>
+            <Label Text="Korisničko ime:" />
+            <Entry Text="{Binding Username}"></Entry>
+            <Label Text="Password" />
+            <Entry Text="{Binding Password}"></Entry>
+            <Label Text="Password potvrda:" />
+            <Entry Text="{Binding PasswordPotvrda}"></Entry>
+            <Button Command="{Binding RegisterCommand}" Text="Register"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -17,12 +17,26 @@ namespace GymManager3.MobileApp.Views
         public TreneriPage()
         {
             InitializeComponent();
-            BindingContext = model = new TreneriViewModel();
+        }
+        int PolaznikID;
+        public TreneriPage(int polaznikId)
+        {
+            InitializeComponent();
+            BindingContext = model = new TreneriViewModel(polaznikId);
+            PolaznikID = polaznikId;
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            BindingContext = model = new TreneriViewModel(PolaznikID);
             await model.Init();
+        }
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Model.Trener t = (Model.Trener)e.SelectedItem;
+            
+
+            Application.Current.MainPage = new TrenerDetaljiPage(PolaznikID, t);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace GymManager3.MobileApp.ViewModels
         {
             LoginTrenerCommand = new Command(() => LoginTrener());
             LoginPolaznikCommand = new Command( () => LoginPolaznik());
+            RegisterCommand = new Command(() => Register());
         }
         string _username = string.Empty;
         public string Username
@@ -31,6 +32,7 @@ namespace GymManager3.MobileApp.ViewModels
         }
         public ICommand LoginTrenerCommand { get; set; }
         public ICommand LoginPolaznikCommand { get; set; }
+        public ICommand RegisterCommand { get; set; }
          public void LoginTrener()
         {
             Application.Current.MainPage = new LoginAsTrainerPage();
@@ -62,6 +64,10 @@ namespace GymManager3.MobileApp.ViewModels
             //{
             //    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
             //}
+        }
+        public void Register()
+        {
+            Application.Current.MainPage = new RegistrationPage();
         }
     }
 }

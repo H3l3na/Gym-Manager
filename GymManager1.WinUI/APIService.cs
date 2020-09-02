@@ -31,6 +31,18 @@ namespace GymManager3.WinUI
 
             return result;
         }
+        //public async Task<T> GetByUsername<T>(object search)
+        //{
+        //    var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
+        //    if (search != null)
+        //    {
+        //        url += "?";
+        //        url += await search.ToQueryString();
+        //    }
+        //    var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+
+        //    return result;
+        //}
 
         public async Task<T> Get<T>()
         {

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.TrenerDetaljiPage">
+    <ContentPage.BindingContext>
+        <vm:TrenerDetaljiVM></vm:TrenerDetaljiVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Padding="5">
+                    <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
+                    <Label Text="Ime" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Ime}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Prezime" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Prezime}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Email" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Email}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Telefon" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Telefon}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Adresa" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Adresa}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Opis" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Opis}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Datum zaposlenja" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Datum}" BackgroundColor="LightBlue"></Label>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

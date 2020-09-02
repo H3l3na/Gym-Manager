@@ -7,6 +7,6 @@ namespace GymManager3.WebAPI.Services
 {
     public interface IAuthService
     {
-        string Auth(/*string username, string password, int? roleId*/);
+       int Auth(string username, string password);
     }
 }

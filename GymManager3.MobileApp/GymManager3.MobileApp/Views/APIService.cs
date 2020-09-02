@@ -53,11 +53,33 @@ namespace GymManager3.MobileApp
             var result = await $"{_apiURL}/{_route}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
-        public async Task<T> GetByUsername<T>(string username)
-        {
-            var url = $"{_apiURL}/{_route}/{username}";
-            return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
-        }
+        //public async Task<T> GetByUsername<T>(object search)
+        //{
+        //    var url = $"{_apiURL}/{_route}";
+        //    if (search != null)
+        //    {
+        //        url += "?";
+        //        url += await search.ToQueryString();
+        //    }
+
+        //    try
+        //    {
+        //        var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+        //        return result;
+        //    }
+        //    catch (FlurlHttpException ex)
+        //    {
+        //        if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
+        //        {
+        //            //MessageBox.Show("Niste authentificirani");
+        //            await Application.Current.MainPage.DisplayAlert("Greška", "Niste authentificirani", "OK");
+        //        }
+        //        throw;
+
+        //    }
+        //    //var url = $"{_apiURL}/{_route}/{username}";
+        //    //return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+        //}
 
         public async Task<T> GetById<T>(object id)
         {
@@ -74,9 +96,15 @@ namespace GymManager3.MobileApp
             var url = $"{_apiURL}/{_route}/{id}";
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
         }
-        public async Task<dynamic> Auth(/*object username, object pass, object ulogaId*/)
+        //public async Task<dynamic> Auth(/*object username, object pass, object ulogaId*/)
+        //{
+        //    var url = $"{_apiURL}/{_route}";
+
+        //    return await url.GetJsonAsync<dynamic>();
+        //}
+        public async Task<T> Auth<T>(object username, object pass)
         {
-            var url = $"{_apiURL}/{_route}";
+            var url = $"{_apiURL}/{_route}/{username},{pass}";
 
             return await url.GetJsonAsync<dynamic>();
         }

@@ -1,4 +1,5 @@
-﻿using GymManager3.Model;
+﻿using GymManager3.MobileApp.Views;
+using GymManager3.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,13 +16,13 @@ namespace GymManager3.MobileApp.ViewModels
 
         }
 
-        public PolaznikMojeUplateVM(int userId, int role, List<uplate> lista)
+        public PolaznikMojeUplateVM(int polaznikId, List<uplate> lista)
         {
-            //Load(userId, role, lista);
+            Load(polaznikId, lista);
 
             Nazad_Command = new Command(() =>
             {
-                //Application.Current.MainPage = new StudPage(role, userId);
+                Application.Current.MainPage = new PolaznikMainPage(polaznikId);
             });
         }
 
@@ -29,7 +30,7 @@ namespace GymManager3.MobileApp.ViewModels
 
         public ICommand Nazad_Command { get; set; }
 
-        public void Load(int userId, int role, List<uplate> lista)
+        public void Load(int userId,  List<uplate> lista)
         {
             foreach (var x in lista)
             {

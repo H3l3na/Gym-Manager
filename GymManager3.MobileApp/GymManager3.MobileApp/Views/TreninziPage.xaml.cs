@@ -14,15 +14,28 @@ namespace GymManager3.MobileApp.Views
     public partial class TreninziPage : ContentPage
     {
         private TreninziViewModel model = null;
+        int Id;
         public TreninziPage()
         {
             InitializeComponent();
-            BindingContext = model = new TreninziViewModel();
+        }
+        public TreninziPage(int id)
+        {
+            InitializeComponent();
+            BindingContext = model = new TreninziViewModel(id);
+            Id = id;
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            BindingContext = model = new TreninziViewModel(Id);
             await model.Init();
+        }
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Model.Trening t = (Model.Trening)e.SelectedItem;
+
+            Application.Current.MainPage = new TreningDetaljiPage(Id, t);
         }
     }
 }

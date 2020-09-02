@@ -11,18 +11,11 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-            <!--<Label Text="Korisničko ime:" />
-            <Entry Text="{Binding Username}"></Entry>
-            <Label Text="Password:" />
-            <Entry Text="{Binding Password}"></Entry>-->
+            <Button Command="{Binding RegisterCommand}" Text="Register" BackgroundColor="LightSkyBlue" BorderColor="LightGray" TextColor="White"></Button>
             <Label Text="Login as Trainer:" />
-            <Button Command="{Binding LoginTrenerCommand}" Text="Login"></Button>
+            <Button Command="{Binding LoginTrenerCommand}" Text="Login" ></Button>
             <Label Text="Login as Member:" />
-            <Button Command="{Binding LoginPolaznikCommand}" Text="Login"></Button>
+            <Button Command="{Binding LoginPolaznikCommand}" Text="Login" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

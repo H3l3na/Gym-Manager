@@ -30,7 +30,7 @@ namespace GymManager3.WebAPI.Services
             byte[] inArray = algorithm.ComputeHash(dst);
             return Convert.ToBase64String(inArray);
         }
-        public string Auth(/*string username, string password, int? roleId*/)
+        public int Auth(string username, string password)
         {
             //int polaznik = _context.Uloge.Where(a => a.Naziv == "Polaznik").Select(v => v.UlogaId).FirstOrDefault();
             //int administracija = _context.Uloge.Where(a => a.Naziv == "Administracija").Select(v => v.UlogaId).FirstOrDefault();
@@ -39,17 +39,17 @@ namespace GymManager3.WebAPI.Services
             int? _Polaznik = null;
             int? _Trener = null;
             int? _Administracija = null;
-            //var lista_polaznik = _context.Polaznik.ToList();
+            var lista_polaznik = _context.Polaznik.ToList();
 
-            //foreach (var x in lista_polaznik)
-            //{
-            //    if (username == x.KorisnickoIme)
-            //    {
-            //        _Polaznik = x.PolaznikId;
-                    
-            //        break;
-            //    }
-            //}
+            foreach (var x in lista_polaznik)
+            {
+                if (username == x.KorisnickoIme)
+                {
+                    _Polaznik = x.PolaznikId;
+
+                    break;
+                }
+            }
 
             //if (_Polaznik == null)
             //{
@@ -59,7 +59,7 @@ namespace GymManager3.WebAPI.Services
             //        if (username == x.KorisnickoIme)
             //        {
             //            _Administracija = x.AdministracijaId;
-                        
+
             //            break;
             //        }
             //    }
@@ -116,7 +116,7 @@ namespace GymManager3.WebAPI.Services
             //        return usrname;
             //    }
             //}
-            return null;
+            return (int)_Polaznik;
         }
      }
 }

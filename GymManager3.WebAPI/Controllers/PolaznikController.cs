@@ -25,13 +25,14 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.Get(request);
         }
-        [HttpGet("{username}")]
-        public int GetByUsername(string username)
-        {
-            return _service.GetByUsername(username);
-        }
 
-        [Authorize(Roles = "Administrator")]
+        //[HttpGet]
+        //public Model.Polaznik GetByUsername([FromQuery] PolaznikUsernameSearchRequest request)
+        //{
+        //    return _service.GetByUsername(request);
+        //}
+
+        //[Authorize(Roles = "Administrator, Polaznik")]
         [HttpPost]
         public Model.Polaznik Insert (PolazniciInsertRequest request)
         {

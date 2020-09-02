@@ -11,9 +11,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Command="{Binding NazadCommand}" Padding="5" TextColor="White" BackgroundColor="Gray" Text="Nazad"></Button>
             <Label Text="Korisničko ime:" />
             <Entry Text="{Binding Username}"></Entry>
             <Label Text="Password:" />

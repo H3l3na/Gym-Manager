@@ -14,7 +14,8 @@
             <Label Text="Treneri"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <ListView ItemsSource="{Binding TreneriList}">
+            <Button HorizontalOptions="Start" BackgroundColor="Gray" Text="Nazad" Command="{Binding NazadCommand}"></Button>
+            <ListView ItemsSource="{Binding TreneriList}" ItemSelected="ListView_ItemSelected" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

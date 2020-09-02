@@ -19,8 +19,6 @@ C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileA
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\bin\Debug\netstandard2.0\GymManager3.Model.dll
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\bin\Debug\netstandard2.0\GymManager3.Model.pdb
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\GymManager3.MobileApp.csproj.CopyComplete
-C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\GymManager3.MobileApp.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolazniciPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\AdministracijaPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TreneriPage.xaml.g.cs
@@ -32,3 +30,11 @@ C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileA
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerMainPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\LoginAsMemberPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\LoginAsTrainerPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolaznikMojiPodaciPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\GymManager3.MobileApp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolaznikMojeUplatePage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolaznikUplateDetaljiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerDetaljiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TreningDetaljiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7xVDOpENZPG9uC0OE6naMGJWicyeL41nwc0/64RIih28e2eJb0O9fct4VC4dvnY6MhrHRuchSqTegfYIii2bZQ==",
+  "dgSpecHash": "hZGGB114WZeIUfGtV1reZaRjdqa/3Xek5sCvpZex0iFJcqrVK+V78Ak+Nl6SjJmBxTcALcCGta8TKcQRztKP/A==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.Android\\GymManager3.MobileApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\flurl\\2.8.1\\flurl.2.8.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\flurl.http\\2.4.1\\flurl.http.2.4.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

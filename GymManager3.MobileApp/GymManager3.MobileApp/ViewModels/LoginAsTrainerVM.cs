@@ -14,6 +14,7 @@ namespace GymManager3.MobileApp.ViewModels
         public LoginAsTrainerVM()
         {
             LoginCommand = new Command(async () => await Login());
+            NazadCommand = new Command( () => Nazad());
 
         }
         string _username = string.Empty;
@@ -29,6 +30,11 @@ namespace GymManager3.MobileApp.ViewModels
             set { SetProperty(ref _password, value); }
         }
         public ICommand LoginCommand { get; set; }
+        public ICommand NazadCommand { get; set; }
+        public void Nazad()
+        {
+            Application.Current.MainPage = new NewLoginPage();
+        }
         async Task Login()
         {
             IsBusy = true;

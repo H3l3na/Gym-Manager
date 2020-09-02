@@ -14,7 +14,8 @@
             <Label Text="Treninzi"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <ListView ItemsSource="{Binding TreninziList}">
+            <Button HorizontalOptions="Start" BackgroundColor="Gray" Text="Nazad" Command="{Binding NazadCommand}"></Button>
+            <ListView ItemsSource="{Binding TreninziList}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,8 +25,8 @@
                                     <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Naziv}"></Label>
                                 </Grid>
                                 <Grid>
-                                    <Label HorizontalOptions="Start" Text="Tezina"></Label>
-                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Tezina}"></Label>
+                                    <Label HorizontalOptions="Start" Text="Opis"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Opis}"></Label>
                                 </Grid>
                             </StackLayout>
                         </ViewCell>

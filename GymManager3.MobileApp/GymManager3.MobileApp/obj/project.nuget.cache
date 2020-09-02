@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LpJyzWbosQM3ZKJbGh9K455uGsQh731Jwwvqo9gDxLWizniCiYm+wt69tzkMkLFd5OODsRV1TH/8JgZkf8R8wA==",
+  "dgSpecHash": "d5ODRhZuc2siTzhwN4ZQWldUyvJ8f2bbkuv4ho0MXB+oHhMX7CqT8fzUZsSQasJEaL1r9z5artDExTIO9ReTVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\flurl\\2.8.1\\flurl.2.8.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\flurl.http\\2.4.1\\flurl.http.2.4.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",

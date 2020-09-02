@@ -19,6 +19,12 @@ namespace GymManager3.MobileApp.Views
             InitializeComponent();
             BindingContext = model = new PolaznikMainVM(/*polaznikId, uloga*/);
         }
+        public PolaznikMainPage(int id)
+        {
+            InitializeComponent();
+            BindingContext = model = new PolaznikMainVM(id);
+            model.PolaznikID = id;
+        }
         public PolaznikMainPage(int polaznikId, int uloga)
         {
             InitializeComponent();
