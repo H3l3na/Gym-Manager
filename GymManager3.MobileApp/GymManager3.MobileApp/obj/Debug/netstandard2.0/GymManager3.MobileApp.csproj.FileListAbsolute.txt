@@ -38,3 +38,9 @@ C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileA
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerDetaljiPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TreningDetaljiPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerMojiPodaciPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerMojiTreninziPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerTreningDetaljiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerMojiTerminiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerTerminDetaljiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerTerminIzmjenaPage.xaml.g.cs

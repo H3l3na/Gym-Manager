@@ -10,5 +10,10 @@ namespace GymManager3.Model
         public DateTime? TerminOdrzavanja { get; set; }
         public int? MaxBrPolaznika { get; set; }
         public string Sala { get; set; }
+       public int? TreningId { get; set; }
+        public string Trening { get; set; }
+        public int? TrenerId { get; set; }
+        public string Trener { get; set; }
+        
     }
 }

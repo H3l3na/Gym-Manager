@@ -11,6 +11,7 @@ namespace GymManager3.MobileApp.ViewModels
     public class LoginAsTrainerVM: BaseViewModel
     {
         private readonly APIService _service = new APIService("Treneri");
+        private readonly APIService _serviceAuth = new APIService("AuthTrener");
         public LoginAsTrainerVM()
         {
             LoginCommand = new Command(async () => await Login());
@@ -42,8 +43,16 @@ namespace GymManager3.MobileApp.ViewModels
             APIService.Password = Password;
             try
             {
-                await _service.Get<dynamic>(null);
-                Application.Current.MainPage = new TrenerMainPage();
+                //await _service.Get<dynamic>(null);
+                long t = await _serviceAuth.Auth<long>(Username, Password);
+                int id = unchecked((int)t);
+                if (id != 0)
+                {
+                    Application.Current.MainPage = new TrenerMainPage(id);
+                }else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", "Neispravni podaci", "OK");
+                }
             }
             catch (Exception ex)
             {

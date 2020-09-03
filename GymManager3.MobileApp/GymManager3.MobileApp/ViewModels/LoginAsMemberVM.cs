@@ -13,6 +13,7 @@ namespace GymManager3.MobileApp.ViewModels
     {
         private readonly APIService _service = new APIService("Polaznik");
         private readonly APIService _serviceAuth = new APIService("Auth");
+        private readonly APIService _serviceAuthTrener = new APIService("AuthTrener");
         public LoginAsMemberVM()
         {
             LoginCommand = new Command(async () => await Login());
@@ -61,8 +62,22 @@ namespace GymManager3.MobileApp.ViewModels
                // var entity = _service.Get<dynamic>(request);//await _service.Get<dynamic>(null);
                  /*await _service.Get<dynamic>(request)*/;
 
-              
-                Application.Current.MainPage = new PolaznikMainPage(id);
+                if (id != 0)
+                {
+                    Application.Current.MainPage = new PolaznikMainPage(id);
+                }else
+                {
+                    t = await _serviceAuthTrener.Auth<long>(Username, Password);
+                    id = unchecked((int)t);
+                    if (id != 0)
+                    {
+                        Application.Current.MainPage = new TrenerMainPage(id);
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Greška", "Neispravni podaci", "OK");
+                    }
+                }
             }
             catch (Exception ex)
             {

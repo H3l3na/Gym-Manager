@@ -108,7 +108,12 @@ namespace GymManager3.MobileApp
 
             return await url.GetJsonAsync<dynamic>();
         }
+        //public async Task<T> AuthTrener<T>(object username, object pass)
+        //{
+        //    var url = $"{_apiURL}/{_route}/{username},{pass}";
 
+        //    return await url.GetJsonAsync<dynamic>();
+        //}
     }
 }
 

@@ -37,9 +37,10 @@ namespace GymManager3.WebAPI.Services
             //int trener = _context.Uloge.Where(a => a.Naziv == "Trener").Select(v => v.UlogaId).FirstOrDefault();
 
             int? _Polaznik = null;
-            int? _Trener = null;
-            int? _Administracija = null;
+            //int? _Trener = null;
+            //int? _Administracija = null;
             var lista_polaznik = _context.Polaznik.ToList();
+            //var lista_trener = _context.Trener.ToList();
 
             foreach (var x in lista_polaznik)
             {
@@ -50,6 +51,16 @@ namespace GymManager3.WebAPI.Services
                     break;
                 }
             }
+
+            //foreach (var x in lista_trener)
+            //{
+            //    if (username == x.KorisnickoIme)
+            //    {
+            //        _Trener = x.TrenerId;
+
+            //        break;
+            //    }
+            //}
 
             //if (_Polaznik == null)
             //{
@@ -77,7 +88,7 @@ namespace GymManager3.WebAPI.Services
             //        }
             //    }
             //}
-            //if (_Polaznik==null && _Trener==null && _Administracija == null)
+            //if (_Polaznik == null && _Trener == null && _Administracija == null)
             //{
             //    return null;
             //}
@@ -116,7 +127,19 @@ namespace GymManager3.WebAPI.Services
             //        return usrname;
             //    }
             //}
-            return (int)_Polaznik;
+            if (_Polaznik != null)
+            {
+                return (int)_Polaznik;
+            }
+            //if (_Trener != null)
+            //{
+            //    return (int)_Trener;
+            //}
+            //if (_Administracija != null)
+            //{
+            //    return (int)_Administracija;
+            //}
+            return 0;
         }
      }
 }

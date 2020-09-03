@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.TrenerTerminIzmjenaPage">
+    <ContentPage.BindingContext>
+        <vm:TrenerTerminIzmjenaVM></vm:TrenerTerminIzmjenaVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Button HorizontalOptions="Start" BackgroundColor="Gray" Text="Nazad" Command="{Binding NazadCommand}"></Button>
+            <Label Text="Unos mora biti u formatu YY-MM-DD" FontSize="13" TextColor="LightGray"/>
+            <Label Text="Novi termin:" />
+            <Entry Text="{Binding TerminOdrz}"></Entry>
+            <Button HorizontalOptions="Start" BackgroundColor="LightGreen" Text="Sačuvaj" Command="{Binding SacuvajCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

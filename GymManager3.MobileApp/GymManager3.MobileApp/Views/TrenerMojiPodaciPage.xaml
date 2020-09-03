@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.TrenerMojiPodaciPage">
+    <ContentPage.BindingContext>
+        <vm:TrenerMojiPodaciVM></vm:TrenerMojiPodaciVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Button BackgroundColor="Gray" TextColor="White" Text="Nazad" Command="{Binding NazadCommand}" HorizontalOptions="Start"></Button>
+                <!--<Button BackgroundColor="LightBlue" Text="Izmijeni" Command="{Binding IzmijeniCommand}" HorizontalOptions="End"></Button>-->
+            </Grid>
+            <Label Text="Dobrodošli"
+                   FontFamily="Helvetica"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label  BackgroundColor="LightGray" Text="Ime"></Label>
+            <Label Text="{Binding Ime}" BackgroundColor="LightBlue" FontSize="16"/>
+            <Label BackgroundColor="LightGray" Text="Prezime"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Prezime}"/>
+            <Label BackgroundColor="LightGray" Text="Adresa"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Adresa}"/>
+            <Label BackgroundColor="LightGray" Text="E-Mail"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Mail}"/>
+            <Label BackgroundColor="LightGray" Text="Telefon"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Telefon}"/>
+            <Label BackgroundColor="LightGray" Text="JMBG"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Jmbg}"/>
+            <Label BackgroundColor="LightGray" Text="Uloga"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Uloga}"/>
+            <Label BackgroundColor="LightGray" Text="Korisničko ime"></Label>
+            <Label BackgroundColor="LightBlue" Text="{Binding Username}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

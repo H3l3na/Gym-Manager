@@ -48,3 +48,5 @@ C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Treninzi\Tr
 C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Treninzi\TreninziDodajWindow.baml
 C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Uplate\UplateDodajWindow.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Uplate\UplateDodajWindow.baml
+C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Termini\TerminiPrikazWindow.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\Termini\TerminiPrikazWindow.baml

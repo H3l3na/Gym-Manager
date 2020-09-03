@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.TrenerMojiTreninziPage">
+    <ContentPage.BindingContext>
+        <vm:TrenerMojiTreninziVM></vm:TrenerMojiTreninziVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button HorizontalOptions="Start" BackgroundColor="LightGoldenrodYellow" Text="Nazad" Command="{Binding Nazad_Command}"></Button>
+            <ListView ItemsSource="{Binding listaTreninga}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label BackgroundColor="Black" HeightRequest="2"></Label>
+                                <Grid>
+                                    <Label Text="Naziv" HorizontalOptions="Start"></Label>
+                                    <Label Text="{Binding Naziv}" FontSize="20" HorizontalOptions="Center"></Label>
+                                </Grid>
+                                <Grid>
+                                    <Label Text="Opis" HorizontalOptions="Start"></Label>
+                                    <Label Text="{Binding Opis}" FontSize="20" HorizontalOptions="Center"></Label>
+                                </Grid>
+                                <Grid>
+                                    <Label Text="Preduvjeti" HorizontalOptions="Start"></Label>
+                                    <Label Text="{Binding Preduvjeti}" FontSize="20" HorizontalOptions="Center"></Label>
+                                </Grid>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.TrenerTerminDetaljiPage">
+    <ContentPage.BindingContext>
+        <vm:TrenerTerminDetaljiVM></vm:TrenerTerminDetaljiVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Padding="5">
+                    <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
+                    <Button HorizontalOptions="Start" Text="Izmijeni" BackgroundColor="Gray" TextColor="White" Command="{Binding IzmijeniCommand}"></Button>
+                    <Label Text="Termin odrzavanja" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Datum}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Trening" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Trening}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Sala" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Sala}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Kapacitet" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding MaxBrPolaznika}" BackgroundColor="LightBlue"></Label>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

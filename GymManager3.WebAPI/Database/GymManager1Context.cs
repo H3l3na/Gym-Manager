@@ -45,6 +45,7 @@ namespace GymManager3.WebAPI.Database
             modelBuilder.Entity<Uloge>().ToTable("Uloge");
             modelBuilder.Entity<KorisniciUloge>().ToTable("KorisniciUloge");
             modelBuilder.Entity<RezervacijaTreninga>().ToTable("RezervacijaTreninga");
+           // modelBuilder.Entity<Termin>().ToTable("Termin");
 
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
@@ -158,6 +159,16 @@ namespace GymManager3.WebAPI.Database
 
                 entity.Property(e => e.TerminOdrzavanja).HasColumnType("datetime");
                 entity.Property(e => e.MaxBrPolaznika).HasColumnType("int");
+                entity.Property(e => e.TrenerId).HasColumnName("TrenerID");
+                entity.Property(e => e.TreningId).HasColumnName("TreningID");
+                entity.HasOne(d => d.Trening);
+                entity.HasOne(d => d.Trener);
+                     //.WithMany(p => p.Subskripcija)
+                     //.HasForeignKey(d => d.TreningId)
+                     //.HasConstraintName("FK__Subskripc__Treni__2B3F6F97");
+                //.WithMany(p => p.Pohadja)
+                //   .HasForeignKey(d => d.TreningId)
+                //   .HasConstraintName("FK__Trening");
             });
 
             modelBuilder.Entity<Trener>(entity =>

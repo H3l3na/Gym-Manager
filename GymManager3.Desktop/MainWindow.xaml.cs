@@ -1,5 +1,6 @@
 ﻿using GymManager3.Desktop.Administracija;
 using GymManager3.Desktop.Polaznici;
+using GymManager3.Desktop.Termini;
 using GymManager3.Desktop.Treneri;
 using GymManager3.Desktop.Treninzi;
 using GymManager3.Desktop.Uplate;
@@ -58,6 +59,12 @@ namespace GymManager3.Desktop
         private void btnUplate_click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow = new UplatePrikazWindow();
+            Application.Current.MainWindow.Show();
+            Close();
+        }
+        private void btnTermini_click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow = new TerminiPrikazWindow();
             Application.Current.MainWindow.Show();
             Close();
         }

@@ -95,6 +95,7 @@ namespace GymManager3.WebAPI
             services.AddScoped<IRezervacijaTreningaService, RezervacijaTreningaService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ISubskripcijaService, SubskripcijaService>();
+            services.AddScoped<IAuthTrenerService, AuthTrenerService>();
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

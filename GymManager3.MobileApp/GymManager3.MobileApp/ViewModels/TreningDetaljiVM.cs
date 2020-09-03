@@ -15,14 +15,14 @@ namespace GymManager3.MobileApp.ViewModels
         {
 
         }
-        public TreningDetaljiVM(int polaznikId, Model.Trening v)
+        public TreningDetaljiVM(int trenerId, Model.Trening v)
         {
             NazadCmd = new Command( () =>
             {
                // List<Model.Trening> source = await _service.Get<List<Model.Trening>>(null);
                
 
-                Application.Current.MainPage = new TreninziPage(polaznikId);
+                Application.Current.MainPage = new TreninziPage(trenerId);
             });
 
             Naziv = v.Naziv;

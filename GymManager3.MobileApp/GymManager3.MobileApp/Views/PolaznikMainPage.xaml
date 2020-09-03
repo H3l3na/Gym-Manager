@@ -17,10 +17,11 @@
                 HorizontalOptions="CenterAndExpand" />
             <Button Command="{Binding Command_MojiPodaci}" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji podaci"></Button>
             
-            <Button Command="{Binding Command_MojeUplate}" Padding="5" BackgroundColor="LightBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Uplate"></Button>
-            <Button Command="{Binding Command_Treneri}" Padding="5" BackgroundColor="LightSteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treneri"></Button>
-            <Button Command="{Binding Command_Treninzi}" Padding="5" BackgroundColor="LightSkyBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treninzi"></Button>
-            <Button Command="{Binding Command_Odjava}" Padding="5" BackgroundColor="PaleVioletRed" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Odjava"></Button>
+            <Button Command="{Binding Command_MojeUplate}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Uplate"></Button>
+            <Button Command="{Binding Command_Treneri}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treneri"></Button>
+            <Button Command="{Binding Command_Treninzi}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treninzi"></Button>
+            <Button Command="{Binding Command_Rezervacija_Grupni_Trening}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Rezerviši grupni trening"></Button>
+            <Button Command="{Binding Command_Odjava}" Padding="5" BackgroundColor="Gray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Odjava"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

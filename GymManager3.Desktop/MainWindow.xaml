@@ -22,5 +22,8 @@
         <GroupBox>
             <Button Content="Uplate" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" Click="btnUplate_click" Margin="302,308,0,0"></Button>
         </GroupBox>
+        <GroupBox>
+            <Button Content="Termini" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" Click="btnTermini_click" Margin="303,339,0,0"></Button>
+        </GroupBox>
     </Grid>
 </Window>
