@@ -17,6 +17,7 @@
                         <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding Opis}"/>
                         <GridViewColumn Header="Preduvjeti" DisplayMemberBinding="{Binding Preduvjeti}"/>
                         <GridViewColumn Header="Cijena" DisplayMemberBinding="{Binding Cijena}"/>
+                        <GridViewColumn Header="Termin odrzavanja" DisplayMemberBinding="{Binding TerminOdrzavanja}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

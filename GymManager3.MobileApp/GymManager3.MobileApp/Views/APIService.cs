@@ -114,6 +114,12 @@ namespace GymManager3.MobileApp
 
         //    return await url.GetJsonAsync<dynamic>();
         //}
+        public async Task<dynamic> Delete(int? _id)
+        {
+            var url = $"{_apiURL}/{_route}/{_id}";
+
+            return await url.DeleteAsync().ReceiveJson<dynamic>();
+        }
     }
 }
 

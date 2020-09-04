@@ -14,10 +14,10 @@
             <Label Text="Trener"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button Command="{Binding Command_MojiPodaci}" BackgroundColor="LightGreen" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji podaci"></Button>
-            <Button Command="{Binding Command_Treninzi}" Padding="5" BackgroundColor="LightSkyBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji treninzi"></Button>
-            <Button Command="{Binding Command_Termini}" Padding="5" BackgroundColor="LightSteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji termini"></Button>
-            <Button Command="{Binding Command_Odjava}" Padding="5" BackgroundColor="PaleVioletRed" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Odjava"></Button>
+            <Button Command="{Binding Command_MojiPodaci}" BackgroundColor="LightGray" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji podaci"></Button>
+            <Button Command="{Binding Command_Treninzi}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji treninzi"></Button>
+            <Button Command="{Binding Command_Termini}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moji termini"></Button>
+            <Button Command="{Binding Command_Odjava}" Padding="5" BackgroundColor="Gray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Odjava"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

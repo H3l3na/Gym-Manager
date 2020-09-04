@@ -70,7 +70,13 @@ namespace GymManager3.WinUI
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{username},{pass},{ulogaId}";
 
             return await url.GetJsonAsync<dynamic>();
-        } 
-       
+        }
+        public async Task<dynamic> Delete(int? _id)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{_id}";
+
+            return await url.DeleteAsync().ReceiveJson<dynamic>();
+        }
+
     }
 }

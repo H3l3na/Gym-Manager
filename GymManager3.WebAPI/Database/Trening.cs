@@ -20,6 +20,7 @@ namespace GymManager3.WebAPI.Database
         public string Opis { get; set; }
         public string Preduvjeti { get; set; }
         public double? Cijena { get; set; }
+        public DateTime? TerminOdrzavanja { get; set; }
 
         public virtual Trener Trener { get; set; }
         public virtual VrstaTreninga VrstaTreninga { get; set; }

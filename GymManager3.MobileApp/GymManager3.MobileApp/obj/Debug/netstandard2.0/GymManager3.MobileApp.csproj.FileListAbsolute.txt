@@ -44,3 +44,7 @@ C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileA
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerMojiTerminiPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerTerminDetaljiPage.xaml.g.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\TrenerTerminIzmjenaPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\ListaTreningaZaRezervacijuPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\RezervacijaTreningaPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolaznikMojiTerminiPage.xaml.g.cs
+C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\obj\Debug\netstandard2.0\Views\PolaznikRezervacijaOtkaziPage.xaml.g.cs

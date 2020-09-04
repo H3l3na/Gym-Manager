@@ -202,6 +202,7 @@ namespace GymManager3.WebAPI.Database
                 entity.Property(e => e.TrenerId).HasColumnName("TrenerID");
 
                 entity.Property(e => e.VrstaTreningaId).HasColumnName("VrstaTreningaID");
+                entity.Property(e => e.TerminOdrzavanja).HasColumnName("TerminOdrzavanja");
 
                 entity.HasOne(d => d.Trener)
                     .WithMany(p => p.Trening)

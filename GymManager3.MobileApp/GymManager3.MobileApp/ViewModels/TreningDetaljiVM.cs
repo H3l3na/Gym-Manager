@@ -30,12 +30,16 @@ namespace GymManager3.MobileApp.ViewModels
             Tezina = v.Tezina;
             Cijena = v.Cijena;
             Preduvjeti = v.Preduvjeti;
+            TerminOdrzavanja = v.TerminOdrzavanja;
         }
 
         public ICommand NazadCmd { get; set; }
 
         string _naziv;
         public string Naziv { get { return _naziv; } set { SetProperty(ref _naziv, value); } }
+
+        DateTime? _terminOdrzavanja;
+        public DateTime? TerminOdrzavanja { get { return _terminOdrzavanja; } set { SetProperty(ref _terminOdrzavanja, value); } }
 
         string _opis;
         public string Opis { get { return _opis; } set { SetProperty(ref _opis, value); } }

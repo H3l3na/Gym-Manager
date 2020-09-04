@@ -12,6 +12,7 @@ namespace GymManager3.MobileApp.ViewModels
     {
         private readonly APIService _polaznikService = new APIService("Polaznik");
         private readonly APIService _uplateService = new APIService("Uplate");
+        private readonly APIService _rezervacijeService = new APIService("RezervacijaTreninga");
         public PolaznikMainVM()
         {
             Command_Odjava = new Command(() =>
@@ -43,6 +44,15 @@ namespace GymManager3.MobileApp.ViewModels
               {
                   LoadTreninge(id);
               });
+            Command_Rezervacija_Grupni_Trening = new Command(() =>
+            {
+                Rezervisi(id);
+            });
+            Command_Moje_Rezervacije = new Command(async () =>
+              {
+                  listaRezervacija = await _rezervacijeService.Get<List<Model.RezervacijaTreninga>>();
+                  Application.Current.MainPage=new PolaznikMojiTerminiPage(id, listaRezervacija);
+              });
         }
         //public PolaznikMainVM(/*int polaznikId, int uloga*/)
         //{
@@ -59,9 +69,14 @@ namespace GymManager3.MobileApp.ViewModels
         //    //});
         //}
         public List<Model.Trening> listaTreninga = new List<Model.Trening>();
+        public List<Model.RezervacijaTreninga> listaRezervacija = new List<Model.RezervacijaTreninga>();
         public void LoadTreninge(int id)
         {
             Application.Current.MainPage = new TreninziPage(id);
+        }
+        public void Rezervisi(int id)
+        {
+            Application.Current.MainPage = new ListaTreningaZaRezervacijuPage(id);
         }
         public List<Model.Trener> listaTrenera = new List<Model.Trener>();
         public  void LoadTreneri()
@@ -115,6 +130,9 @@ namespace GymManager3.MobileApp.ViewModels
         public ICommand Command_MojeUplate { get; set; }
         public ICommand Command_Treneri { get; set; }
         public ICommand Command_Treninzi { get; set; }
+        public ICommand Command_Rezervacija_Grupni_Trening { get; set; }
+        public ICommand Command_Moje_Rezervacije { get; set; }
+        public ICommand Command_Rezervacija_Individualni_Trening { get; set; }
         int _polaznikId;
         public int PolaznikID { get { return _polaznikId; } set { SetProperty(ref _polaznikId, value); } }
         int uloga;

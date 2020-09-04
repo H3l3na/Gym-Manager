@@ -26,6 +26,7 @@ namespace GymManager3.Desktop.Treninzi
         APIService _service = new APIService("Treninzi");
         APIService _trenerService = new APIService("Treneri");
         APIService _vrstaTreningaService = new APIService("VrstaTreninga");
+        APIService _terminService = new APIService("Termin");
         public  TreninziDodajWindow()
         {
 
@@ -67,7 +68,7 @@ namespace GymManager3.Desktop.Treninzi
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
             
-            if (textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxCijena.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "")
+            if (textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxCijena.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || textBoxTermin.Text=="")
             {
                 errormessage.Text = "Molimo unesite sva polja";
             }
@@ -81,9 +82,21 @@ namespace GymManager3.Desktop.Treninzi
                     Opis=textBoxOpis.Text,
                     Preduvjeti=textBoxPreduvjeti.Text,
                     Tezina=textBoxTezina.Text,
-                    TrenerId=(int)cmbTreneri.SelectedValue
+                    TrenerId=(int)cmbTreneri.SelectedValue,
+                    TerminOdrzavanja=DateTime.Parse(textBoxTermin.Text)
                 };
                 await _service.Insert<Model.Trening>(request);
+                List<Model.Trening> lista =await _service.Get<List<Model.Trening>>();
+                Model.Trening trening = lista.Last();
+                TerminInsertRequest terminRequest = new TerminInsertRequest()
+                {
+                    TerminOdrzavanja= DateTime.Parse(textBoxTermin.Text),
+                    Sala="",
+                    TrenerId= (int)cmbTreneri.SelectedValue,
+                    TreningId=trening.TreningId,
+                };
+                await _terminService.Insert<Model.Termin>(terminRequest);
+               // await _service.Insert<Model.Trening>(request);
                 Application.Current.MainWindow = new MainWindow();
                 Application.Current.MainWindow.Show();
                 Close();

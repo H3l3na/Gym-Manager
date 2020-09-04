@@ -20,7 +20,9 @@
             <Button Command="{Binding Command_MojeUplate}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Uplate"></Button>
             <Button Command="{Binding Command_Treneri}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treneri"></Button>
             <Button Command="{Binding Command_Treninzi}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Treninzi"></Button>
+            <Button Command="{Binding Command_Moje_Rezervacije}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Moje rezervacije"></Button>
             <Button Command="{Binding Command_Rezervacija_Grupni_Trening}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Rezerviši grupni trening"></Button>
+            <Button Command="{Binding Command_Rezervacija_Individualni_Trening}" Padding="5" BackgroundColor="SteelBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Rezerviši individualni trening"></Button>
             <Button Command="{Binding Command_Odjava}" Padding="5" BackgroundColor="Gray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Odjava"></Button>
         </StackLayout>
     </ContentPage.Content>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:GymManager3.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GymManager3.MobileApp.Views.ListaTreningaZaRezervacijuPage">
+    <ContentPage.BindingContext>
+        <vm:ListaTreningaZaRezervacijuVM></vm:ListaTreningaZaRezervacijuVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Odaberite trening"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button HorizontalOptions="Start" BackgroundColor="Gray" Text="Nazad" Command="{Binding NazadCommand}"></Button>
+            <ListView ItemsSource="{Binding TreninziList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Grid>
+                                    <Label HorizontalOptions="Start" Text="Naziv"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Naziv}"></Label>
+                                </Grid>
+                                <Grid>
+                                    <Label HorizontalOptions="Start" Text="Opis"></Label>
+                                    <Label TextColor="Black" FontSize="20"  HorizontalOptions="Center" Text="{Binding Opis}"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
