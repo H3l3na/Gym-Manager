@@ -10,6 +10,10 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200915194857_initial.cs" />
     <Compile Remove="Migrations\20200915194857_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200915195803_initial.cs" />
+    <Compile Remove="Migrations\20200915195803_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200915205226_initial.cs" />
+    <Compile Remove="Migrations\20200915205226_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +30,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GymManager3.Model\GymManager3.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
   </ItemGroup>
 
 </Project>

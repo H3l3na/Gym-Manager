@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using GymManager3.Model;
 using GymManager3.WebAPI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -472,6 +473,8 @@ namespace GymManager3.WebAPI.Database
                 KorisnickoIme="therock",
                 Telefon="061724122",
                 TrenerId=1,
+                Uloga="Trener",
+                Slika= File.ReadAllBytes("img/therock.jpg")
             };
             t.LozinkaSalt = TreneriService.GenerateSalt();
             t.LozinkaHash = TreneriService.GenerateHash(t.LozinkaSalt, "dwayne");
@@ -491,6 +494,8 @@ namespace GymManager3.WebAPI.Database
                 KorisnickoIme = "arnie",
                 Telefon = "061724552",
                 TrenerId = 2,
+                Uloga="Trener",
+                Slika= File.ReadAllBytes("img/therock.jpg")
             };
             t1.LozinkaSalt = TreneriService.GenerateSalt();
             t1.LozinkaHash = TreneriService.GenerateHash(t1.LozinkaSalt, "arnold");
@@ -510,6 +515,8 @@ namespace GymManager3.WebAPI.Database
                 KorisnickoIme = "gal123",
                 Telefon = "061724332",
                 TrenerId = 3,
+                Uloga="Trener",
+                Slika= File.ReadAllBytes("img/gal.jpg")
             };
             t2.LozinkaSalt = TreneriService.GenerateSalt();
             t2.LozinkaHash = TreneriService.GenerateHash(t2.LozinkaSalt, "gal");

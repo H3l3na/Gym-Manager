@@ -19,4 +19,6 @@ RUN dotnet publish "GymManager3.WebAPI.csproj" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+ADD GymManager3.WebAPI/img img/
+
 ENTRYPOINT ["dotnet", "GymManager3.WebAPI.dll"]

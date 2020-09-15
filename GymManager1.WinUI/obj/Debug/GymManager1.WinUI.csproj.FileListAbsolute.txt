@@ -1,9 +1,0 @@
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\bin\Debug\GymManager1.WinUI.exe.config
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\bin\Debug\GymManager1.WinUI.exe
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\bin\Debug\GymManager1.WinUI.pdb
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.csprojAssemblyReference.cache
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.Properties.Resources.resources
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.csproj.GenerateResource.cache
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.exe
-C:\Users\User\source\repos\GymManager3\GymManager1.WinUI\obj\Debug\GymManager1.WinUI.pdb

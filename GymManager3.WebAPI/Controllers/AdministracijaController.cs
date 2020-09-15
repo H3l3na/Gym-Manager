@@ -27,7 +27,7 @@ namespace GymManager3.WebAPI.Controllers
             return _service.Insert(request);
         }
 
-        
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public ActionResult<List<Model.Administracija>> Get([FromQuery] AdministracijaSearchRequest request)
         {

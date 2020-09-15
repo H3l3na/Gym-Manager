@@ -732,11 +732,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\bin\Debug\netstandard2.0\GymManager3.MobileApp.dll">
       <PackagePath>GymManager3.MobileApp.dll</PackagePath>
-      <Modified>2020-09-15T13:54:17.944</Modified>
+      <Modified>2020-09-15T20:35:04.477</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\GymManager3\GymManager3.MobileApp\GymManager3.MobileApp\bin\Debug\netstandard2.0\GymManager3.Model.dll">
       <PackagePath>GymManager3.Model.dll</PackagePath>
-      <Modified>2020-09-15T12:23:34.076</Modified>
+      <Modified>2020-09-15T20:21:01.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>

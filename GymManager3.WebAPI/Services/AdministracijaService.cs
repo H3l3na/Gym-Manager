@@ -32,22 +32,22 @@ namespace GymManager3.WebAPI.Services
             entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
             _context.Administracija.Add(entity);
             _context.SaveChanges();
-            var list = _context.Administracija.ToList();
-            foreach (var x in list)
-            {
-                if (x.KorisnickoIme == request.KorisnickoIme && x.Ime == request.Ime && x.Prezime == request.Prezime)
-                {
-                    KorisniciUloge n = new KorisniciUloge
-                    {
-                        AdministracijaID = x.AdministracijaId,
-                        DatumIzmjene = DateTime.Now,
-                        UlogaID = 1
-                    };
+           // var list = _context.Administracija.ToList();
+            //foreach (var x in list)
+            //{
+            //    if (x.KorisnickoIme == request.KorisnickoIme && x.Ime == request.Ime && x.Prezime == request.Prezime)
+            //    {
+            //        KorisniciUloge n = new KorisniciUloge
+            //        {
+            //            AdministracijaID = x.AdministracijaId,
+            //            DatumIzmjene = DateTime.Now,
+            //            UlogaID = 1
+            //        };
 
-                    _context.KorisniciUloge.Add(n);
-                    _context.SaveChanges();
-                }
-            }
+            //        _context.KorisniciUloge.Add(n);
+            //        _context.SaveChanges();
+            //    }
+            //}
             return _mapper.Map<Model.Administracija>(entity);
         }
         public List<Model.Administracija> Get(AdministracijaSearchRequest request)
