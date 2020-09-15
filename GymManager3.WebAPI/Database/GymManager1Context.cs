@@ -282,22 +282,22 @@ namespace GymManager3.WebAPI.Database
                 entity.HasOne(d => d.Administracija)
                     .WithMany(p => p.KorisniciUloge)
                     .HasForeignKey(d => d.AdministracijaID)
-                    .HasConstraintName("AdministracijaID_FK");
+                    .HasConstraintName("AdministracijaID_FK_23242431");
 
                 entity.HasOne(d => d.Polaznik)
                     .WithMany(p => p.KorisniciUloge)
                     .HasForeignKey(d => d.PolaznikID)
-                    .HasConstraintName("PolaznikID_FK");
+                    .HasConstraintName("PolaznikID_FK_5");
 
                 entity.HasOne(d => d.Trener)
                     .WithMany(p => p.KorisniciUloge)
                     .HasForeignKey(d => d.TrenerID)
-                    .HasConstraintName("TrenerID_FK");
+                    .HasConstraintName("TrenerID_FK_5");
 
                 entity.HasOne(d => d.Uloga)
                     .WithMany(p => p.KorisniciUloge)
                     .HasForeignKey(d => d.UlogaID)
-                    .HasConstraintName("UlogaID_FK");
+                    .HasConstraintName("UlogaID_FK_2");
             });
             modelBuilder.Entity<Uloge>(entity =>
             {
@@ -321,12 +321,12 @@ namespace GymManager3.WebAPI.Database
                 entity.HasOne(d => d.Polaznik)
                     .WithMany(p => p.RezervacijaTreninga)
                     .HasForeignKey(d => d.PolaznikID)
-                    .HasConstraintName("PolaznikID_FK");
+                    .HasConstraintName("PolaznikID_FK_2");
 
                 entity.HasOne(d => d.Trening)
                     .WithMany(p => p.RezervacijaTreninga)
                     .HasForeignKey(d => d.TreningID)
-                    .HasConstraintName("TreningID_FK");
+                    .HasConstraintName("TreningID_FK_1");
 
                 entity.Property(e => e.DatumVrijeme).HasColumnType("datetime");
 
@@ -347,7 +347,7 @@ namespace GymManager3.WebAPI.Database
                 entity.HasOne(d => d.Trener)
                     .WithMany(p => p.RezervacijaTrenera)
                     .HasForeignKey(d => d.TrenerID)
-                    .HasConstraintName("TrenerID_FK");
+                    .HasConstraintName("TrenerID_FK_21232");
 
                 
 
@@ -363,12 +363,12 @@ namespace GymManager3.WebAPI.Database
                 entity.HasOne(d => d.Polaznik)
                     .WithMany(p => p.Ocjene)
                     .HasForeignKey(d => d.PolaznikID)
-                    .HasConstraintName("PolaznikID_FK");
+                    .HasConstraintName("PolaznikID_FK_3");
 
                 entity.HasOne(d => d.Trener)
                     .WithMany(p => p.Ocjene)
                     .HasForeignKey(d => d.TrenerID)
-                    .HasConstraintName("TrenerID_FK");
+                    .HasConstraintName("TrenerID_FK_4");
 
 
 

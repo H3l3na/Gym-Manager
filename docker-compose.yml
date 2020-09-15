@@ -20,7 +20,7 @@ services:
             dockerfile: GymManager3.WebAPI/Dockerfile
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - CONNECTION_STRING=Server=gymmanagernet-sql,1433;Database=GymManager1;User=sa;Password=reallyStrongPwd123;ConnectRetryCount=0
+            - CONNECTION_STRING=Server=gymmanagernet-sql,1433;Database=GymManager13;User=sa;Password=reallyStrongPwd123;ConnectRetryCount=0
         ports:
             - 56230:80
         networks:

@@ -89,8 +89,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Admin",
                             Jmbg = "1002003004001",
                             KorisnickoIme = "admin",
-                            LozinkaHash = "LvCr58p6/ZB3Oaz7lygL5SybYts=",
-                            LozinkaSalt = "uiYGY+Qpm2yTIhvujwlV/g==",
+                            LozinkaHash = "SRGP5iFJ0PkimHaXNHES72Ohg+M=",
+                            LozinkaSalt = "wxleqUJtsY1nlwKCJbF7mQ==",
                             Mail = "admin@gmail.com",
                             Prezime = "Admin",
                             Spol = "M",
@@ -308,8 +308,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Alma",
                             JMBG = "2504996127155",
                             KorisnickoIme = "alma123",
-                            LozinkaHash = "bhHfxO25pXvENGAFZPNpLUPhKLk=",
-                            LozinkaSalt = "XkhJjWKutng9gwGqnM5HWg==",
+                            LozinkaHash = "ewRRBQcr5wimoDdBWZ8V9qqFlS0=",
+                            LozinkaSalt = "a7bUGSMrjA1mgO1DuTzJfA==",
                             Mail = "alma@gmail.com",
                             Prezime = "Djedovic",
                             Spol = "Ž",
@@ -325,8 +325,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Amela",
                             JMBG = "2009996127155",
                             KorisnickoIme = "amela123",
-                            LozinkaHash = "kaZyh4G4+pbffB7BcFpwrmTC7Fc=",
-                            LozinkaSalt = "p02YvvPpqDzctCrIlXFn0Q==",
+                            LozinkaHash = "dNruP0ITZPcelPUkQz8ubz26WpA=",
+                            LozinkaSalt = "mm4DcLIhKPb3sbmLa11tGg==",
                             Mail = "amela@gmail.com",
                             Prezime = "Cosic",
                             Spol = "Ž",
@@ -620,8 +620,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Dwayne",
                             Jmbg = "1112223334441",
                             KorisnickoIme = "therock",
-                            LozinkaHash = "Hu3I566U63IfB7wpBIWSgPvrocA=",
-                            LozinkaSalt = "aRfWAJofJsXOrAqdy5J3Eg==",
+                            LozinkaHash = "fI/iqUpTgGjm/X7ZzGjBsSpljMQ=",
+                            LozinkaSalt = "kyzeRmiE+U91WNGEavI+YA==",
                             Mail = "dwayne@gmail.com",
                             Opis = "Professional fitness trainer",
                             Prezime = "Johnson",
@@ -637,8 +637,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Arnold",
                             Jmbg = "1112223334442",
                             KorisnickoIme = "arnie",
-                            LozinkaHash = "29Fh/de/6g6xOFFl3NLxDuUSKYM=",
-                            LozinkaSalt = "a7kYMehoouvW29lxo6KIoA==",
+                            LozinkaHash = "puwPHT7GsXg/4nnGtiW6+zOwgaI=",
+                            LozinkaSalt = "xbyEO3Lg2YUeEXYSbpuqMQ==",
                             Mail = "arnold@gmail.com",
                             Opis = "Professional fitness trainer",
                             Prezime = "Schwarzeneger",
@@ -654,8 +654,8 @@ namespace GymManager3.WebAPI.Migrations
                             Ime = "Gal",
                             Jmbg = "1112223334222",
                             KorisnickoIme = "gal123",
-                            LozinkaHash = "0fWcLjR5shgqfj52FNLZqrZuqHE=",
-                            LozinkaSalt = "+itG6dytdkHc0I9sXnk2ag==",
+                            LozinkaHash = "FrV+0V8/Km43xKyuh1osPn8pvfo=",
+                            LozinkaSalt = "nIPPe35969Pe5WE80IjNng==",
                             Mail = "gal@gmail.com",
                             Opis = "Professional fitness trainer",
                             Prezime = "Gadot",
@@ -902,22 +902,22 @@ namespace GymManager3.WebAPI.Migrations
                     b.HasOne("GymManager3.WebAPI.Database.Administracija", "Administracija")
                         .WithMany("KorisniciUloge")
                         .HasForeignKey("AdministracijaID")
-                        .HasConstraintName("AdministracijaID_FK");
+                        .HasConstraintName("AdministracijaID_FK_23242431");
 
                     b.HasOne("GymManager3.WebAPI.Database.Polaznik", "Polaznik")
                         .WithMany("KorisniciUloge")
                         .HasForeignKey("PolaznikID")
-                        .HasConstraintName("PolaznikID_FK");
+                        .HasConstraintName("PolaznikID_FK_5");
 
                     b.HasOne("GymManager3.WebAPI.Database.Trener", "Trener")
                         .WithMany("KorisniciUloge")
                         .HasForeignKey("TrenerID")
-                        .HasConstraintName("TrenerID_FK");
+                        .HasConstraintName("TrenerID_FK_5");
 
                     b.HasOne("GymManager3.WebAPI.Database.Uloge", "Uloga")
                         .WithMany("KorisniciUloge")
                         .HasForeignKey("UlogaID")
-                        .HasConstraintName("UlogaID_FK");
+                        .HasConstraintName("UlogaID_FK_2");
                 });
 
             modelBuilder.Entity("GymManager3.WebAPI.Database.Ocjene", b =>
@@ -925,13 +925,13 @@ namespace GymManager3.WebAPI.Migrations
                     b.HasOne("GymManager3.WebAPI.Database.Polaznik", "Polaznik")
                         .WithMany("Ocjene")
                         .HasForeignKey("PolaznikID")
-                        .HasConstraintName("PolaznikID_FK")
+                        .HasConstraintName("PolaznikID_FK_3")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("GymManager3.WebAPI.Database.Trener", "Trener")
                         .WithMany("Ocjene")
                         .HasForeignKey("TrenerID")
-                        .HasConstraintName("TrenerID_FK")
+                        .HasConstraintName("TrenerID_FK_4")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -971,7 +971,7 @@ namespace GymManager3.WebAPI.Migrations
                     b.HasOne("GymManager3.WebAPI.Database.Trener", "Trener")
                         .WithMany("RezervacijaTrenera")
                         .HasForeignKey("TrenerID")
-                        .HasConstraintName("TrenerID_FK");
+                        .HasConstraintName("TrenerID_FK_21232");
                 });
 
             modelBuilder.Entity("GymManager3.WebAPI.Database.RezervacijaTreninga", b =>
@@ -979,12 +979,12 @@ namespace GymManager3.WebAPI.Migrations
                     b.HasOne("GymManager3.WebAPI.Database.Polaznik", "Polaznik")
                         .WithMany("RezervacijaTreninga")
                         .HasForeignKey("PolaznikID")
-                        .HasConstraintName("PolaznikID_FK");
+                        .HasConstraintName("PolaznikID_FK_2");
 
                     b.HasOne("GymManager3.WebAPI.Database.Trening", "Trening")
                         .WithMany("RezervacijaTreninga")
                         .HasForeignKey("TreningID")
-                        .HasConstraintName("TreningID_FK");
+                        .HasConstraintName("TreningID_FK_1");
                 });
 
             modelBuilder.Entity("GymManager3.WebAPI.Database.Subskripcija", b =>

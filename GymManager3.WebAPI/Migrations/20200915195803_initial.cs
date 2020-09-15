@@ -195,25 +195,25 @@ namespace GymManager3.WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_KorisniciUloge", x => x.KorisnikUlogaID);
                     table.ForeignKey(
-                        name: "AdministracijaID_FK",
+                        name: "AdministracijaID_FK_23242431",
                         column: x => x.AdministracijaID,
                         principalTable: "Administracija",
                         principalColumn: "AdministracijaID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "PolaznikID_FK",
+                        name: "PolaznikID_FK_5",
                         column: x => x.PolaznikID,
                         principalTable: "Polaznik",
                         principalColumn: "PolaznikID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "TrenerID_FK",
+                        name: "TrenerID_FK_5",
                         column: x => x.TrenerID,
                         principalTable: "Trener",
                         principalColumn: "TrenerID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "UlogaID_FK",
+                        name: "UlogaID_FK_2",
                         column: x => x.UlogaID,
                         principalTable: "Uloge",
                         principalColumn: "UlogaID",
@@ -234,13 +234,13 @@ namespace GymManager3.WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_Ocjene", x => x.OcjeneID);
                     table.ForeignKey(
-                        name: "PolaznikID_FK",
+                        name: "PolaznikID_FK_3",
                         column: x => x.PolaznikID,
                         principalTable: "Polaznik",
                         principalColumn: "PolaznikID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "TrenerID_FK",
+                        name: "TrenerID_FK_4",
                         column: x => x.TrenerID,
                         principalTable: "Trener",
                         principalColumn: "TrenerID",
@@ -267,7 +267,7 @@ namespace GymManager3.WebAPI.Migrations
                         principalColumn: "PolaznikID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "TrenerID_FK",
+                        name: "TrenerID_FK_21232",
                         column: x => x.TrenerID,
                         principalTable: "Trener",
                         principalColumn: "TrenerID",
@@ -321,13 +321,13 @@ namespace GymManager3.WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_RezervacijaTreninga", x => x.RezervacijaTreningaID);
                     table.ForeignKey(
-                        name: "PolaznikID_FK",
+                        name: "PolaznikID_FK_2",
                         column: x => x.PolaznikID,
                         principalTable: "Polaznik",
                         principalColumn: "PolaznikID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "TreningID_FK",
+                        name: "TreningID_FK_1",
                         column: x => x.TreningID,
                         principalTable: "Trening",
                         principalColumn: "TreningID",
@@ -508,15 +508,15 @@ namespace GymManager3.WebAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Administracija",
                 columns: new[] { "AdministracijaID", "Adresa", "DatumRodjenja", "DatumZaposlenja", "GradID", "Ime", "JMBG", "KorisnickoIme", "LozinkaHash", "LozinkaSalt", "Mail", "Prezime", "Slika", "Spol", "StalanZaposlenik", "Staz", "Telefon", "Uloga" },
-                values: new object[] { 1, "Dzemala Bijedica 100", new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Admin", "1002003004001", "admin", "LvCr58p6/ZB3Oaz7lygL5SybYts=", "uiYGY+Qpm2yTIhvujwlV/g==", "admin@gmail.com", "Admin", null, "M", null, 1, "061834223", "Administrator" });
+                values: new object[] { 1, "Dzemala Bijedica 100", new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Admin", "1002003004001", "admin", "SRGP5iFJ0PkimHaXNHES72Ohg+M=", "wxleqUJtsY1nlwKCJbF7mQ==", "admin@gmail.com", "Admin", null, "M", null, 1, "061834223", "Administrator" });
 
             migrationBuilder.InsertData(
                 table: "Polaznik",
                 columns: new[] { "PolaznikID", "Adresa", "DatumRodjenja", "GradID", "Ime", "JMBG", "KorisnickoIme", "LozinkaHash", "LozinkaSalt", "Mail", "Prezime", "Spol", "Telefon", "Uloga" },
                 values: new object[,]
                 {
-                    { 1, "Olovska 103A", new DateTime(2020, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Alma", "2504996127155", "alma123", "bhHfxO25pXvENGAFZPNpLUPhKLk=", "XkhJjWKutng9gwGqnM5HWg==", "alma@gmail.com", "Djedovic", "Ž", "062365144", "Polaznik" },
-                    { 2, "Olovska 103B", new DateTime(2020, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Amela", "2009996127155", "amela123", "kaZyh4G4+pbffB7BcFpwrmTC7Fc=", "p02YvvPpqDzctCrIlXFn0Q==", "amela@gmail.com", "Cosic", "Ž", "062341184", "Polaznik" }
+                    { 1, "Olovska 103A", new DateTime(2020, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Alma", "2504996127155", "alma123", "ewRRBQcr5wimoDdBWZ8V9qqFlS0=", "a7bUGSMrjA1mgO1DuTzJfA==", "alma@gmail.com", "Djedovic", "Ž", "062365144", "Polaznik" },
+                    { 2, "Olovska 103B", new DateTime(2020, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Amela", "2009996127155", "amela123", "dNruP0ITZPcelPUkQz8ubz26WpA=", "mm4DcLIhKPb3sbmLa11tGg==", "amela@gmail.com", "Cosic", "Ž", "062341184", "Polaznik" }
                 });
 
             migrationBuilder.InsertData(
@@ -524,9 +524,9 @@ namespace GymManager3.WebAPI.Migrations
                 columns: new[] { "TrenerID", "Adresa", "BrojOcjena", "DatumZaposlenja", "GradID", "Ime", "JMBG", "KorisnickoIme", "LozinkaHash", "LozinkaSalt", "Mail", "Opis", "Prezime", "Slika", "Spol", "Telefon", "Uloga" },
                 values: new object[,]
                 {
-                    { 1, "Olovska 105", null, new DateTime(2020, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Dwayne", "1112223334441", "therock", "Hu3I566U63IfB7wpBIWSgPvrocA=", "aRfWAJofJsXOrAqdy5J3Eg==", "dwayne@gmail.com", "Professional fitness trainer", "Johnson", null, "M", "061724122", null },
-                    { 2, "Olovska 106", null, new DateTime(2020, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Arnold", "1112223334442", "arnie", "29Fh/de/6g6xOFFl3NLxDuUSKYM=", "a7kYMehoouvW29lxo6KIoA==", "arnold@gmail.com", "Professional fitness trainer", "Schwarzeneger", null, "M", "061724552", null },
-                    { 3, "Olovska 107", null, new DateTime(2020, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Gal", "1112223334222", "gal123", "0fWcLjR5shgqfj52FNLZqrZuqHE=", "+itG6dytdkHc0I9sXnk2ag==", "gal@gmail.com", "Professional fitness trainer", "Gadot", null, "Ž", "061724332", null }
+                    { 1, "Olovska 105", null, new DateTime(2020, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Dwayne", "1112223334441", "therock", "fI/iqUpTgGjm/X7ZzGjBsSpljMQ=", "kyzeRmiE+U91WNGEavI+YA==", "dwayne@gmail.com", "Professional fitness trainer", "Johnson", null, "M", "061724122", null },
+                    { 2, "Olovska 106", null, new DateTime(2020, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Arnold", "1112223334442", "arnie", "puwPHT7GsXg/4nnGtiW6+zOwgaI=", "xbyEO3Lg2YUeEXYSbpuqMQ==", "arnold@gmail.com", "Professional fitness trainer", "Schwarzeneger", null, "M", "061724552", null },
+                    { 3, "Olovska 107", null, new DateTime(2020, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Gal", "1112223334222", "gal123", "FrV+0V8/Km43xKyuh1osPn8pvfo=", "nIPPe35969Pe5WE80IjNng==", "gal@gmail.com", "Professional fitness trainer", "Gadot", null, "Ž", "061724332", null }
                 });
 
             migrationBuilder.InsertData(
