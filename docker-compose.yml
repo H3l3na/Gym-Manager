@@ -13,7 +13,7 @@ services:
         networks:
             - gymmanagernet
 
-    GymManager3.webapi:
+    gymmanager3.webapi:
         restart: unless-stopped
         build:
             context: .
