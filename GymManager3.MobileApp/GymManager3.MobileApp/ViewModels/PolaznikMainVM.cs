@@ -53,6 +53,10 @@ namespace GymManager3.MobileApp.ViewModels
                   listaRezervacija = await _rezervacijeService.Get<List<Model.RezervacijaTreninga>>();
                   Application.Current.MainPage=new PolaznikMojiTerminiPage(id, listaRezervacija);
               });
+            Command_Rezervacija_Individualni_Trening = new Command(() =>
+              {
+                  RezervisiIndividualni(id);
+              });
         }
         //public PolaznikMainVM(/*int polaznikId, int uloga*/)
         //{
@@ -124,6 +128,11 @@ namespace GymManager3.MobileApp.ViewModels
             
             Application.Current.MainPage = new NewLoginPage();
             
+        }
+
+        public void RezervisiIndividualni(int id)
+        {
+            Application.Current.MainPage = new PolaznikRezervacijaTreneraPage(id);
         }
         public ICommand Command_MojiPodaci { get; set; }
         public ICommand Command_Odjava { get; set; }

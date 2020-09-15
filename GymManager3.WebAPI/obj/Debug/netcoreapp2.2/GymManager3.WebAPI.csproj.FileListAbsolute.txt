@@ -9,7 +9,6 @@ C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\bin\Debug\netcoreapp2.
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\bin\Debug\netcoreapp2.2\GymManager3.Model.dll
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\bin\Debug\netcoreapp2.2\GymManager3.Model.pdb
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.csprojAssemblyReference.cache
-C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.RazorAssemblyInfo.cache
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.RazorAssemblyInfo.cs
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.AssemblyInfoInputs.cache
@@ -19,3 +18,4 @@ C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.dll
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.pdb
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.genruntimeconfig.cache
+C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.csproj.CoreCompileInputs.cache

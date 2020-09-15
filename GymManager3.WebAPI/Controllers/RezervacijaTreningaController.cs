@@ -24,6 +24,11 @@ namespace GymManager3.WebAPI.Controllers
             return _service.Get();
         }
 
+        [HttpPut("{id}")]
+        public Model.RezervacijaTreninga Update(int id, RezervacijaTreningaInsertRequest request)
+        {
+            return _service.Update(id, request);
+        }
         [HttpPost]
         public Model.RezervacijaTreninga Insert(RezervacijaTreningaInsertRequest request)
         {

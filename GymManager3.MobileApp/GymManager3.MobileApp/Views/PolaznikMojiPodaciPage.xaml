@@ -14,7 +14,7 @@
         <StackLayout >
 
             <Grid>
-                <Button BackgroundColor="Gray" TextColor="White" Text="Nazad" Command="{Binding NazadCommand}" HorizontalOptions="Start"></Button>
+                <Button BackgroundColor="Gray" Margin="20,20,0,0" TextColor="White" Text="Nazad" Command="{Binding NazadCommand}" HorizontalOptions="Start"></Button>
                 <!--<Button BackgroundColor="LightBlue" Text="Izmijeni" Command="{Binding IzmijeniCommand}" HorizontalOptions="End"></Button>-->
             </Grid>
             <Label Text="Dobrodošli"

@@ -11,12 +11,12 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Button Command="{Binding NazadCommand}" Padding="5" TextColor="White" BackgroundColor="Gray" Text="Nazad"></Button>
-            <Label Text="Korisničko ime:" />
-            <Entry Text="{Binding Username}"></Entry>
-            <Label Text="Password:" />
-            <Entry Text="{Binding Password}"></Entry>
-            <Button Command="{Binding LoginCommand}" Text="Login"></Button>
+            <Button HorizontalOptions="Start" Margin="20,20,0,0" WidthRequest="80" Command="{Binding NazadCommand}" Padding="5" TextColor="White" BackgroundColor="Gray" Text="Nazad"></Button>
+            <Label Margin="100,100,100,0" Text="Korisničko ime:" />
+            <Entry Margin="100,0,100,0" Text="{Binding Username}"></Entry>
+            <Label Margin="100,0,100,0" Text="Password:" />
+            <Entry Margin="100,0,100,0" Text="{Binding Password}" IsPassword="True"></Entry>
+            <Button Margin="100,0,100,0" Command="{Binding LoginCommand}" Text="Login"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

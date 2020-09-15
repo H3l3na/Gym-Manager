@@ -11,6 +11,8 @@ namespace GymManager3.WebAPI.Database
             Uplata = new HashSet<Uplata>();
             KorisniciUloge = new HashSet<KorisniciUloge>();
             RezervacijaTreninga = new HashSet<RezervacijaTreninga>();
+            RezervacijaTrenera = new HashSet<RezervacijaTrenera>();
+            Ocjene = new HashSet<Ocjene>();
         }
 
         public int PolaznikId { get; set; }
@@ -33,5 +35,7 @@ namespace GymManager3.WebAPI.Database
         public virtual ICollection<Uplata> Uplata { get; set; }
         public virtual ICollection<KorisniciUloge> KorisniciUloge { get; set; }
         public virtual ICollection<RezervacijaTreninga> RezervacijaTreninga { get; set; }
+        public virtual ICollection<RezervacijaTrenera> RezervacijaTrenera { get; set; }
+        public virtual ICollection<Ocjene> Ocjene { get; set; }
     }
 }

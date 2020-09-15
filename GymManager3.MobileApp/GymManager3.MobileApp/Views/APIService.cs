@@ -53,6 +53,7 @@ namespace GymManager3.MobileApp
             var result = await $"{_apiURL}/{_route}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
+       
         //public async Task<T> GetByUsername<T>(object search)
         //{
         //    var url = $"{_apiURL}/{_route}";

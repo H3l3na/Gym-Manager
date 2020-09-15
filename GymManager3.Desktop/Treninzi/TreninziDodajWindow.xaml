@@ -20,6 +20,7 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 360, 0, 0" Name="Trener" Text="Trener" VerticalAlignment="Top" Width="193"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 408, 0, 0" Name="VrstaTreninga" Text="Vrsta treninga" VerticalAlignment="Top" Width="193"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,453,0,0" Name="TerminOdrzavanja" Text="Termin odrzavanja" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,501,0,0" Name="Kapacitet" Text="Kapacitet" VerticalAlignment="Top" Width="193"/>
 
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxNaziv" VerticalAlignment="Top" Width="247" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,168,0,0" Name="textBoxTezina" VerticalAlignment="Top" Width="247" />
@@ -52,7 +53,8 @@
         </ComboBox>
         <ComboBox x:Name="cmbVrsteTreninga" DisplayMemberPath="Naziv" SelectedValuePath="VrstaTreningaId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,408,0,0"></ComboBox>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,453,0,0"  Name="textBoxTermin" VerticalAlignment="Top" Width="247" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,502,0,0"  Name="textBoxKapacitet" VerticalAlignment="Top" Width="247" />
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
-        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="46,456,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click" Grid.Column="1" RenderTransformOrigin="0.453,3.15"/>
+        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="46,460,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click" Grid.Column="1" RenderTransformOrigin="0.453,3.15"/>
     </Grid>
 </Window>

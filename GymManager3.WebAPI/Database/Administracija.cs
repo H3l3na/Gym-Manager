@@ -23,7 +23,7 @@ namespace GymManager3.WebAPI.Database
         public string LozinkaSalt { get; set; }
         public DateTime? DatumZaposlenja { get; set; }
         public DateTime? DatumRodjenja { get; set; }
-        public bool? Spol { get; set; }
+        public string Spol { get; set; }
         public int? Staz { get; set; }
         public bool? StalanZaposlenik { get; set; }
         public string Jmbg { get; set; }

@@ -11,11 +11,11 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Button Command="{Binding RegisterCommand}" Text="Register" BackgroundColor="SteelBlue" BorderColor="LightGray" TextColor="White"></Button>
+            <Button  Command="{Binding RegisterCommand}" Margin="100,100,100,0" Text="Register"  BackgroundColor="SteelBlue" BorderColor="LightGray" TextColor="White"></Button>
             <!--<Label Text="Login as Trainer:" />
             <Button Command="{Binding LoginTrenerCommand}" Text="Login" ></Button>-->
-            <Label Text="Login:" />
-            <Button Command="{Binding LoginPolaznikCommand}" Text="Login" BackgroundColor="LightSteelBlue"></Button>
+            <Label Margin="100,100,100,0" Text="Login:" HorizontalOptions="Center" />
+            <Button  Margin="100,0,100,0" Command="{Binding LoginPolaznikCommand}"  Text="Login" BackgroundColor="LightSteelBlue" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

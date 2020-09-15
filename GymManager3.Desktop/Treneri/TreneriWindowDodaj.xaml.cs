@@ -57,6 +57,7 @@ namespace GymManager3.Desktop.Treneri
                     DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
                     Adresa = textBoxAdresa.Text,
                     Slika=_imageBytes,
+                    Spol=cmbSpol.SelectedValue.ToString()
                 };
                 await _service.Insert<Model.Trener>(request);
 
@@ -73,6 +74,8 @@ namespace GymManager3.Desktop.Treneri
         }
         private async void LoadGradovi()
         {
+            cmbSpol.Items.Add("M");
+            cmbSpol.Items.Add("Ž");
             var listaGradova = await _serviceGrad.Get<IEnumerable<Model.Grad>>(null);
             cmbGradovi.ItemsSource = listaGradova;
         }

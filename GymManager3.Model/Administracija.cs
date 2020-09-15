@@ -21,6 +21,7 @@ namespace GymManager3.Model
         public int? GradId { get; set; }
         public string KorisnickoIme { get; set; }
         public byte[] Slika { get; set; }
+        public string Spol { get; set; }
 
         public ICollection<KorisniciUloge> KorisniciUloge { get; set; }
     }

@@ -13,7 +13,7 @@
         <StackLayout>
             <ScrollView>
                 <StackLayout Padding="5">
-                    <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
+                    <Button HorizontalOptions="Start" Margin="20,20,0,0" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
                     <Button HorizontalOptions="Center" Text="Otkaži" BackgroundColor="PaleVioletRed" TextColor="White" Command="{Binding OtkaziCmd}"></Button>
                     <Label Text="Trening" BackgroundColor="LightGray"></Label>
                     <Label Text="{Binding Trening}" BackgroundColor="LightBlue"></Label>

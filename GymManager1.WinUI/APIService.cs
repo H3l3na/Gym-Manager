@@ -49,6 +49,7 @@ namespace GymManager3.WinUI
             var result = await $"{Properties.Settings.Default.APIUrl}/{_route}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
+      
 
         public async Task<T> GetById<T>(object id)
         {

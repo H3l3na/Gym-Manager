@@ -18,7 +18,7 @@ namespace GymManager3.Model.Requests
         public string Adresa { get; set; }
         public string Jmbg { get; set; }
         public DateTime? DatumZaposlenja { get; set; }
-        public bool? Spol { get; set; }
+        public string Spol { get; set; }
         public string Opis { get; set; }
         
         public int? GradId { get; set; }

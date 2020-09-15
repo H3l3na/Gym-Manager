@@ -41,5 +41,14 @@ namespace GymManager3.WebAPI.Services
             var entity = _context.Trening.Find(id);
             return _mapper.Map<Model.Trening>(entity);
         }
+        public Model.Trening Update(int id, TreninziInsertRequest request)
+        {
+            var entity = _context.Trening.Find(id);
+            _context.Trening.Attach(entity);
+            _context.Trening.Update(entity);
+            _mapper.Map(request, entity);
+            _context.SaveChanges();
+            return _mapper.Map<Model.Trening>(entity);
+        }
     }
 }

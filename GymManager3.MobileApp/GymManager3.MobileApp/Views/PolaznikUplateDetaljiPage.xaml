@@ -17,7 +17,7 @@
         </StackLayout>-->
         <ScrollView>
             <StackLayout Padding="5">
-                <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" TextColor="White" Command="{Binding NazadCmd}"></Button>
+                <Button HorizontalOptions="Start" Text="Nazad" BackgroundColor="Gray" Margin="20,20,0,0" TextColor="White" Command="{Binding NazadCmd}"></Button>
                 <Label Text="Svrha" BackgroundColor="LightGray"></Label>
                 <Label Text="{Binding Svrha}" BackgroundColor="LightBlue"></Label>
                 <Label Text="Iznos" BackgroundColor="LightGray"></Label>

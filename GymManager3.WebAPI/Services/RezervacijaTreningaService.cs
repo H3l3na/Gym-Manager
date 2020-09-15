@@ -47,6 +47,7 @@ namespace GymManager3.WebAPI.Services
 
             return result;
         }
+       
         public Model.RezervacijaTreninga Insert(RezervacijaTreningaInsertRequest request)
         {
             var entity = _mapper.Map<Database.RezervacijaTreninga>(request);
@@ -69,5 +70,15 @@ namespace GymManager3.WebAPI.Services
             }
             return false;
         }
+        public Model.RezervacijaTreninga Update(int id, RezervacijaTreningaInsertRequest request)
+        {
+            var entity = _context.RezervacijaTreninga.Find(id);
+            _context.RezervacijaTreninga.Attach(entity);
+            _context.RezervacijaTreninga.Update(entity);
+            _mapper.Map(request, entity);
+            _context.SaveChanges();
+            return _mapper.Map<Model.RezervacijaTreninga>(entity);
+        }
+
     }
 }

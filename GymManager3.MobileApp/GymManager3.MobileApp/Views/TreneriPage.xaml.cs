@@ -33,7 +33,7 @@ namespace GymManager3.MobileApp.Views
         }
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Model.Trener t = (Model.Trener)e.SelectedItem;
+            Model.treneri t = (Model.treneri)e.SelectedItem;
             
 
             Application.Current.MainPage = new TrenerDetaljiPage(PolaznikID, t);

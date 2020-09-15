@@ -12,6 +12,7 @@ namespace GymManager3.WebAPI.Services
         List<Model.RezervacijaTreninga> Get();
         Model.RezervacijaTreninga Insert(RezervacijaTreningaInsertRequest request);
         bool Delete(int id);
+        Model.RezervacijaTreninga Update(int id, RezervacijaTreningaInsertRequest request);
     }
    
 }

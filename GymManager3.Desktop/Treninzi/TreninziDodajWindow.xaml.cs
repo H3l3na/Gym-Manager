@@ -74,7 +74,21 @@ namespace GymManager3.Desktop.Treninzi
             }
             else
             {
-                MessageBox.Show(cmbTreneri.SelectedValue.ToString());
+                //MessageBox.Show(cmbTreneri.SelectedValue.ToString());
+                string sala = "";
+                if (int.Parse(cmbVrsteTreninga.SelectedValue.ToString()) == 1)
+                {
+                    sala = "Sala 1";
+                }else if (int.Parse(cmbVrsteTreninga.SelectedValue.ToString()) == 2)
+                {
+                    sala = "Sala 2";
+                }else if (int.Parse(cmbVrsteTreninga.SelectedValue.ToString()) == 3)
+                {
+                    sala = "Sala 3";
+                }else if (int.Parse(cmbVrsteTreninga.SelectedValue.ToString()) == 4)
+                {
+                    sala = "Sala 4";
+                }
                 TreninziInsertRequest request = new TreninziInsertRequest()
                 {
                     Cijena=double.Parse(textBoxCijena.Text),
@@ -83,7 +97,10 @@ namespace GymManager3.Desktop.Treninzi
                     Preduvjeti=textBoxPreduvjeti.Text,
                     Tezina=textBoxTezina.Text,
                     TrenerId=(int)cmbTreneri.SelectedValue,
-                    TerminOdrzavanja=DateTime.Parse(textBoxTermin.Text)
+                    TerminOdrzavanja=DateTime.Parse(textBoxTermin.Text),
+                    VrstaTreningaId=int.Parse(cmbVrsteTreninga.SelectedValue.ToString()),
+                    Kapacitet=int.Parse(textBoxKapacitet.Text)
+                    
                 };
                 await _service.Insert<Model.Trening>(request);
                 List<Model.Trening> lista =await _service.Get<List<Model.Trening>>();
@@ -91,11 +108,12 @@ namespace GymManager3.Desktop.Treninzi
                 TerminInsertRequest terminRequest = new TerminInsertRequest()
                 {
                     TerminOdrzavanja= DateTime.Parse(textBoxTermin.Text),
-                    Sala="",
+                    Sala=sala,
                     TrenerId= (int)cmbTreneri.SelectedValue,
                     TreningId=trening.TreningId,
                 };
                 await _terminService.Insert<Model.Termin>(terminRequest);
+               
                // await _service.Insert<Model.Trening>(request);
                 Application.Current.MainWindow = new MainWindow();
                 Application.Current.MainWindow.Show();

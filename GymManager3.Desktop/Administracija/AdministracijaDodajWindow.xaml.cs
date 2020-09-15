@@ -61,6 +61,7 @@ namespace GymManager3.Desktop.Administracija
                     DatumRodjenja = DateTime.ParseExact(textBoxDatumRodj.Text, "dd/MM/yyyy", null),
                     DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
                     Slika = _imageBytes,
+                    Spol = cmbSpol.SelectedValue.ToString(),
                 };
                 await _service.Insert<Model.Administracija>(request);
                 Application.Current.MainWindow = new MainWindow();
@@ -70,6 +71,7 @@ namespace GymManager3.Desktop.Administracija
         }
         private void btnNazad_click(object sender, RoutedEventArgs e)
         {
+           
             Application.Current.MainWindow = new AdministracijaPrikazWindow();
             Application.Current.MainWindow.Show();
             Close();
@@ -78,6 +80,8 @@ namespace GymManager3.Desktop.Administracija
         {
             var listaGradovi = await _serviceGrad.Get<IEnumerable<Model.Grad>>(null);
             cmbGradovi.ItemsSource = listaGradovi;
+            cmbSpol.Items.Add("M");
+            cmbSpol.Items.Add("Ž");
         }
         //private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
         //{

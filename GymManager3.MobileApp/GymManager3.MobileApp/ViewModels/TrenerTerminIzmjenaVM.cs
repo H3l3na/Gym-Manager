@@ -12,6 +12,8 @@ namespace GymManager3.MobileApp.ViewModels
     public class TrenerTerminIzmjenaVM: BaseViewModel
     {
         private readonly APIService _service= new APIService("Termin");
+        private readonly APIService _treningService = new APIService("Treninzi");
+        private readonly APIService _rezervacijaService = new APIService("RezervacijaTreninga");
         public TrenerTerminIzmjenaVM()
         {
 
@@ -20,7 +22,7 @@ namespace GymManager3.MobileApp.ViewModels
         {
             
             NazadCommand = new Command(() => Nazad(trenerId, lista));
-            SacuvajCommand = new Command(() => Sacuvaj(terminId));
+            SacuvajCommand = new Command(() => Sacuvaj(terminId, trenerId));
 
         }
         public ICommand NazadCommand { get; set; }
@@ -32,7 +34,7 @@ namespace GymManager3.MobileApp.ViewModels
             get { return _terminOdrz; }
             set { SetProperty(ref _terminOdrz, value); }
         }
-        public async void Sacuvaj(int terminId)
+        public async void Sacuvaj(int terminId, int trenerId)
         {
             Model.Termin t = await _service.GetById<Model.Termin>(terminId);
             TerminInsertRequest request = new TerminInsertRequest()
@@ -43,6 +45,59 @@ namespace GymManager3.MobileApp.ViewModels
                 TreningId=t.TreningId,
                 TerminOdrzavanja=DateTime.Parse(TerminOdrz)
             };
+            List<Model.Trening> listaTreninga = await _treningService.Get<List<Model.Trening>>();
+            int TreningId=0;
+            foreach (var x in listaTreninga)
+            {
+                if (x.TrenerId == trenerId && x.TerminOdrzavanja == t.TerminOdrzavanja)
+                {
+                    TreninziInsertRequest treningRequest = new TreninziInsertRequest()
+                    {
+                        Cijena = x.Cijena,
+                        Naziv = x.Naziv,
+                        Opis = x.Opis,
+                        Preduvjeti = x.Preduvjeti,
+                        TerminOdrzavanja = DateTime.Parse(TerminOdrz),
+                        Tezina = x.Tezina,
+                        TrenerId = x.TrenerId,
+                        VrstaTreningaId = x.VrstaTreningaId,
+
+                    };
+                    TreningId = x.TreningId;
+                    try
+                    {
+                        //await Application.Current.MainPage.DisplayAlert("", TreningId.ToString()+" " + x.Cijena, "OK");
+                        await _treningService.Update<Model.Trening>(TreningId, treningRequest);
+                        int id = (int)t.TrenerId;
+                        Application.Current.MainPage = new TreneriPage(id);
+                    }
+                    catch (Exception ex)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Greska", ex.Message, "OK");
+                    }
+                }
+            }
+            List<Model.RezervacijaTreninga> listaRezervacija = await _rezervacijaService.Get<List<Model.RezervacijaTreninga>>();
+            foreach(var x in listaRezervacija)
+            {
+                if (x.TreningID == TreningId)
+                {
+                    RezervacijaTreningaInsertRequest rezervacijaRequest = new RezervacijaTreningaInsertRequest()
+                    {
+                        DatumVrijeme= DateTime.Parse(TerminOdrz),
+                        PolaznikID=x.PolaznikID,
+                        TreningID=x.TreningID
+                    };
+                    try
+                    {
+                        await _rezervacijaService.Update<Model.RezervacijaTreninga>(x.RezervacijaTreningaID, rezervacijaRequest);
+                    }
+                    catch (Exception ex)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                    }
+                }
+            }
             try
             {
                 await _service.Update<Model.Termin>(terminId, request);

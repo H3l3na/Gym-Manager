@@ -14,14 +14,21 @@ namespace GymManager3.MobileApp.Views
     public partial class TrenerDetaljiPage : ContentPage
     {
         private TrenerDetaljiVM model = null;
+        public int TrenerID;
         public TrenerDetaljiPage()
         {
             InitializeComponent();
         }
-        public TrenerDetaljiPage(int polaznikId, Model.Trener t)
+        public TrenerDetaljiPage(int polaznikId, Model.treneri t)
         {
             InitializeComponent();
             BindingContext = model = new TrenerDetaljiVM(polaznikId, t);
+            TrenerID = t.TrenerId;
+        }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await model.LoadTrainers(TrenerID);
         }
     }
 }

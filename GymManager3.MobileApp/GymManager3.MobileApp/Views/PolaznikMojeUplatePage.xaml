@@ -11,8 +11,8 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            
-            <Button HorizontalOptions="Start" BackgroundColor="LightGoldenrodYellow" Text="Nazad" Command="{Binding Nazad_Command}"></Button>
+
+            <Button HorizontalOptions="Start" Margin="20,20,0,0" BackgroundColor="Gray" Text="Nazad" Command="{Binding Nazad_Command}"></Button>
             <ListView ItemsSource="{Binding listaUplata}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

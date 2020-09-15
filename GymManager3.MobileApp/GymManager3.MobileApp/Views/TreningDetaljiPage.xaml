@@ -26,6 +26,9 @@
                     <Label Text="{Binding Preduvjeti}" BackgroundColor="LightBlue"></Label>
                     <Label Text="Termin odrzavanja" BackgroundColor="LightGray"></Label>
                     <Label Text="{Binding TerminOdrzavanja}" BackgroundColor="LightBlue"></Label>
+                    <Label Text="Kapacitet" BackgroundColor="LightGray"></Label>
+                    <Label Text="{Binding Kapacitet}" BackgroundColor="LightBlue"></Label>
+                   
                 </StackLayout>
             </ScrollView>
         </StackLayout>

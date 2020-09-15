@@ -12,7 +12,7 @@ namespace GymManager3.MobileApp.ViewModels
 {
     public class TreneriViewModel
     {
-        private readonly APIService _treneriService = new APIService("Treneri");
+        private readonly APIService _treneriService = new APIService("Trener");
         public TreneriViewModel()
         {
 
@@ -26,7 +26,7 @@ namespace GymManager3.MobileApp.ViewModels
   
               });
         }
-        public ObservableCollection<Trener> TreneriList { get; set; } = new ObservableCollection<Trener>();
+        public ObservableCollection<treneri> TreneriList { get; set; } = new ObservableCollection<treneri>();
         public ICommand InitCommand { get; set; }
         public ICommand NazadCommand { get; set; }
         public void Nazad(int polaznikId)
@@ -35,7 +35,7 @@ namespace GymManager3.MobileApp.ViewModels
         }
         public async Task Init()
         {
-            var list = await _treneriService.Get<IEnumerable<Trener>>(null);
+            var list = await _treneriService.Get<IEnumerable<treneri>>(null);
             TreneriList.Clear();
             foreach (var trener in list)
             {

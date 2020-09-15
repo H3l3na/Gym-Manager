@@ -14,7 +14,7 @@
             <Label Text="Moje rezervacije"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button HorizontalOptions="Start" BackgroundColor="LightGoldenrodYellow" Text="Nazad" Command="{Binding Nazad_Command}"></Button>
+            <Button HorizontalOptions="Start" Margin="20,20,0,0" BackgroundColor="Gray" Text="Nazad" Command="{Binding Nazad_Command}"></Button>
             <ListView ItemsSource="{Binding listaRezervacija}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

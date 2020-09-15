@@ -35,5 +35,10 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.GetById(id);
         }
+        [HttpPut("{id}")]
+        public Model.Trening Update(int id, TreninziInsertRequest request)
+        {
+            return _service.Update(id, request);
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace GymManager3.WebAPI.Services
        List<Model.Trening> Get(TreninziSearchRequest request);
         Model.Trening Insert(TreninziInsertRequest request);
         Model.Trening GetById(int id);
+        Model.Trening Update(int id, TreninziInsertRequest request);
     }
 }

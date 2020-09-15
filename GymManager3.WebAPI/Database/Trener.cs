@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace GymManager3.WebAPI.Database
 {
@@ -9,6 +10,8 @@ namespace GymManager3.WebAPI.Database
         {
             Trening = new HashSet<Trening>();
             KorisniciUloge = new HashSet<KorisniciUloge>();
+            RezervacijaTrenera = new HashSet<RezervacijaTrenera>();
+            Ocjene = new HashSet<Ocjene>();
         }
 
         public int TrenerId { get; set; }
@@ -20,8 +23,9 @@ namespace GymManager3.WebAPI.Database
         public string Mail { get; set; }
         public string Adresa { get; set; }
         public string Jmbg { get; set; }
+        public int? BrojOcjena { get; set; }
         public DateTime? DatumZaposlenja { get; set; }
-        public bool? Spol { get; set; }
+        public string Spol { get; set; }
         public string Opis { get; set; }
         public byte[] Slika { get; set; }
         public string LozinkaHash { get; set; }
@@ -32,5 +36,7 @@ namespace GymManager3.WebAPI.Database
         public virtual Grad Grad { get; set; }
         public virtual ICollection<Trening> Trening { get; set; }
         public ICollection<KorisniciUloge> KorisniciUloge { get; set; }
+        public ICollection<RezervacijaTrenera> RezervacijaTrenera{ get; set; }
+        public ICollection<Ocjene> Ocjene { get; set; }
     }
 }

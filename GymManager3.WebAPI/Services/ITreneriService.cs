@@ -13,5 +13,6 @@ namespace GymManager3.WebAPI.Services
         Model.Trener GetById(int id);
         Model.Trener Insert(TreneriInsertRequest request);
         Model.Trener Authenticiraj(string username, string pass);
+        
     }
 }

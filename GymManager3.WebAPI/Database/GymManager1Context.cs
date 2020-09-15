@@ -29,6 +29,9 @@ namespace GymManager3.WebAPI.Database
         public virtual DbSet<Uloge> Uloge { get; set; }
         public virtual DbSet<KorisniciUloge> KorisniciUloge { get; set; }
         public virtual DbSet<RezervacijaTreninga> RezervacijaTreninga { get; set; }
+        public virtual DbSet<RezervacijaTrenera> RezervacijaTrenera { get; set; }
+        public virtual DbSet<SlobodniTermini> SlobodniTermini { get; set; }
+        public virtual DbSet<Ocjene> Ocjene { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -80,6 +83,11 @@ namespace GymManager3.WebAPI.Database
             modelBuilder.Entity<Grad>(entity =>
             {
                 entity.Property(e => e.GradId).HasColumnName("GradID");
+            });
+            modelBuilder.Entity<SlobodniTermini>(entity =>
+            {
+                entity.Property(e => e.SlobodniTerminiID).HasColumnName("SlobodniTerminiID");
+                entity.Property(e => e.Termin).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<Pohadja>(entity =>
@@ -178,6 +186,7 @@ namespace GymManager3.WebAPI.Database
                 entity.Property(e => e.DatumZaposlenja).HasColumnType("date");
 
                 entity.Property(e => e.GradId).HasColumnName("GradID");
+                //entity.Property(e => e.BrojOcjena).HasColumnName("BrojOcjena");
 
                 entity.Property(e => e.Jmbg)
                     .HasColumnName("JMBG")
@@ -318,6 +327,48 @@ namespace GymManager3.WebAPI.Database
                     .HasConstraintName("TreningID_FK");
 
                 entity.Property(e => e.DatumVrijeme).HasColumnType("datetime");
+
+            });
+            modelBuilder.Entity<RezervacijaTrenera>(entity =>
+            {
+                entity.HasKey(e => e.RezervacijaTreneraID);
+                entity.Property(e => e.RezervacijaTreneraID).HasColumnName("RezervacijaTreneraID");
+                entity.Property(e => e.PolaznikID).HasColumnName("PolaznikID");
+
+                entity.Property(e => e.TrenerID).HasColumnName("TrenerID");
+                entity.Property(e => e.SlobodniTerminiID).HasColumnName("SlobodniTerminiID");
+                entity.HasOne(d => d.Polaznik)
+                    .WithMany(p => p.RezervacijaTrenera)
+                    .HasForeignKey(d => d.PolaznikID)
+                    .HasConstraintName("PolaznikID_FK");
+
+                entity.HasOne(d => d.Trener)
+                    .WithMany(p => p.RezervacijaTrenera)
+                    .HasForeignKey(d => d.TrenerID)
+                    .HasConstraintName("TrenerID_FK");
+
+                
+
+            });
+            modelBuilder.Entity<Ocjene>(entity =>
+            {
+                entity.HasKey(e => e.OcjeneID);
+                entity.Property(e => e.OcjeneID).HasColumnName("OcjeneID");
+                entity.Property(e => e.PolaznikID).HasColumnName("PolaznikID");
+
+                entity.Property(e => e.TrenerID).HasColumnName("TrenerID");
+                entity.Property(e => e.Ocjena).HasColumnName("Ocjena");
+                entity.HasOne(d => d.Polaznik)
+                    .WithMany(p => p.Ocjene)
+                    .HasForeignKey(d => d.PolaznikID)
+                    .HasConstraintName("PolaznikID_FK");
+
+                entity.HasOne(d => d.Trener)
+                    .WithMany(p => p.Ocjene)
+                    .HasForeignKey(d => d.TrenerID)
+                    .HasConstraintName("TrenerID_FK");
+
+
 
             });
 

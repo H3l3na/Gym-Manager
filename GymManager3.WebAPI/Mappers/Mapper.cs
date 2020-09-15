@@ -32,6 +32,13 @@ namespace GymManager3.WebAPI.Mappers
             CreateMap<Database.Subskripcija, Model.Subskripcija>();
             CreateMap<Database.Termin, TerminInsertRequest>().ReverseMap();
             CreateMap<Database.RezervacijaTreninga, RezervacijaTreningaInsertRequest>().ReverseMap();
+            CreateMap<Database.RezervacijaTrenera, Model.RezervacijaTrenera>();
+            CreateMap<Database.RezervacijaTrenera, RezervacijaTreneraInsertRequest>().ReverseMap();
+            CreateMap<Database.SlobodniTermini, Model.SlobodniTermini>();
+            CreateMap<Database.Trener, RecommendedSearchRequest>().ReverseMap();
+            CreateMap<Database.Ocjene, Model.Ocjene>();
+            CreateMap<Database.Ocjene, OcjeneUpsertRequest>().ReverseMap();
+            CreateMap<Database.Trener, Model.treneri>();
         }
     }
 }

@@ -46,15 +46,33 @@ namespace GymManager3.MobileApp.ViewModels
                   }
                   else if (pronasao == false)
                   {
-                      RezervacijaTreningaInsertRequest request = new RezervacijaTreningaInsertRequest()
+                      int brojac = 1;
+                      List<Model.RezervacijaTreninga> listaTreninga = await _rezervacijaService.Get<List<Model.RezervacijaTreninga>>();
+                      foreach(var x in listaTreninga)
                       {
-                          DatumVrijeme = v.TerminOdrzavanja,
-                          PolaznikID = polaznikId,
-                          TreningID = v.TreningId
-                      };
-                      await _rezervacijaService.Insert<Model.RezervacijaTreninga>(request);
-                      await Application.Current.MainPage.DisplayAlert("", "Uspješno ste rezervisali trening", "OK");
-                      Application.Current.MainPage = new PolaznikMainPage(polaznikId);
+                          if (x.TreningID == v.TreningId)
+                          {
+                              brojac++;
+                          }
+                      }
+                      if (brojac == v.Kapacitet || brojac > v.Kapacitet)
+                      {
+                          await Application.Current.MainPage.DisplayAlert("Upozorenje", "Mjesta su popunjena. Odaberite drugi trening", "OK");
+                          Application.Current.MainPage = new ListaTreningaZaRezervacijuPage(polaznikId);
+                      }
+                      else
+                      {
+                          RezervacijaTreningaInsertRequest request = new RezervacijaTreningaInsertRequest()
+                          {
+                              DatumVrijeme = v.TerminOdrzavanja,
+                              PolaznikID = polaznikId,
+                              TreningID = v.TreningId
+                          };
+                          await _rezervacijaService.Insert<Model.RezervacijaTreninga>(request);
+                          await Application.Current.MainPage.DisplayAlert("", "Uspješno ste rezervisali trening", "OK");
+                          Application.Current.MainPage = new PolaznikMainPage(polaznikId);
+                      }
+                      
                   }
 
               }); 

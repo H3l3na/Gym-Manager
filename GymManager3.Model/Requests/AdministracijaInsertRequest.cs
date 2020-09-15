@@ -28,6 +28,7 @@ namespace GymManager3.Model.Requests
         public string Password { get; set; }
         public string PasswordConfirmation { get; set; }
         public byte[] Slika { get; set; }
+        public string Spol { get; set; }
 
     }
 }

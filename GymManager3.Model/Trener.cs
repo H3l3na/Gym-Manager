@@ -15,8 +15,9 @@ namespace GymManager3.Model
         public string Adresa { get; set; }
         public string JMBG { get; set; }
         public DateTime? DatumZaposlenja { get; set; }
-        public bool? Spol { get; set; }
+        public string Spol { get; set; }
         public string Opis { get; set; }
+        public int BrojOcjena { get; set; }
         
         public string LozinkaHash { get; set; }
         public string LozinkaSalt { get; set; }

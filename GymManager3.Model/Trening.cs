@@ -15,5 +15,6 @@ namespace GymManager3.Model
         public int? TrenerId { get; set; }
         public int? VrstaTreningaId { get; set; }
         public DateTime? TerminOdrzavanja { get; set; }
+        public int Kapacitet { get; set; }
     }
 }
