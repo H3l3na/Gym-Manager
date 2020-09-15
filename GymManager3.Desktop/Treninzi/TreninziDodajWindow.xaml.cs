@@ -68,7 +68,7 @@ namespace GymManager3.Desktop.Treninzi
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
             
-            if (textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxCijena.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || textBoxTermin.Text=="")
+            if (textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxCijena.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || dtmTermin.Text=="")
             {
                 errormessage.Text = "Molimo unesite sva polja";
             }
@@ -97,7 +97,7 @@ namespace GymManager3.Desktop.Treninzi
                     Preduvjeti=textBoxPreduvjeti.Text,
                     Tezina=textBoxTezina.Text,
                     TrenerId=(int)cmbTreneri.SelectedValue,
-                    TerminOdrzavanja=DateTime.Parse(textBoxTermin.Text),
+                    TerminOdrzavanja=DateTime.Parse(dtmTermin.ToString()),
                     VrstaTreningaId=int.Parse(cmbVrsteTreninga.SelectedValue.ToString()),
                     Kapacitet=int.Parse(textBoxKapacitet.Text)
                     
@@ -107,7 +107,7 @@ namespace GymManager3.Desktop.Treninzi
                 Model.Trening trening = lista.Last();
                 TerminInsertRequest terminRequest = new TerminInsertRequest()
                 {
-                    TerminOdrzavanja= DateTime.Parse(textBoxTermin.Text),
+                    TerminOdrzavanja= DateTime.Parse(dtmTermin.ToString()),
                     Sala=sala,
                     TrenerId= (int)cmbTreneri.SelectedValue,
                     TreningId=trening.TreningId,

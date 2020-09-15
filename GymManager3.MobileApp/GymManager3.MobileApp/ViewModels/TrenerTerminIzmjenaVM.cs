@@ -37,13 +37,14 @@ namespace GymManager3.MobileApp.ViewModels
         public async void Sacuvaj(int terminId, int trenerId)
         {
             Model.Termin t = await _service.GetById<Model.Termin>(terminId);
+          
             TerminInsertRequest request = new TerminInsertRequest()
             {
                 Sala=t.Sala,
                 MaxBrPolaznika=t.MaxBrPolaznika,
                 TrenerId=t.TrenerId,
                 TreningId=t.TreningId,
-                TerminOdrzavanja=DateTime.Parse(TerminOdrz)
+                TerminOdrzavanja=DateTime.Parse(TerminOdrz.ToString())
             };
             List<Model.Trening> listaTreninga = await _treningService.Get<List<Model.Trening>>();
             int TreningId=0;

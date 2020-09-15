@@ -56,7 +56,7 @@ namespace GymManager3.Desktop.Uplate
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
 
-            if (textBoxSvrha.Text=="" || textBoxIznos.Text == "" || textBoxDatum.Text == "" || cmbPolaznici.Text == "" || cmbAdmini.Text == "" )
+            if (textBoxSvrha.Text=="" || textBoxIznos.Text == "" || dtmUplate.Text == "" || cmbPolaznici.Text == "" || cmbAdmini.Text == "" )
             {
                 errormessage.Text = "Molimo unesite sva polja";
             }
@@ -66,7 +66,7 @@ namespace GymManager3.Desktop.Uplate
                 UplataInsertRequest request = new UplataInsertRequest()
                 {
                     Iznos=double.Parse(textBoxIznos.Text),
-                    DatumUplate= DateTime.ParseExact(textBoxDatum.Text, "dd/MM/yyyy", null),
+                    DatumUplate= DateTime.Parse(dtmUplate.ToString()),
                     Svrha =textBoxSvrha.Text,
                     AdministracijaId=(int)cmbAdmini.SelectedValue,
                     PolaznikId=(int)cmbPolaznici.SelectedValue,

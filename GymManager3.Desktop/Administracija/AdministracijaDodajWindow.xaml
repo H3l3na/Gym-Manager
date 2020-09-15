@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop.Administracija"
         mc:Ignorable="d"
-        Title="AdministracijaDodajWindow" Height="627.525" Width="848">
-    <Grid Margin="0,0,2,0" Height="592" VerticalAlignment="Top">
+        Title="AdministracijaDodajWindow" Height="591.525" Width="848">
+    <Grid Margin="0,0,2,-3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
@@ -50,10 +50,12 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,216,0,0" Name="textBoxMail" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,264,0,0" Name="textBoxTelefon" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,312,0,0" Name="textBoxAdresa" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
-        <ComboBox x:Name="cmbGradovi" DisplayMemberPath="Naziv" SelectedValuePath="GradId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="545,115,0,0" Grid.ColumnSpan="2"></ComboBox>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,168,0,0" Name="textBoxDatumRodj" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,216,0,0" Name="textBoxDatumZaposlenja" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,264,0,0" Name="textBoxStaz" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="cmbGradovi" DisplayMemberPath="Naziv" SelectedValuePath="GradId" Height="23" Width="219" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="545,115,0,0" Grid.ColumnSpan="2"></ComboBox>
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,168,0,0" Name="textBoxDatumRodj" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <DatePicker Height="23" Name="dtmRodjenja" HorizontalAlignment="Left" Margin="545,168,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2"></DatePicker>
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,216,0,0" Name="textBoxDatumZaposlenja" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <DatePicker Height="23" Name="dtmZaposlenja" HorizontalAlignment="Left" Margin="545,216,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2"></DatePicker>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,264,0,0" Name="textBoxStaz" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
         <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,312,0,0" Name="textBoxSpol" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
         <ComboBox x:Name="cmbSpol"  Height="23" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="545,312,0,0" Grid.ColumnSpan="2"></ComboBox>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,372,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
@@ -61,6 +63,6 @@
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,488,0,0" Name="passwordBoxPassPotvrda" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <!--<Button Name="btnLoadFromResource" Click="BtnLoadFromFile_Click"  Height="23" Margin="545,372,179,211">Load from Resource</Button>-->
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click" Grid.ColumnSpan="2"/>
-        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="685,550,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
+        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="657,491,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

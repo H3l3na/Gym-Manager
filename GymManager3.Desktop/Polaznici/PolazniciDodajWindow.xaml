@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PolazniciDodajWindow" Height="679.482" Width="800">
     <Grid Margin="0,0,0,19">
-        <TextBlock Height="20" HorizontalAlignment="Left" Margin="465,115,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+        <TextBlock Height="20" HorizontalAlignment="Left" Margin="66,76,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 120, 0, 0" Name="Ime" Text="Ime" VerticalAlignment="Top" Width="193"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 168, 0, 0" Name="Prezime" Text="Prezime" VerticalAlignment="Top" Width="193"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 216, 0, 0" Name="Mail" Text="Email" VerticalAlignment="Top" Width="193"/>
@@ -24,12 +24,15 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,264,0,0" Name="textBoxTelefon" VerticalAlignment="Top" Width="247" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,312,0,0" Name="textBoxAdresa" VerticalAlignment="Top" Width="247" />
         <ComboBox x:Name="cmbGradovi" DisplayMemberPath="Naziv" SelectedValuePath="GradId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,362,0,0"></ComboBox>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,408,0,0" Name="textBoxDatumRodjenja" VerticalAlignment="Top" Width="247" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="165,408,0,0"  Name="textBoxDatumRodjenja" VerticalAlignment="Top" Width="247" />-->
+        <DatePicker Height="23" Name="dtmRodjenja" HorizontalAlignment="Left" Margin="165,408,0,0" VerticalAlignment="Top" Width="247"></DatePicker>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,456,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,504,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" Width="247" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,552,0,0" Name="passwordBoxPassPotvrda" VerticalAlignment="Top" Width="247" />
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
         <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="606,562,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="506,115,0,0" x:Name="textBoxJMBG" VerticalAlignment="Top" Width="237" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="440,120,0,0" x:Name="JMBG" Text="JMBG" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.641,0.739"/>
 
     </Grid>
 </Window>

@@ -18,4 +18,3 @@ C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.dll
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.pdb
 C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.genruntimeconfig.cache
-C:\Users\User\source\repos\GymManager3\GymManager3.WebAPI\obj\Debug\netcoreapp2.2\GymManager3.WebAPI.csproj.CoreCompileInputs.cache

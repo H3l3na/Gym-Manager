@@ -1,4 +1,5 @@
 ﻿using GymManager3.MobileApp.Views;
+using GymManager3.Model;
 using GymManager3.Model.Requests;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace GymManager3.MobileApp.ViewModels
     public class RegistrationVM: BaseViewModel
     {
         private readonly APIService _service = new APIService("Polaznik");
+        private readonly APIService _treneriService = new APIService("Treneri");
         public RegistrationVM()
         {
             RegisterCommand = new Command(async () => await Register());
@@ -66,6 +68,12 @@ namespace GymManager3.MobileApp.ViewModels
             get { return _adresa; }
             set { SetProperty(ref _adresa, value); }
         }
+        string _uloga = string.Empty;
+        public string Uloga
+        {
+            get { return _uloga; }
+            set { SetProperty(ref _uloga, value); }
+        }
         public ICommand RegisterCommand { get; set; }
         public ICommand NazadCommand { get; set; }
         public void Nazad()
@@ -77,27 +85,64 @@ namespace GymManager3.MobileApp.ViewModels
             IsBusy = true;
             //APIService.Username = Username;
             //APIService.Password = Password;
-            PolazniciInsertRequest request = new PolazniciInsertRequest()
+            if (Ime==null || Prezime == null || Username==null || Password==null || PasswordPotvrda==null || Mail==null || Telefon==null )
             {
-                Ime = Ime,
-                Prezime=Prezime,
-                KorisnickoIme=Username,
-                Password=Password,
-                PasswordPotvrda=Password,
-                Mail=Mail,
-                Telefon=Telefon,
-                Uloga="Polaznik",
-                GradId=1,
-                DatumRodjenja=DateTime.Now
-            };
-            try
-            {
-                await _service.Insert<Model.Polaznik>(request);
-                Application.Current.MainPage = new NewLoginPage();
+               await  Application.Current.MainPage.DisplayAlert("Upozorenje", "Molimo unesite sva polja", "OK");
             }
-            catch (Exception ex)
+            if (Password != PasswordPotvrda)
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                await Application.Current.MainPage.DisplayAlert("Greska", "Passwordi se ne slazu", "OK");
+            }
+            if (Uloga!=null && Uloga!="Trener" && Uloga != "Polaznik")
+            {
+                await Application.Current.MainPage.DisplayAlert("Greska", "Neispravan unos za polje 'Uloga'", "Pokusajte ponovo");
+            }
+            if (Uloga == "Polaznik")
+            {
+                PolazniciInsertRequest request = new PolazniciInsertRequest()
+                {
+                    Ime = Ime,
+                    Prezime = Prezime,
+                    KorisnickoIme = Username,
+                    Password = Password,
+                    PasswordPotvrda = PasswordPotvrda,
+                    Mail = Mail,
+                    Telefon = Telefon,
+                    Uloga = "Polaznik",
+                    //GradId = 1,
+                    //DatumRodjenja = DateTime.Now
+                };
+                try
+                {
+                    await _service.Insert<Model.Polaznik>(request);
+                    Application.Current.MainPage = new NewLoginPage();
+                }
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                }
+            }else if (Uloga == "Trener")
+            {
+                TreneriInsertRequest trenerRequest = new TreneriInsertRequest()
+                {
+                    Ime = Ime,
+                    Prezime = Prezime,
+                    KorisnickoIme=Username,
+                    Password=Password,
+                    PasswordConfirmation=PasswordPotvrda,
+                    Mail=Mail,
+                    Telefon=Telefon,
+                    Uloga="Trener"
+                };
+                try
+                {
+                    await _treneriService.Insert<Model.Trener>(trenerRequest);
+                    Application.Current.MainPage = new NewLoginPage();
+                }
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                }
             }
         }
     }

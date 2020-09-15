@@ -35,6 +35,14 @@ namespace GymManager3.Desktop.Treneri
             {
                 errormessage.Text = "Molimo popunite sva polja";
             }
+            else if (textBoxTelefon.Text.Length>12 || textBoxTelefon.Text.Length < 9)
+            {
+                errormessage.Text = "Polje Telefon mora biti u rasponu od 9 do 12";
+            }
+            else if (textBoxUsername.Text.Length > 10)
+            {
+                errormessage.Text = "Polje Username ne smije biti duze od 10 karaktera";
+            }
             else if (passwordBoxPassword.Password != passwordBoxPassPotvrda.Password)
             {
                 errormessage.Text = "Passwordi se ne slažu";
@@ -54,7 +62,7 @@ namespace GymManager3.Desktop.Treneri
                     Mail = textBoxMail.Text,
                     Uloga = "Trener",
                     Opis = textBoxOpis.Text,
-                    DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
+                    DatumZaposlenja = DateTime.Parse(dtmRodjenja.ToString()),
                     Adresa = textBoxAdresa.Text,
                     Slika=_imageBytes,
                     Spol=cmbSpol.SelectedValue.ToString()

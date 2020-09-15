@@ -39,7 +39,8 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,264,0,0" Name="textBoxTelefon" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,312,0,0" Name="textBoxAdresa" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,360,0,0" Name="textBoxOpis" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,408,0,0" Name="textBoxDatumZaposlenja" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="165,408,0,0" Name="textBoxDatumZaposlenja" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <DatePicker Height="23" Name="dtmRodjenja" Margin="165,408,388,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,456,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,504,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,552,0,0" Name="passwordBoxPassPotvrda" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />

@@ -10,15 +10,18 @@
         <vm:TrenerMojiPodaciVM></vm:TrenerMojiPodaciVM>
     </ContentPage.BindingContext>
     <ContentPage.Content>
+        
+        <ScrollView>
         <StackLayout>
-            <Grid>
-                <Button BackgroundColor="Gray" TextColor="White" Text="Nazad" Command="{Binding NazadCommand}" HorizontalOptions="Start"></Button>
-                <!--<Button BackgroundColor="LightBlue" Text="Izmijeni" Command="{Binding IzmijeniCommand}" HorizontalOptions="End"></Button>-->
-            </Grid>
-            <Label Text="Dobrodošli"
+                <Grid>
+                    <Button BackgroundColor="Gray" TextColor="White" Text="Nazad" Command="{Binding NazadCommand}" HorizontalOptions="Start"></Button>
+                    <!--<Button BackgroundColor="LightBlue" Text="Izmijeni" Command="{Binding IzmijeniCommand}" HorizontalOptions="End"></Button>-->
+                </Grid>
+                <Label Text="Dobrodošli"
                    FontFamily="Helvetica"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Image Source="{Binding Slika}" HorizontalOptions="Center" HeightRequest="200" WidthRequest="300"></Image>
             <Label  BackgroundColor="LightGray" Text="Ime"></Label>
             <Label Text="{Binding Ime}" BackgroundColor="LightBlue" FontSize="16"/>
             <Label BackgroundColor="LightGray" Text="Prezime"></Label>
@@ -36,5 +39,6 @@
             <Label BackgroundColor="LightGray" Text="Korisničko ime"></Label>
             <Label BackgroundColor="LightBlue" Text="{Binding Username}"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

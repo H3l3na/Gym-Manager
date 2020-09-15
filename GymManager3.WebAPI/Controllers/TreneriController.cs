@@ -30,7 +30,7 @@ namespace GymManager3.WebAPI.Controllers
             return _service.GetById(id);
         }
 
-        [Authorize(Roles = "Administrator")]
+       // [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult<Model.Trener>Insert (TreneriInsertRequest request)
         {

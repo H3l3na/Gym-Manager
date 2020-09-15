@@ -13,8 +13,9 @@
         
         <StackLayout>
             <Button HorizontalOptions="Start" BackgroundColor="Gray" Text="Nazad" Command="{Binding NazadCommand}"></Button>
-            <Label Text="Unos mora biti u formatu YY-MM-DD" FontSize="13" TextColor="LightGray"/>
+            <Label Text="Unos mora biti u formatu YYYY-MM-DD" FontSize="13" TextColor="Gray"/>
             <Label Text="Novi termin:" />
+            <!--<DatePicker  x:Name="dpTerminOdrzavanja"></DatePicker>-->
             <Entry Text="{Binding TerminOdrz}"></Entry>
             <Button HorizontalOptions="Start" BackgroundColor="LightGreen" Text="Sačuvaj" Command="{Binding SacuvajCommand}"></Button>
         </StackLayout>

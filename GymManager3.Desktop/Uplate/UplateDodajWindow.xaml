@@ -18,7 +18,8 @@
 
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxIznos" VerticalAlignment="Top" Width="247" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,168,0,0" Name="textBoxSvrha" VerticalAlignment="Top" Width="247" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,216,0,0" Name="textBoxDatum" VerticalAlignment="Top" Width="247" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="165,216,0,0" Name="textBoxDatum" VerticalAlignment="Top" Width="247" />-->
+        <DatePicker Height="23" Name="dtmUplate" HorizontalAlignment="Left" Margin="165,216,0,0" VerticalAlignment="Top" Width="247"></DatePicker>
         <ComboBox x:Name="cmbSubskripcije" DisplayMemberPath="Vrsta" SelectedValuePath="SubskripcijaId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,264,0,0"></ComboBox>
         <ComboBox x:Name="cmbPolaznici" SelectedValuePath="PolaznikId" Height="23" HorizontalAlignment="Left" Margin="165,312,0,0" VerticalAlignment="Top" Width="247">
             <ComboBox.ItemTemplate>

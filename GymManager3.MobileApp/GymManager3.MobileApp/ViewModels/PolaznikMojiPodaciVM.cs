@@ -83,7 +83,7 @@ namespace GymManager3.MobileApp.ViewModels
             _adresa = p.Adresa;
             _uloga = p.Uloga;
             _username = p.KorisnickoIme;
-            _jmbg = p.Jmbg;
+            _jmbg = p.JMBG;
         }
         public  async  Task Init(int id)
         {

@@ -12,9 +12,9 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" DisplayMemberBinding="{Binding UplataId}"/>
-                        <GridViewColumn Header="Naziv" DisplayMemberBinding="{Binding Iznos}"/>
-                        <GridViewColumn Header="Tezina" DisplayMemberBinding="{Binding Svrha}"/>
-                        <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding DatumUplate}"/>
+                        <GridViewColumn Header="Iznos" DisplayMemberBinding="{Binding Iznos}"/>
+                        <GridViewColumn Header="Svrha " DisplayMemberBinding="{Binding Svrha}"/>
+                        <GridViewColumn Header="Datum uplate" DisplayMemberBinding="{Binding DatumUplate}"/>
                         <GridViewColumn Header="PolaznikID" DisplayMemberBinding="{Binding PolaznikId}"/>
                         <GridViewColumn Header="AdministracijaID" DisplayMemberBinding="{Binding AdministracijaId}"/>
                         <GridViewColumn Header="SubskripcijaID" DisplayMemberBinding="{Binding SubskripcijaId}"/>

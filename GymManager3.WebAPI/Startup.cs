@@ -72,13 +72,11 @@ namespace GymManager3.WebAPI
                 });
             });
 
-            var connection = @"Server=.;Database=GymManager1;Trusted_Connection=True;";
-            services.AddDbContext<GymManager1Context>(options => options.UseSqlServer(connection));
+           // var connection = @"Server=.;Database=GymManager1;Trusted_Connection=True;";
+            services.AddDbContext<GymManager1Context>(opt => opt.UseSqlServer(Configuration["CONNECTION_STRING"]));
 
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
-           
-
 
             services.AddScoped<IPolaznikService, PolaznikService>();
             services.AddScoped<IUplataService, UplataService>();

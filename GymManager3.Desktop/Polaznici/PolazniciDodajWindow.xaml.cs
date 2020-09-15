@@ -33,6 +33,16 @@ namespace GymManager3.Desktop.Polaznici
             {
                 errormessage.Text = "Molimo popunite sva polja";
             }
+            else if (textBoxTelefon.Text.Length > 12 || textBoxTelefon.Text.Length<9)
+            {
+                errormessage.Text = "Polje Telefon mora biti u rasponu od 9 do 12";
+            }else if (textBoxUsername.Text.Length > 10)
+            {
+                errormessage.Text = "Polje Username ne smije biti duze od 10 karaktera";
+            }else if (textBoxJMBG.Text.Length != 13)
+            {
+                errormessage.Text = "Polje JMBG mora imati 13 brojeva";
+            }
             else if (passwordBoxPassword.Password != passwordBoxPassPotvrda.Password)
             {
                 errormessage.Text = "Passwordi se ne slažu";
@@ -51,7 +61,9 @@ namespace GymManager3.Desktop.Polaznici
                     Telefon = textBoxTelefon.Text,
                     Mail = textBoxMail.Text,
                     Uloga = "Polaznik",
-                    DatumRodjenja= DateTime.ParseExact(textBoxDatumRodjenja.Text, "dd/MM/yyyy", null),
+                    DatumRodjenja=DateTime.Parse(dtmRodjenja.ToString()),
+                    JMBG=textBoxJMBG.Text
+                    //DatumRodjenja= DateTime.ParseExact(textBoxDatumRodjenja.Text, "dd/MM/yyyy", null),
                 };
                 await _service.Insert<Model.Polaznik>(request);
                 Application.Current.MainWindow = new MainWindow();

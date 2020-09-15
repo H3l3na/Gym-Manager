@@ -38,6 +38,13 @@ namespace GymManager3.Desktop.Administracija
             {
                 errormessage.Text = "Molimo popunite sva polja";
             }
+            else if(textBoxTelefon.Text.Length<9 || textBoxTelefon.Text.Length > 12)
+            {
+                errormessage.Text = "Polje Telefon mora biti u rasponu od 9 do 12";
+            }else if (textBoxUsername.Text.Length > 10)
+            {
+                errormessage.Text = "Polje Username ne smije biti duze od 10 karaktera";
+            }
             else if (passwordBoxPassword.Password != passwordBoxPassPotvrda.Password)
             {
                 errormessage.Text = "Passwordi se ne slažu";
@@ -58,8 +65,10 @@ namespace GymManager3.Desktop.Administracija
                     Mail = textBoxMail.Text,
                     Uloga = "Administrator",
                     Staz = int.Parse(textBoxStaz.Text),
-                    DatumRodjenja = DateTime.ParseExact(textBoxDatumRodj.Text, "dd/MM/yyyy", null),
-                    DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
+                    DatumRodjenja= DateTime.Parse(dtmRodjenja.ToString()),
+                    DatumZaposlenja= DateTime.Parse(dtmZaposlenja.ToString()),
+                   // DatumRodjenja = DateTime.ParseExact(textBoxDatumRodj.Text, "dd/MM/yyyy", null),
+                   // DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
                     Slika = _imageBytes,
                     Spol = cmbSpol.SelectedValue.ToString(),
                 };

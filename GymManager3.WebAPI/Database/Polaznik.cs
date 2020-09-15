@@ -23,8 +23,8 @@ namespace GymManager3.WebAPI.Database
         public string Uloga { get; set; }
         public string Mail { get; set; }
         public string Adresa { get; set; }
-        public string Jmbg { get; set; }
-        public bool? Spol { get; set; }
+        public string JMBG { get; set; }
+        public string Spol { get; set; }
         public string KorisnickoIme { get; set; }
         public string LozinkaHash { get; set; }
         public string LozinkaSalt { get; set; }

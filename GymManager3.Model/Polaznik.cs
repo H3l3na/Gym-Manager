@@ -14,7 +14,7 @@ namespace GymManager3.Model
         public string Telefon { get; set; }
         public string Mail { get; set; }
         public string Adresa { get; set; }
-        public string Jmbg { get; set; }
+        public string JMBG { get; set; }
         public bool? Spol { get; set; }
         public DateTime? DatumRodjenja { get; set; }
         public int? GradId { get; set; }

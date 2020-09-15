@@ -1,6 +1,7 @@
 ﻿using GymManager3.MobileApp.Views;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -50,12 +51,18 @@ namespace GymManager3.MobileApp.ViewModels
             _uloga = t.Uloga;
             _username = t.KorisnickoIme;
             _jmbg = t.JMBG;
+            if (t.Slika != null)
+            {
+                Slika = ImageSource.FromStream(() => new MemoryStream(t.Slika));
+            }
         }
         public async Task Init(int id)
         {
             var t = await _service.GetById<Model.Trener>(id);
 
         }
+        ImageSource _slika;
+        public ImageSource Slika { get { return _slika; } set { SetProperty(ref _slika, value); } }
         int _trenerID;
         public int TrenerID
         {

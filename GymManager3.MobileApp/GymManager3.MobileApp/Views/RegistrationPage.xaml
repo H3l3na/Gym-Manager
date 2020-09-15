@@ -10,7 +10,8 @@
         <vm:RegistrationVM></vm:RegistrationVM>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView Margin="100,50,100,50">
+        <StackLayout >
             <Button Command="{Binding NazadCommand}" Padding="5"  TextColor="White" BackgroundColor="Gray" Text="Nazad"></Button>
             <Label Text="Ime:" />
             <Entry Text="{Binding Ime}"></Entry>
@@ -22,13 +23,20 @@
             <Entry Text="{Binding Telefon}"></Entry>
             <Label Text="Adresa:" />
             <Entry Text="{Binding Adresa}"></Entry>
+             <!--<Label Text="Format datuma: YYYY-MM-DD" FontSize="10" TextColor="LightGray"></Label>
+             <Label Text="Datum rođenja"></Label>
+            <Entry Text="{Binding DatumRodjenja}"></Entry>-->
+                <Label Text="Da li ste 'Polaznik' ili 'Trener'?" FontSize="10" TextColor="Gray"></Label>
+                <Label Text="Uloga"></Label>
+                <Entry Text="{Binding Uloga}"></Entry>
             <Label Text="Korisničko ime:" />
             <Entry Text="{Binding Username}"></Entry>
             <Label Text="Password" />
-            <Entry Text="{Binding Password}"></Entry>
+            <Entry Text="{Binding Password}" IsPassword="True"></Entry>
             <Label Text="Password potvrda:" />
-            <Entry Text="{Binding PasswordPotvrda}"></Entry>
+            <Entry Text="{Binding PasswordPotvrda}" IsPassword="True"></Entry>
             <Button Command="{Binding RegisterCommand}" Text="Register"></Button>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
