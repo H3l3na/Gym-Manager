@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using GymManager3.WebAPI.Database;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace GymManager3.WebAPI
 {
@@ -14,7 +17,15 @@ namespace GymManager3.WebAPI
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            Environment.GetEnvironmentVariables();
+            var host = CreateWebHostBuilder(args).Build();
+            using (var scope = host.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<GymManager1Context>();
+                context.Database.Migrate();
+                context.Database.EnsureCreated();
+            }
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

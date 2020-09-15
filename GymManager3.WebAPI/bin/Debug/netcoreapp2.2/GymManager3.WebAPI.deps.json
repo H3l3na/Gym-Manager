@@ -31,6 +31,7 @@
           "Microsoft.ML": "1.5.2",
           "Microsoft.ML.Recommender": "0.17.2",
           "Microsoft.NETCore.App": "2.2.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "Swashbuckle.AspNetCore": "5.5.1",
           "Swashbuckle.AspNetCore.Swagger": "5.5.1"
@@ -285,6 +286,7 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.8": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
@@ -3948,6 +3950,13 @@
       "sha512": "sha512-6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
       "path": "microsoft.openapi/1.1.4",
       "hashPath": "microsoft.openapi.1.1.4.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LXlwvlXetgFg2sqsLCzi+Kd+nV78VrRzy9u6nKU05yx9tcsF9BcLqL/+vtj01Z7RPhp0U8D4Px/bHbyMR9Ddjg==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.10.8",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
       "type": "package",
