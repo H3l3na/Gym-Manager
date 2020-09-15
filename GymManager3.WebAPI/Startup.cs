@@ -73,7 +73,7 @@ namespace GymManager3.WebAPI
             });
 
            // var connection = @"Server=.;Database=GymManager1;Trusted_Connection=True;";
-            services.AddDbContext<GymManager1Context>(opt => opt.UseSqlServer(Configuration["CONNECTION_STRING"]));
+            services.AddDbContext<GymManager1Context>(opt => opt.UseSqlServer(Configuration.GetConnectionString("GymManager")));
 
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);

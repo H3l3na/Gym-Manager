@@ -39,7 +39,7 @@ namespace GymManager3.WebAPI.Database
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.;Database=GymManager1;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=(local);Database=GymManager13;Integrated Security=True;Trusted_Connection=True;");
             }
         }
 
