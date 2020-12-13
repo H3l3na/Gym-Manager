@@ -5243,7 +5243,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -8600,7 +8600,7 @@
       ]
     },
     "System.ComponentModel.Annotations/4.7.0": {
-      "sha512": "oG58v7FkIMewZU1tNyqKbnilEobW6I4W0xy0Q/hztjVbTVr83oXNPHwrvS24JJKrDylLingIlI/zmCHCZ5vq1A==",
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.7.0",
       "files": [
@@ -8736,7 +8736,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.4.0": {
-      "sha512": "FpAgMC+BX6OOCiRebYqHP3r3aYU7o0lopPOo4zKyGc5LWXFEYRUaKtoXXvAJ3sP+IDOK/KBxZaiVAdi+QdZ0TA==",
+      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
       "type": "package",
       "path": "system.text.encoding.codepages/4.4.0",
       "files": [
@@ -9169,18 +9169,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\hp\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
       "projectName": "GymManager3.MobileApp.UWP",
-      "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\obj\\",
+      "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9188,7 +9188,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9202,8 +9202,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj"
+            "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj"
             }
           }
         }

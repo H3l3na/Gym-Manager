@@ -15,7 +15,8 @@
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "ancmHostingModel": "OutOfProcess"
     },
     "GymManager3.WebAPI": {
       "commandName": "Project",

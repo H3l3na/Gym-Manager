@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj": {}
+    "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj": {
+    "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
         "projectName": "GymManager3.MobileApp.UWP",
-        "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\GymManager3.MobileApp.UWP.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -33,8 +33,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj"
+              "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj"
               }
             }
           }
@@ -87,21 +87,21 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
+    "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
         "projectName": "GymManager3.MobileApp",
-        "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -114,9 +114,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj"
+              "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj"
               }
             }
           }
@@ -129,6 +130,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Flurl": {
               "target": "Package",
@@ -167,25 +169,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj": {
+    "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj",
         "projectName": "GymManager3.Model",
-        "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -198,6 +200,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -209,6 +212,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -235,7 +239,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

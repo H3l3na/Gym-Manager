@@ -429,7 +429,7 @@
       ]
     },
     "System.ComponentModel.Annotations/4.7.0": {
-      "sha512": "oG58v7FkIMewZU1tNyqKbnilEobW6I4W0xy0Q/hztjVbTVr83oXNPHwrvS24JJKrDylLingIlI/zmCHCZ5vq1A==",
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.7.0",
       "files": [
@@ -565,7 +565,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.4.0": {
-      "sha512": "FpAgMC+BX6OOCiRebYqHP3r3aYU7o0lopPOo4zKyGc5LWXFEYRUaKtoXXvAJ3sP+IDOK/KBxZaiVAdi+QdZ0TA==",
+      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
       "type": "package",
       "path": "system.text.encoding.codepages/4.4.0",
       "files": [
@@ -932,25 +932,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\hp\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
       "projectName": "GymManager3.MobileApp",
-      "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.MobileApp\\GymManager3.MobileApp\\obj\\",
+      "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\GymManager3.MobileApp.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.MobileApp\\GymManager3.MobileApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -963,9 +963,10 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\GymManager3\\GymManager3.Model\\GymManager3.Model.csproj"
+            "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\rs2\\Gym-Manager\\GymManager3.Model\\GymManager3.Model.csproj"
             }
           }
         }
@@ -978,6 +979,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Flurl": {
             "target": "Package",
@@ -1016,7 +1018,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
