@@ -34,13 +34,7 @@ namespace GymManager3.MobileApp.ViewModels
             IsBusy = true;
              APIService.Username = Username;
              APIService.Password = Password;
-            await Application.Current.MainPage.DisplayAlert("Greška", Username, "OK");
-            if (Username == "" || Password == "")
-            {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Niste unijeli sve podatke", "OK");
-            }
-            else
-            {
+
                 try
                 {
                     await _service.Get<dynamic>(null);
@@ -50,7 +44,6 @@ namespace GymManager3.MobileApp.ViewModels
                 {
                     await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
                 }
-            }
         }
     }
 }

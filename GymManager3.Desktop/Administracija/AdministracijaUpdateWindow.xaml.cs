@@ -36,7 +36,7 @@ namespace GymManager3.Desktop.Administracija
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            if (textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxAdresa.Text == "" || textBoxStaz.Text == "")
+            if (textBoxJMBG.Text=="" || dtmRodjenja.SelectedDate==null || dtmZaposlenja.SelectedDate==null || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxAdresa.Text == "" || textBoxStaz.Text == "")
             {
                 errormessage.Text = "Sva polja su obavezna";
             }

@@ -79,7 +79,7 @@ namespace GymManager3.Desktop.Treninzi
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
             
-            if (cmbTreneri.SelectedValue==null || cmbVrsteTreninga.SelectedValue==null  || textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || textBoxKapacitet.Text == "" || textBoxCijena.Text == "")
+            if (dtmTermin.SelectedDate==null || cmbTreneri.SelectedValue==null || cmbVrsteTreninga.SelectedValue==null  || textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || textBoxKapacitet.Text == "" || textBoxCijena.Text == "")
             {
                 errormessage.Text = "Sva polja su obavezna";
             }
