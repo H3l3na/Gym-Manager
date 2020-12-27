@@ -33,7 +33,7 @@ namespace GymManager3.Desktop.Administracija
         
         private async void btnPrikazi_click(object sender, RoutedEventArgs e)
         {
-            ListView1.Items.Clear();
+            ListView1.ClearValue(ItemsControl.ItemsSourceProperty);
             var listaAdministratora = await _service.Get<List<Model.Administracija>>(null);
             
             ListView1.ItemsSource = listaAdministratora;

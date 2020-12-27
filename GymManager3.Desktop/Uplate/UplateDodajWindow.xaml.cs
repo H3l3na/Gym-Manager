@@ -55,10 +55,18 @@ namespace GymManager3.Desktop.Uplate
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-
+            double value;
             if (textBoxSvrha.Text=="" || textBoxIznos.Text == "" || dtmUplate.SelectedDate==null || cmbPolaznici.SelectedValue == null || cmbAdmini.SelectedValue == null || cmbSubskripcije.SelectedValue==null)
             {
                 errormessage.Text = "Sva polja su obavezna";
+            }
+            else if (!(double.TryParse(textBoxIznos.Text, out value)))
+            {
+                errormessage.Text = "Polje iznos mora biti broj";
+            }
+            else if (double.TryParse(textBoxIznos.Text, out value) && (double.Parse(textBoxIznos.Text)<10 || double.Parse(textBoxIznos.Text) > 5000))
+            {
+                errormessage.Text = "Polje iznos mora biti u rasponu od 10 do 5000";
             }
             else
             {

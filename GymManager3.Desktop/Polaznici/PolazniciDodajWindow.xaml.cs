@@ -1,6 +1,7 @@
 ﻿using GymManager3.Model.Requests;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,15 @@ namespace GymManager3.Desktop.Polaznici
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
+            List<Model.Polaznik> listaPolaznika = await _service.Get<List<Model.Polaznik>>();
+            bool postojiUsername = false;
+            foreach(Model.Polaznik p in listaPolaznika)
+            {
+                if (textBoxUsername.Text!="" && textBoxUsername.Text == p.KorisnickoIme)
+                {
+                    postojiUsername = true;
+                }
+            }
             if (dtmRodjenja.SelectedDate==null || cmbGradovi.SelectedValue==null || textBoxAdresa.Text == "" || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxUsername.Text == "" || passwordBoxPassPotvrda.Password == "" || passwordBoxPassword.Password == "" || textBoxJMBG.Text=="")
             {
                 errormessage.Text = "Sva polja su obavezna";
@@ -47,6 +57,12 @@ namespace GymManager3.Desktop.Polaznici
             {
                 errormessage.Text = "Passwordi se ne slažu";
                 passwordBoxPassPotvrda.Focus();
+            }else if (postojiUsername)
+            {
+                errormessage.Text = "Polaznik sa datim korisnickim imenom vec postoji";
+            }else if (!(IsValidEmail(textBoxMail.Text)))
+            {
+                errormessage.Text = "Email nije u validnom formatu";
             }
             else
             {
@@ -76,6 +92,11 @@ namespace GymManager3.Desktop.Polaznici
             Application.Current.MainWindow = new PolazniciPrikazWindow();
             Application.Current.MainWindow.Show();
             Close();
+        }
+
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
         private async void LoadGradovi()
         {

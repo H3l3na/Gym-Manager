@@ -26,7 +26,7 @@ namespace GymManager3.Desktop.Polaznici
         }
         private async void btnPrikazi_click(object sender, RoutedEventArgs e)
         {
-            ListView1.Items.Clear();
+            ListView1.ClearValue(ItemsControl.ItemsSourceProperty);
             var listaPolaznika = await _service.Get<List<Model.Polaznik>>(null);
 
             ListView1.ItemsSource = listaPolaznika;

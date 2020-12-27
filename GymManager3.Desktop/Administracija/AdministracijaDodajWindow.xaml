@@ -25,12 +25,12 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,115,0,0" Name="Grad" Text="Grad" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,168,0,0" Name="DatumRodjenja" Text="Datum rodjenja" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,216,0,0" Name="DatumZaposlenja" Text="Datum zaposlenja" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,264,0,0" Name="Staz" Text="Staz" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,312,0,0" Name="Spol" Text="Spol" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,264,0,0" Name="Staz" Text="Staz" VerticalAlignment="Top" Width="92" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,372,0,0" Name="Spol" Text="Spol" VerticalAlignment="Top" Width="92" Grid.ColumnSpan="2"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,372,0,0" Name="Username" Text="Korisničko ime" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,433,0,0" Name="Password" Text="Password" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,488,0,0" Name="PasswordPotvrda" Text="Password potvrda" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,372,0,0" Name="Slika" Text="Slika" VerticalAlignment="Top" Width="87" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="437,433,0,0" Name="Slika" Text="Slika" VerticalAlignment="Top" Width="87" Grid.ColumnSpan="2"/>
         <!--<Image Name="imgDynamic" Margin="685,356,46,150" Height="100"/>-->
         <Image x:Name="MyImage" Margin="672,372,46,66" Grid.ColumnSpan="2">
             <!--<Image.Source>
@@ -47,7 +47,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="BrowseButton" Content="..." BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" Click="BrowseButton_OnClick" Height="22" Width="80" Margin="545,373,215,169.6" Grid.ColumnSpan="2"/>
+        <Button x:Name="BrowseButton" Content="..." BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" Click="BrowseButton_OnClick" Height="22" Width="80" Margin="545,434,215,108.6" Grid.ColumnSpan="2"/>
         <!--<Button x:Name="SaveButton" Content="Save" Click="SaveButton_OnClick" Height="22" Width="80" Margin="462,434,296,87"/>
         <Button x:Name="LoadButton" Content="Load" Click="LoadButton_OnClick" Height="22" Width="80" Margin="462,472,296,49"/>-->
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxIme" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
@@ -62,12 +62,14 @@
         <DatePicker Height="23" Name="dtmZaposlenja" HorizontalAlignment="Left" Margin="545,216,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2"></DatePicker>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="545,264,0,0" Name="textBoxStaz" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
         <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,312,0,0" Name="textBoxSpol" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
-        <ComboBox x:Name="cmbSpol"  Height="23" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="545,312,0,0" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox x:Name="cmbSpol"  Height="23" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="545,372,0,0" Grid.ColumnSpan="2"></ComboBox>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,372,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,433,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,488,0,0" Name="passwordBoxPassPotvrda" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <!--<Button Name="btnLoadFromResource" Click="BtnLoadFromFile_Click"  Height="23" Margin="545,372,179,211">Load from Resource</Button>-->
         <Button Content="Nazad" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click" Grid.ColumnSpan="2"/>
         <Button Content="Sačuvaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="657,491,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="432,312,0,0" x:Name="JMBG" Text="JMBG" VerticalAlignment="Top" Width="115" Grid.ColumnSpan="2"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,312,0,0" x:Name="textBoxJMBG" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

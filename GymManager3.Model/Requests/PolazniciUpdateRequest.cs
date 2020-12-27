@@ -17,5 +17,6 @@ namespace GymManager3.Model.Requests
         public string Telefon { get; set; }
         public string JMBG { get; set; }
         public string Adresa { get; set;  }
+        public string KorisnickoIme { get; set; }
     }
 }

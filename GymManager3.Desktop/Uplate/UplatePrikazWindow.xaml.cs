@@ -27,7 +27,7 @@ namespace GymManager3.Desktop.Uplate
         }
         private async void btnPrikazi_click(object sender, RoutedEventArgs e)
         {
-            ListView1.Items.Clear();
+            ListView1.ClearValue(ItemsControl.ItemsSourceProperty);
             var listaUplata = await _uplateService.Get<List<Model.uplate>>(null);
             //var listaUplata = await _service.Get<List<Model.Uplata>>(null);
 

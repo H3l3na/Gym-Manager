@@ -27,7 +27,7 @@ namespace GymManager3.Desktop.Treneri
         }
         private async void btnPrikazi_click(object sender, RoutedEventArgs e)
         {
-            ListView1.Items.Clear();
+            ListView1.ClearValue(ItemsControl.ItemsSourceProperty);
             var listaTrenera = await _service.Get<List<Model.Trener>>(null);
 
             ListView1.ItemsSource = listaTrenera;

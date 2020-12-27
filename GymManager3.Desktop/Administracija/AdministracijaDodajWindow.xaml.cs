@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using System.ComponentModel.DataAnnotations;
 
 namespace GymManager3.Desktop.Administracija
 {
@@ -34,6 +35,16 @@ namespace GymManager3.Desktop.Administracija
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
+            List<Model.Administracija> listaAdmina = await _service.Get<List<Model.Administracija>>();
+            bool postojiUsername = false;
+            foreach (Model.Administracija a in listaAdmina)
+            {
+                if (textBoxUsername.Text != "" && textBoxUsername.Text == a.KorisnickoIme)
+                {
+                    postojiUsername = true;
+                }
+            }
+            int value;
             if (textBoxAdresa.Text=="" || textBoxIme.Text=="" || textBoxPrezime.Text=="" || textBoxMail.Text=="" || textBoxTelefon.Text=="" || textBoxUsername.Text=="" || passwordBoxPassPotvrda.Password=="" || passwordBoxPassword.Password == "")
             {
                 errormessage.Text = "Sva polja su obavezna";
@@ -45,10 +56,27 @@ namespace GymManager3.Desktop.Administracija
             {
                 errormessage.Text = "Polje Username ne smije biti duze od 10 karaktera";
             }
+            else if (textBoxJMBG.Text.Length != 13)
+            {
+                errormessage.Text = "Polje JMBG mora imati 13 brojeva";
+            }
             else if (passwordBoxPassword.Password != passwordBoxPassPotvrda.Password)
             {
                 errormessage.Text = "Passwordi se ne slažu";
                 passwordBoxPassPotvrda.Focus();
+            }
+            else if (!(int.TryParse(textBoxStaz.Text, out value))){
+                errormessage.Text = "Polje staz mora biti broj";
+            }
+            else if (int.Parse(textBoxStaz.Text) > 40 || int.Parse(textBoxStaz.Text)<0)
+            {
+                errormessage.Text = "Staz ne moze biti veci od 40 ili manji od 0";
+            }else if (postojiUsername)
+            {
+                errormessage.Text = "Admin sa datim korisnickim imenom vec postoji";
+            }else if (!(IsValidEmail(textBoxMail.Text)))
+            {
+                errormessage.Text = "Email nije u validnom formatu";
             }
             else
             {
@@ -67,6 +95,7 @@ namespace GymManager3.Desktop.Administracija
                     Staz = int.Parse(textBoxStaz.Text),
                     DatumRodjenja= DateTime.Parse(dtmRodjenja.ToString()),
                     DatumZaposlenja= DateTime.Parse(dtmZaposlenja.ToString()),
+                    JMBG=textBoxJMBG.Text,
                    // DatumRodjenja = DateTime.ParseExact(textBoxDatumRodj.Text, "dd/MM/yyyy", null),
                    // DatumZaposlenja = DateTime.ParseExact(textBoxDatumZaposlenja.Text, "dd/MM/yyyy", null),
                     Slika = _imageBytes,
@@ -84,6 +113,11 @@ namespace GymManager3.Desktop.Administracija
             Application.Current.MainWindow = new AdministracijaPrikazWindow();
             Application.Current.MainWindow.Show();
             Close();
+        }
+
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
         private async void LoadGradovi()
         {

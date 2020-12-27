@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,15 @@ namespace GymManager3.Desktop.Treneri
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
+            List<Model.Trener> listaTrenera = await _service.Get<List<Model.Trener>>();
+            bool postojiUsername = false;
+            foreach (Model.Trener t in listaTrenera)
+            {
+                if (textBoxUsername.Text != "" && textBoxUsername.Text == t.KorisnickoIme)
+                {
+                    postojiUsername = true;
+                }
+            }
             if (dtmRodjenja.SelectedDate==null || cmbGradovi.SelectedValue==null || cmbSpol.SelectedValue==null || textBoxIme.Text=="" || textBoxPrezime.Text=="" || textBoxMail.Text=="" || textBoxAdresa.Text=="" || textBoxTelefon.Text=="" || textBoxUsername.Text=="" || passwordBoxPassword.Password=="" || passwordBoxPassPotvrda.Password == "" || textBoxOpis.Text=="")
             {
                 errormessage.Text = "Sva polja su obavezna";
@@ -47,6 +57,12 @@ namespace GymManager3.Desktop.Treneri
             {
                 errormessage.Text = "Passwordi se ne slažu";
                 passwordBoxPassPotvrda.Focus();
+            }else if (postojiUsername)
+            {
+                errormessage.Text = "Trener sa datim korisnickim imenom vec postoji";
+            }else if (!(IsValidEmail(textBoxMail.Text)))
+            {
+                errormessage.Text = "Email nije u validnom formatu";
             }
             else
             {
@@ -79,6 +95,11 @@ namespace GymManager3.Desktop.Treneri
             Application.Current.MainWindow = new TreneriPrikazWindow();
             Application.Current.MainWindow.Show();
             Close();
+        }
+
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
         private async void LoadGradovi()
         {

@@ -78,10 +78,27 @@ namespace GymManager3.Desktop.Treninzi
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            
+            double value1;
+            int value2;
             if (dtmTermin.SelectedDate==null || cmbTreneri.SelectedValue==null || cmbVrsteTreninga.SelectedValue==null  || textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || textBoxKapacitet.Text == "" || textBoxCijena.Text == "")
             {
                 errormessage.Text = "Sva polja su obavezna";
+            }
+            else if (!(double.TryParse(textBoxCijena.Text, out value1)))
+            {
+                errormessage.Text = "Polje cijena mora biti broj";
+            }
+            else if (double.TryParse(textBoxCijena.Text, out value1) && (double.Parse(textBoxCijena.Text) < 50 || double.Parse(textBoxCijena.Text) > 1000))
+            {
+                errormessage.Text = "Polje cijena mora biti broj izmedju 50 i 1000";
+            }
+            else if (!(int.TryParse(textBoxKapacitet.Text, out value2)))
+            {
+                errormessage.Text = "Polje kapacitet mora biti broj";
+            }
+            else if ((int.TryParse(textBoxKapacitet.Text, out value2)) && ((int.Parse(textBoxKapacitet.Text) < 0) || (int.Parse(textBoxKapacitet.Text) > 30)))
+            {
+                errormessage.Text = "Polje kapacitet mora biti u rasponu od 0 do 30";
             }
             else
             {
@@ -91,7 +108,7 @@ namespace GymManager3.Desktop.Treninzi
                     Opis = textBoxOpis.Text,
                     Preduvjeti = textBoxPreduvjeti.Text,
                     Kapacitet = int.Parse(textBoxKapacitet.Text),
-                    Cijena = int.Parse(textBoxCijena.Text),
+                    Cijena = double.Parse(textBoxCijena.Text),
                     Tezina = textBoxTezina.Text,
                     TerminOdrzavanja=dtmTermin.SelectedDate,
                     TrenerId=int.Parse(cmbTreneri.SelectedValue.ToString()),
