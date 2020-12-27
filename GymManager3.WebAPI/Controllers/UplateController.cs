@@ -22,5 +22,11 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.Get();
         }
+
+        [HttpGet("{id}")]
+        public Model.uplate GetById(int id)
+        {
+            return _service.GetById(id);
+        }
     }
 }

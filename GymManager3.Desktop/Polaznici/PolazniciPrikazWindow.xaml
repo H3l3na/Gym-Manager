@@ -4,11 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop.Polaznici"
-        mc:Ignorable="d"
-        Title="PolazniciPrikazWindow" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" Height="450" Width="800">
+    <Grid x:Name="dgvPolaznici">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
+                <GradientStop Color="LightGray" Offset="1" />
+                <GradientStop Color="LightBlue" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <GroupBox Header="Lista polaznika" HorizontalAlignment="Left" Height="353" Margin="0,53,0,0" VerticalAlignment="Top" Width="792">
-            <ListView Name="ListView1" ItemsSource="{Binding listaPolaznika}">
+            <ListView Name="ListView1" ItemsSource="{Binding listaPolaznika}" SelectionChanged="ListView1_SelectionChanged" Margin="0,0,0,-0.4" MouseDoubleClick="ListView1_MouseDoubleClick">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" DisplayMemberBinding="{Binding PolaznikId}"/>
@@ -24,8 +29,8 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button Content="Prikaži" HorizontalAlignment="Left" Margin="669,30,0,0" VerticalAlignment="Top" Width="75" Click="btnPrikazi_click"/>
-        <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="531,30,0,0" Click="btnDodaj_click"/>
+        <Button Content="Prikaži" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold"  HorizontalAlignment="Left" Margin="669,30,0,0" VerticalAlignment="Top" Width="75" Click="btnPrikazi_click"/>
+        <Button Content="Nazad" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold"  HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
+        <Button Content="Dodaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="531,30,0,0" Click="btnDodaj_click"/>
     </Grid>
 </Window>

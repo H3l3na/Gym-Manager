@@ -36,7 +36,7 @@ namespace GymManager3.Desktop.Administracija
         {
             if (textBoxAdresa.Text=="" || textBoxIme.Text=="" || textBoxPrezime.Text=="" || textBoxMail.Text=="" || textBoxTelefon.Text=="" || textBoxUsername.Text=="" || passwordBoxPassPotvrda.Password=="" || passwordBoxPassword.Password == "")
             {
-                errormessage.Text = "Molimo popunite sva polja";
+                errormessage.Text = "Sva polja su obavezna";
             }
             else if(textBoxTelefon.Text.Length<9 || textBoxTelefon.Text.Length > 12)
             {

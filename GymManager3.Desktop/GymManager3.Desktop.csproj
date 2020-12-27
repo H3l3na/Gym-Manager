@@ -69,11 +69,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Administracija\AdministracijaUpdateWindow.xaml.cs">
+      <DependentUpon>AdministracijaUpdateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administracija\AdministracijaDodajWindow.xaml.cs">
       <DependentUpon>AdministracijaDodajWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Administracija\AdministracijaPrikazWindow.xaml.cs">
       <DependentUpon>AdministracijaPrikazWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Polaznici\PolazniciUpdateWindow.xaml.cs">
+      <DependentUpon>PolazniciUpdateWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Polaznici\PolazniciDodajWindow.xaml.cs">
       <DependentUpon>PolazniciDodajWindow.xaml</DependentUpon>
@@ -90,8 +96,14 @@
     <Compile Include="Treneri\TreneriPrikazWindow.xaml.cs">
       <DependentUpon>TreneriPrikazWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Treneri\TreneriUpdateWindow.xaml.cs">
+      <DependentUpon>TreneriUpdateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Treneri\TreneriWindowDodaj.xaml.cs">
       <DependentUpon>TreneriWindowDodaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Treninzi\TreninziUpdateWindow..xaml.cs">
+      <DependentUpon>TreninziUpdateWindow..xaml</DependentUpon>
     </Compile>
     <Compile Include="Treninzi\TreninziDodajWindow.xaml.cs">
       <DependentUpon>TreninziDodajWindow.xaml</DependentUpon>
@@ -99,12 +111,19 @@
     <Compile Include="Treninzi\TreninziPrikazWindow.xaml.cs">
       <DependentUpon>TreninziPrikazWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Uplate\UplateUpdateWindow.xaml.cs">
+      <DependentUpon>UplateUpdateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Uplate\UplateDodajWindow.xaml.cs">
       <DependentUpon>UplateDodajWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Uplate\UplatePrikazWindow.xaml.cs">
       <DependentUpon>UplatePrikazWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Administracija\AdministracijaUpdateWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Administracija\AdministracijaDodajWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +152,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Polaznici\PolazniciUpdateWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Polaznici\PolazniciDodajWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,9 +176,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Treneri\TreneriUpdateWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Treneri\TreneriWindowDodaj.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Treninzi\TreninziUpdateWindow..xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Treninzi\TreninziDodajWindow.xaml">
       <SubType>Designer</SubType>
@@ -164,6 +195,10 @@
     <Page Include="Treninzi\TreninziPrikazWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Uplate\UplateUpdateWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Uplate\UplateDodajWindow.xaml">
       <SubType>Designer</SubType>

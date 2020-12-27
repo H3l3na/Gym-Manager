@@ -20,6 +20,7 @@ namespace GymManager3.Desktop.Uplate
     public partial class UplatePrikazWindow : Window
     {
         APIService _service = new APIService("Uplata");
+        APIService _uplateService = new APIService("Uplate");
         public UplatePrikazWindow()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace GymManager3.Desktop.Uplate
         private async void btnPrikazi_click(object sender, RoutedEventArgs e)
         {
             ListView1.Items.Clear();
-            var listaUplata = await _service.Get<List<Model.Uplata>>(null);
+            var listaUplata = await _uplateService.Get<List<Model.uplate>>(null);
+            //var listaUplata = await _service.Get<List<Model.Uplata>>(null);
 
             ListView1.ItemsSource = listaUplata;
         }
@@ -44,6 +46,13 @@ namespace GymManager3.Desktop.Uplate
             Close();
         }
 
-       
+        private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var id = ListView1.SelectedValue;
+            Model.uplate uplata = (Model.uplate)id;
+            Application.Current.MainWindow = new UplateUpdateWindow(uplata.UplataId);
+            Application.Current.MainWindow.Show();
+            Close();
+        }
     }
 }

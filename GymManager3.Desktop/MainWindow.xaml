@@ -5,25 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="0,-114,2,20">
-        <GroupBox Header="" HorizontalAlignment="Left" Height="379" Margin="10,134,0,0" VerticalAlignment="Top" Width="770">
-            <Button Content="Administratori" HorizontalAlignment="Left" Margin="292,76,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
+        Title="MainWindow" Height="400" Width="750">
+    <Grid Margin="0,-20,3.6,0">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
+                <GradientStop Color="LightGray" Offset="1" />
+                <GradientStop Color="LightBlue" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="484" Margin="0,0,-0.6,0" VerticalAlignment="Top" Width="741">
+            <Button Content="Administratori" HorizontalAlignment="Left"  BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" Margin="302,70,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click" FontFamily="Great Vibes"/>
         </GroupBox>
-        <GroupBox Margin="0,-48,0,48" RenderTransformOrigin="0.492,0.476">
-            <Button  Content="Polaznici" Margin="302,244,0,0" HorizontalAlignment="Left" Width="94" VerticalAlignment="Top" Click="btnPolaznik_click"></Button>
-        </GroupBox>
-        <GroupBox>
-            <Button Content="Treneri" Width="94" VerticalAlignment="Top" HorizontalAlignment="Left" Height="19" Margin="302,254,0,0" Click="btnTrener_click"/>
-        </GroupBox>
-        <GroupBox>
-            <Button Content="Treninzi" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" Click="btnTrening_click" Margin="302,281,0,0"></Button>
-        </GroupBox>
-        <GroupBox>
-            <Button Content="Uplate" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" Click="btnUplate_click" Margin="302,308,0,0"></Button>
+        <GroupBox Margin="0,10,0,0" RenderTransformOrigin="0.492,0.476">
+            <Button  Content="Polaznici" Margin="302,110,0,0" BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="94" VerticalAlignment="Top" Click="btnPolaznik_click"></Button>
         </GroupBox>
         <GroupBox>
-            <Button Content="Termini" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" Click="btnTermini_click" Margin="303,339,0,0"></Button>
+            <Button Content="Treneri" Width="94" VerticalAlignment="Top" BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="302,155,0,0" Click="btnTrener_click"/>
+        </GroupBox>
+        <GroupBox>
+            <Button Content="Treninzi" VerticalAlignment="Top" BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="94" Click="btnTrening_click" Margin="302,188,0,0"></Button>
+        </GroupBox>
+        <GroupBox>
+            <Button Content="Uplate" VerticalAlignment="Top" BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="94" Click="btnUplate_click" Margin="302,222,0,0"></Button>
+        </GroupBox>
+        <!--<GroupBox Margin="0,10,-0.6,0.4">
+            <Button Content="Termini" VerticalAlignment="Top" BorderThickness="2"  BorderBrush="White" Background="LightBlue" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="94" Click="btnTermini_click" Margin="303,245,0,0"></Button>
+        </GroupBox>-->
+        <GroupBox Margin="0,10,-0.6,0.4">
+            <Button Content="Logout" VerticalAlignment="Top" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Width="94" Click="btnLogout_click" Margin="303,275,0,0"></Button>
         </GroupBox>
     </Grid>
 </Window>

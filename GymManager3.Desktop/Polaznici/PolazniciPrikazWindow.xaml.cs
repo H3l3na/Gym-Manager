@@ -43,5 +43,19 @@ namespace GymManager3.Desktop.Polaznici
             Application.Current.MainWindow.Show();
             Close();
         }
+
+        private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private async void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var id = ListView1.SelectedValue;
+            Model.Polaznik polaznik = (Model.Polaznik)id;
+            Application.Current.MainWindow = new PolazniciUpdateWindow(polaznik.PolaznikId);
+            Application.Current.MainWindow.Show();
+            Close();
+        }
     }
 }

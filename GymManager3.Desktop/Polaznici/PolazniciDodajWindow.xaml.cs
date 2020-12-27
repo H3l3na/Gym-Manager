@@ -29,9 +29,9 @@ namespace GymManager3.Desktop.Polaznici
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            if (textBoxAdresa.Text == "" || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxUsername.Text == "" || passwordBoxPassPotvrda.Password == "" || passwordBoxPassword.Password == "")
+            if (dtmRodjenja.SelectedDate==null || cmbGradovi.SelectedValue==null || textBoxAdresa.Text == "" || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxUsername.Text == "" || passwordBoxPassPotvrda.Password == "" || passwordBoxPassword.Password == "" || textBoxJMBG.Text=="")
             {
-                errormessage.Text = "Molimo popunite sva polja";
+                errormessage.Text = "Sva polja su obavezna";
             }
             else if (textBoxTelefon.Text.Length > 12 || textBoxTelefon.Text.Length<9)
             {

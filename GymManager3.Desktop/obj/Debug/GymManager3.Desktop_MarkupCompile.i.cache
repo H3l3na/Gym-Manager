@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\obj\Debug\
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\
 GymManager3.Desktop
 none
 false
 DEBUG;TRACE
-C:\Users\User\source\repos\GymManager3\GymManager3.Desktop\App.xaml
-14-405649736
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\App.xaml
+19-476145837
 
-20-607892267
-21-1910624585
-Administracija\AdministracijaDodajWindow.xaml;Administracija\AdministracijaPrikazWindow.xaml;frmLogin.xaml;MainWindow.xaml;Polaznici\PolazniciDodajWindow.xaml;Polaznici\PolazniciPrikazWindow.xaml;RegisterWindow.xaml;Termini\TerminiPrikazWindow.xaml;Treneri\TreneriPrikazWindow.xaml;Treneri\TreneriWindowDodaj.xaml;Treninzi\TreninziDodajWindow.xaml;Treninzi\TreninziPrikazWindow.xaml;Uplate\UplateDodajWindow.xaml;Uplate\UplatePrikazWindow.xaml;
+25-2064621590
+21-408460804
+Administracija\AdministracijaUpdateWindow.xaml;Administracija\AdministracijaDodajWindow.xaml;Administracija\AdministracijaPrikazWindow.xaml;frmLogin.xaml;MainWindow.xaml;Polaznici\PolazniciUpdateWindow.xaml;Polaznici\PolazniciDodajWindow.xaml;Polaznici\PolazniciPrikazWindow.xaml;RegisterWindow.xaml;Termini\TerminiPrikazWindow.xaml;Treneri\TreneriPrikazWindow.xaml;Treneri\TreneriUpdateWindow.xaml;Treneri\TreneriWindowDodaj.xaml;Treninzi\TreninziUpdateWindow..xaml;Treninzi\TreninziDodajWindow.xaml;Treninzi\TreninziPrikazWindow.xaml;Uplate\UplateUpdateWindow.xaml;Uplate\UplateDodajWindow.xaml;Uplate\UplatePrikazWindow.xaml;
 
 True
 

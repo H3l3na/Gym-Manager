@@ -14,8 +14,10 @@ namespace GymManager3.WebAPI.Services
         List<Polaznik> Get(PolazniciSearchRequest request);
         Model.Polaznik Insert(Model.Requests.PolazniciInsertRequest request);
         Model.Polaznik GetById(int id);
-        Model.Polaznik Update(int id, PolazniciInsertRequest request);
+        Model.Polaznik Update(int id, PolazniciUpdateRequest request);
         Model.Polaznik Authenticiraj(string username, string pass);
+
+        Model.Polaznik Delete(int id);
         //Model.Polaznik GetByUsername(PolaznikUsernameSearchRequest request);
     }
 }

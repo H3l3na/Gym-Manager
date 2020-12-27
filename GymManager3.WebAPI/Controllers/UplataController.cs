@@ -37,5 +37,17 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.Insert(request);
         }
+
+        [HttpPut("{id}")]
+        public Model.Uplata Update(int id, UplataUpdateRequest request)
+        {
+            return _service.Update(id, request);
+        }
+
+        [HttpDelete("{id}")]
+        public Model.Uplata Delete(int id)
+        {
+            return _service.Delete(id);
+        }
     }
 }

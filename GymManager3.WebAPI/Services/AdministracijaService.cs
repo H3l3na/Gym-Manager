@@ -64,7 +64,7 @@ namespace GymManager3.WebAPI.Services
             var list = query.ToList();
             return _mapper.Map<List<Model.Administracija>>(list);
         }
-        public Model.Administracija Update(int id, AdministracijaInsertRequest request)
+        public Model.Administracija Update(int id, AdministracijaUpdateRequest request)
         {
             var entity = _context.Administracija.Find(id);
             _context.Administracija.Attach(entity);
@@ -118,6 +118,17 @@ namespace GymManager3.WebAPI.Services
             }
             
             return null;
+        }
+        public Model.Administracija Delete(int id)
+        {
+            var admin = _context.Administracija.Find(id);
+            Model.Administracija administracija = _mapper.Map<Model.Administracija>(admin);
+            if (admin != null)
+            {
+                _context.Administracija.Remove(admin);
+                _context.SaveChanges();
+            }
+            return administracija;
         }
     }
 }

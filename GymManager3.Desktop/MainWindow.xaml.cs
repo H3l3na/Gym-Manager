@@ -44,6 +44,13 @@ namespace GymManager3.Desktop
             Application.Current.MainWindow.Show();
             Close();
         }
+
+        private void btnLogout_click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow = new frmLogin();
+            Application.Current.MainWindow.Show();
+            Close();
+        }
         private void btnTrener_click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow = new TreneriPrikazWindow();

@@ -43,5 +43,26 @@ namespace GymManager3.WebAPI.Services
             _context.SaveChanges();
             return _mapper.Map<Model.Uplata>(entity);
         }
+        public Model.Uplata Update(int id, UplataUpdateRequest request)
+        {
+            var entity = _context.Uplata.Find(id);
+            _context.Uplata.Attach(entity);
+            _context.Uplata.Update(entity);
+            _mapper.Map(request, entity);
+            _context.SaveChanges();
+            return _mapper.Map<Model.Uplata>(entity);
+        }
+
+        public Model.Uplata Delete(int id)
+        {
+            var uplata = _context.Uplata.Find(id);
+            Model.Uplata u = _mapper.Map<Model.Uplata>(uplata);
+            if (uplata != null)
+            {
+                _context.Uplata.Remove(uplata);
+                _context.SaveChanges();
+            }
+            return u;
+        }
     }
 }

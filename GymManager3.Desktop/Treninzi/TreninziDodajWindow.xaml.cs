@@ -70,7 +70,7 @@ namespace GymManager3.Desktop.Treninzi
             
             if (textBoxNaziv.Text == "" || textBoxOpis.Text == "" || textBoxCijena.Text == "" || textBoxPreduvjeti.Text == "" || textBoxTezina.Text == "" || dtmTermin.Text=="")
             {
-                errormessage.Text = "Molimo unesite sva polja";
+                errormessage.Text = "Sva polja su obavezna";
             }
             else
             {

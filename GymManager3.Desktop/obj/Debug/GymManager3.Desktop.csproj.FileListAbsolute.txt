@@ -102,3 +102,13 @@ C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\GymManager3.De
 C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\GymManager3.Desktop.csproj.CopyComplete
 C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\GymManager3.Desktop.exe
 C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\GymManager3.Desktop.pdb
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Polaznici\PolazniciUpdateWindow.g.cs
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Polaznici\PolazniciUpdateWindow.baml
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Administracija\AdministracijaUpdateWindow.g.cs
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Administracija\AdministracijaUpdateWindow.baml
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Treneri\TreneriUpdateWindow.g.cs
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Treneri\TreneriUpdateWindow.baml
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Treninzi\TreninziUpdateWindow..g.cs
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Treninzi\TreninziUpdateWindow..baml
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Uplate\UplateUpdateWindow.g.cs
+C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\obj\Debug\Uplate\UplateUpdateWindow.baml

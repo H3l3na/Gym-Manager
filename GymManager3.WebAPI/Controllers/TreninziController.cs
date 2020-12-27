@@ -40,5 +40,11 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.Update(id, request);
         }
+
+        [HttpDelete("{id}")]
+        public Model.Trening Delete(int id)
+        {
+            return _service.Delete(id);
+        }
     }
 }

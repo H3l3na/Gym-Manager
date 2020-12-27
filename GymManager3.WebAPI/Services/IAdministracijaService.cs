@@ -12,8 +12,9 @@ namespace GymManager3.WebAPI.Services
         Model.Administracija Insert(Model.Requests.AdministracijaInsertRequest request);
         List<Administracija> Get(AdministracijaSearchRequest request);
         Model.Administracija GetById(int id);
-        Model.Administracija Update(int id, AdministracijaInsertRequest request);
+        Model.Administracija Update(int id, AdministracijaUpdateRequest request);
         Model.Administracija Authenticiraj(string username, string pass);
+        Model.Administracija Delete(int id);
        
     }
 }

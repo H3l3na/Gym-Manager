@@ -8,5 +8,6 @@ namespace GymManager3.WebAPI.Services
     public interface IUplateService
     {
         List<Model.uplate> Get();
+        Model.uplate GetById(int id);
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\hp\Desktop\rs2\Gym-Manager\GymManager3.Desktop\App.xaml
-14-405649736
+19-476145837
 
-191570468414
+24-1222262223
 21-408460804
-Administracija\AdministracijaDodajWindow.xaml;Administracija\AdministracijaPrikazWindow.xaml;frmLogin.xaml;MainWindow.xaml;Polaznici\PolazniciDodajWindow.xaml;Polaznici\PolazniciPrikazWindow.xaml;RegisterWindow.xaml;Termini\TerminiPrikazWindow.xaml;Treneri\TreneriPrikazWindow.xaml;Treneri\TreneriWindowDodaj.xaml;Treninzi\TreninziDodajWindow.xaml;Treninzi\TreninziPrikazWindow.xaml;Uplate\UplateDodajWindow.xaml;Uplate\UplatePrikazWindow.xaml;
+Administracija\AdministracijaUpdateWindow.xaml;Administracija\AdministracijaDodajWindow.xaml;Administracija\AdministracijaPrikazWindow.xaml;frmLogin.xaml;MainWindow.xaml;Polaznici\PolazniciUpdateWindow.xaml;Polaznici\PolazniciDodajWindow.xaml;Polaznici\PolazniciPrikazWindow.xaml;RegisterWindow.xaml;Termini\TerminiPrikazWindow.xaml;Treneri\TreneriPrikazWindow.xaml;Treneri\TreneriUpdateWindow.xaml;Treneri\TreneriWindowDodaj.xaml;Treninzi\TreninziUpdateWindow..xaml;Treninzi\TreninziDodajWindow.xaml;Treninzi\TreninziPrikazWindow.xaml;Uplate\UplateUpdateWindow.xaml;Uplate\UplateDodajWindow.xaml;Uplate\UplatePrikazWindow.xaml;
 
 False
 

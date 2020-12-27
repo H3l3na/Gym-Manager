@@ -36,5 +36,19 @@ namespace GymManager3.WebAPI.Controllers
         {
             return _service.Insert(request);
         }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("{id}")]
+        public Model.Trener Update(int id, TrenerUpdateRequest request)
+        {
+            return _service.Update(id, request);
+        }
+
+        //[Authorize(Roles = "Administrator")]
+        [HttpDelete("{id}")]
+        public Model.Trener Delete(int id)
+        {
+            return _service.Delete(id);
+        }
     }
 }

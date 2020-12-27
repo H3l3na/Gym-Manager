@@ -60,6 +60,13 @@ namespace GymManager3.Desktop
 
             return await url.GetJsonAsync<dynamic>();
         }
+      /*  public async Task<dynamic> Delete(int? _id)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{_id}";
+
+            return await url.DeleteAsync().ReceiveJson<dynamic>();
+        }*/
+        //novi kod below
         public async Task<dynamic> Delete(int? _id)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{_id}";

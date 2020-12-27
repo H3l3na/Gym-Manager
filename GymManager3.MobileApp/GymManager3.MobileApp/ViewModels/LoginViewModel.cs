@@ -34,14 +34,22 @@ namespace GymManager3.MobileApp.ViewModels
             IsBusy = true;
              APIService.Username = Username;
              APIService.Password = Password;
-            try
+            await Application.Current.MainPage.DisplayAlert("Greška", Username, "OK");
+            if (Username == "" || Password == "")
             {
-                await _service.Get<dynamic>(null);
-                Application.Current.MainPage = new MainPage();
+                await Application.Current.MainPage.DisplayAlert("Greška", "Niste unijeli sve podatke", "OK");
             }
-            catch(Exception ex)
+            else
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                try
+                {
+                    await _service.Get<dynamic>(null);
+                    Application.Current.MainPage = new MainPage();
+                }
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                }
             }
         }
     }

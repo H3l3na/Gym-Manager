@@ -46,9 +46,16 @@ namespace GymManager3.WebAPI.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
-        public Model.Polaznik Update(int id, PolazniciInsertRequest request)
+        public Model.Polaznik Update(int id, PolazniciUpdateRequest request)
         {
             return _service.Update(id, request);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpDelete("{id}")]
+        public Model.Polaznik Delete(int id)
+        {
+            return _service.Delete(id);
         }
     }
 }

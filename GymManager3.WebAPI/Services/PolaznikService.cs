@@ -95,19 +95,20 @@ namespace GymManager3.WebAPI.Services
         //    var entity = _context.Polaznik.Where(x => x.KorisnickoIme == request.KorisnickoIme).FirstOrDefault();
         //    return _mapper.Map<Model.Polaznik>(entity);
         //}
-        public Model.Polaznik Update(int id, PolazniciInsertRequest request)
+        public Model.Polaznik Update(int id, PolazniciUpdateRequest request)
         {
             var entity = _context.Polaznik.Find(id);
             _context.Polaznik.Attach(entity);
             _context.Polaznik.Update(entity);
             _mapper.Map(request, entity);
+            /*
             if (!string.IsNullOrWhiteSpace(request.Password))
             {
                 if (request.Password != request.PasswordPotvrda)
                 {
                     throw new UserException("Passwordi se ne slazu!");
                 }
-            }
+            }*/
             _context.SaveChanges();
             return _mapper.Map<Model.Polaznik>(entity);
         }
@@ -126,6 +127,18 @@ namespace GymManager3.WebAPI.Services
             }
 
             return null;
+        }
+        
+        public Model.Polaznik Delete(int id)
+        {
+            var polaznik = _context.Polaznik.Find(id);
+            Model.Polaznik p = _mapper.Map<Model.Polaznik>(polaznik);
+            if (polaznik != null)
+            {
+                _context.Polaznik.Remove(polaznik);
+                _context.SaveChanges();
+            }
+            return p;
         }
     }
 }

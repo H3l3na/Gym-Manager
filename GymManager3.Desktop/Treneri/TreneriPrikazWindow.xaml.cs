@@ -44,5 +44,14 @@ namespace GymManager3.Desktop.Treneri
             Application.Current.MainWindow.Show();
             Close();
         }
+
+        private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var id = ListView1.SelectedValue;
+            Model.Trener trener = (Model.Trener)id;
+            Application.Current.MainWindow = new TreneriUpdateWindow(trener.TrenerId);
+            Application.Current.MainWindow.Show();
+            Close();
+        }
     }
 }

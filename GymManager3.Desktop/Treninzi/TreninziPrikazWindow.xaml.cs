@@ -43,5 +43,19 @@ namespace GymManager3.Desktop.Treninzi
             Application.Current.MainWindow.Show();
             Close();
         }
+
+        private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ListView1_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
+        {
+            var id = ListView1.SelectedValue;
+            Model.Trening trening = (Model.Trening)id;
+            Application.Current.MainWindow = new TreninziUpdateWindow(trening.TreningId);
+            Application.Current.MainWindow.Show();
+            Close();
+        }
     }
 }

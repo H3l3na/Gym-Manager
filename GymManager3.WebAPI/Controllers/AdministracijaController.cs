@@ -41,9 +41,16 @@ namespace GymManager3.WebAPI.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
-        public Model.Administracija Update(int id, AdministracijaInsertRequest request)
+        public Model.Administracija Update(int id, AdministracijaUpdateRequest request)
         {
             return _service.Update(id, request);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpDelete("{id}")]
+        public Model.Administracija Delete(int id)
+        {
+            return _service.Delete(id);
         }
     }
 }

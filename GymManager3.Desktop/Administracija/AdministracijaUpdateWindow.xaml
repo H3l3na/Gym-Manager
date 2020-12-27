@@ -1,0 +1,59 @@
+﻿<Window x:Class="GymManager3.Desktop.Administracija.AdministracijaUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymManager3.Desktop.Administracija"
+        mc:Ignorable="d" Height="467.525" Width="848">
+    <Grid Margin="0,0,2,-3">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
+                <GradientStop Color="LightGray" Offset="1" />
+                <GradientStop Color="LightBlue" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="165,72,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" RenderTransformOrigin="0.267,-1.1" Grid.ColumnSpan="2" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,116,0,0" Name="Ime" Text="Ime" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 168, 0, 0" Name="Prezime" Text="Prezime" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 216, 0, 0" Name="Mail" Text="Mail" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 264, 0, 0" Name="Telefon" Text="Telefon" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 312, 0, 0" Name="Adresa" Text="Adresa" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,362,0,0" Name="Staz" Text="Staz" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2"/>
+        <!--<Image Name="imgDynamic" Margin="685,356,46,150" Height="100"/>-->
+        <TextBox x:Name="ImagePath" Margin="23,65,814,526" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <!--<Button x:Name="SaveButton" Content="Save" Click="SaveButton_OnClick" Height="22" Width="80" Margin="462,434,296,87"/>
+        <Button x:Name="LoadButton" Content="Load" Click="LoadButton_OnClick" Height="22" Width="80" Margin="462,472,296,49"/>-->
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxIme" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,168,0,0" Name="textBoxPrezime" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,216,0,0" Name="textBoxMail" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,264,0,0" Name="textBoxTelefon" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,312,0,0" Name="textBoxAdresa" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,168,0,0" Name="textBoxDatumRodj" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,216,0,0" Name="textBoxDatumZaposlenja" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,362,0,0" Name="textBoxStaz" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <DatePicker Height="23" Name="dtmRodjenja" HorizontalAlignment="Left" Margin="545,168,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2"></DatePicker>
+        <DatePicker Height="23" Name="dtmZaposlenja" HorizontalAlignment="Left" Margin="545,116,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2"></DatePicker>
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="545,312,0,0" Name="textBoxSpol" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />-->
+        <!--<Button Name="btnLoadFromResource" Click="BtnLoadFromFile_Click"  Height="23" Margin="545,372,179,211">Load from Resource</Button>-->
+        <Button Content="Nazad" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click" Grid.ColumnSpan="2"/>
+        <Button Content="Sačuvaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="651,364,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,115,0,0" x:Name="DatumRodjenja" Text="Datum rođenja" VerticalAlignment="Top" Width="103" Grid.ColumnSpan="2"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,172,0,0" x:Name="DatumZaposlenja" Text="Datum zaposlenja" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="2"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,216,0,0" x:Name="textBoxJMBG" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,216,0,0" x:Name="JMBG" Text="JMBG" VerticalAlignment="Top" Width="103" Grid.ColumnSpan="2"/>
+        <!--<Button Content="Obriši" BorderThickness="2"  BorderBrush="PaleVioletRed" Background="PaleVioletRed" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="683,28,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_click" Grid.ColumnSpan="2"/>-->
+    </Grid>
+</Window>

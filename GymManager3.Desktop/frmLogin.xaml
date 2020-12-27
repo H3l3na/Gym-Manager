@@ -4,17 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop"
-        mc:Ignorable="d"
-        Title="frmLogin" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="400" Width="750">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
+                <GradientStop Color="LightGray" Offset="1" />
+                <GradientStop Color="LightBlue" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="373*"/>
+        </Grid.ColumnDefinitions>
         <!--<TextBlock>  
                  <Hyperlink Click="buttonRegister_Click" FontSize="14" FontStyle="Normal">Register</Hyperlink>
         </TextBlock>-->
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 120, 0, 0" Name="Username" Text="Korisničko ime" VerticalAlignment="Top" Width="193"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66, 168, 0, 0" Name="Password" Text="Password" VerticalAlignment="Top" Width="193"/>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="160,115,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="160,168,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="247" />
-        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="230,211,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="button1_Click" />
-        <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="118,253,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
+        <TextBlock Height="23" HorizontalAlignment="Left" Foreground="Gray" FontWeight="Bold" FontFamily="Great Vibes" Margin="70,110,0,0" Name="Username" Text="Korisničko ime" VerticalAlignment="Top" Width="193" Grid.Column="1"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Foreground="Gray" FontWeight="Bold" Margin="70,168,0,0" Name="Password" Text="Password" VerticalAlignment="Top" Width="193" Grid.Column="1"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="199,110,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="247" Grid.Column="1" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="199,168,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="247" Grid.Column="1" />
+        <Button Content="Login" Height="23" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="272,230,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="button1_Click" Grid.Column="1" />
+        <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="70.4,253,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C" Grid.Column="1"  />
     </Grid>
 </Window>

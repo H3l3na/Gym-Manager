@@ -99,6 +99,27 @@ namespace GymManager3.WebAPI.Services
 
             return null;
         }
+        public Model.Trener Update(int id, TrenerUpdateRequest request)
+        {
+            var entity = _context.Trener.Find(id);
+            _context.Trener.Attach(entity);
+            _context.Trener.Update(entity);
+            _mapper.Map(request, entity);
+            _context.SaveChanges();
+            return _mapper.Map<Model.Trener>(entity);
+        }
+
+        public Model.Trener Delete(int id)
+        {
+            var trener = _context.Trener.Find(id);
+            Model.Trener t = _mapper.Map<Model.Trener>(trener);
+            if (trener != null)
+            {
+                _context.Trener.Remove(trener);
+                _context.SaveChanges();
+            }
+            return t;
+        }
         //public List<Model.Trener> Recommend (int id)
         //{
         //    if (mlContext == null)

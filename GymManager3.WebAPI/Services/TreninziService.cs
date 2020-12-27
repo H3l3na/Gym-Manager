@@ -50,5 +50,17 @@ namespace GymManager3.WebAPI.Services
             _context.SaveChanges();
             return _mapper.Map<Model.Trening>(entity);
         }
+        
+        public Model.Trening Delete(int id)
+        {
+            var trening = _context.Trening.Find(id);
+            Model.Trening t = _mapper.Map<Model.Trening>(trening);
+            if (trening != null)
+            {
+                _context.Trening.Remove(trening);
+                _context.SaveChanges();
+            }
+            return t;
+        }
     }
 }

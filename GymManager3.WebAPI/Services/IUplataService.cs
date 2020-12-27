@@ -12,5 +12,8 @@ namespace GymManager3.WebAPI.Services
         List<Uplata> Get(UplataSearchRequest request);
         Model.Uplata GetById(int id);
         Model.Uplata Insert(UplataInsertRequest request);
+
+        Model.Uplata Update(int id, UplataUpdateRequest request);
+        Model.Uplata Delete(int id);
     }
 }

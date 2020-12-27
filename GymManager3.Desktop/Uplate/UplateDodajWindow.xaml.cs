@@ -56,9 +56,9 @@ namespace GymManager3.Desktop.Uplate
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
 
-            if (textBoxSvrha.Text=="" || textBoxIznos.Text == "" || dtmUplate.Text == "" || cmbPolaznici.Text == "" || cmbAdmini.Text == "" )
+            if (textBoxSvrha.Text=="" || textBoxIznos.Text == "" || dtmUplate.SelectedDate==null || cmbPolaznici.SelectedValue == null || cmbAdmini.SelectedValue == null || cmbSubskripcije.SelectedValue==null)
             {
-                errormessage.Text = "Molimo unesite sva polja";
+                errormessage.Text = "Sva polja su obavezna";
             }
             else
             {

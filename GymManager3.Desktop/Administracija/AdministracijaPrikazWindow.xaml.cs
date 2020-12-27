@@ -50,5 +50,14 @@ namespace GymManager3.Desktop.Administracija
             Application.Current.MainWindow.Show();
             Close();
         }
+
+        private async void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var id = ListView1.SelectedValue;
+            Model.Administracija admin = (Model.Administracija)id;
+            Application.Current.MainWindow = new AdministracijaUpdateWindow(admin.AdministracijaID);
+            Application.Current.MainWindow.Show();
+            Close();
+        }
     }
 }

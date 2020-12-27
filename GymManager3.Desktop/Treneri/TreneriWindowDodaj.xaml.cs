@@ -31,9 +31,9 @@ namespace GymManager3.Desktop.Treneri
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            if (textBoxIme.Text=="" || textBoxPrezime.Text=="" || textBoxMail.Text=="" || textBoxAdresa.Text=="" || textBoxTelefon.Text=="" || textBoxUsername.Text=="" || passwordBoxPassword.Password=="" || passwordBoxPassPotvrda.Password == "")
+            if (dtmRodjenja.SelectedDate==null || cmbGradovi.SelectedValue==null || cmbSpol.SelectedValue==null || textBoxIme.Text=="" || textBoxPrezime.Text=="" || textBoxMail.Text=="" || textBoxAdresa.Text=="" || textBoxTelefon.Text=="" || textBoxUsername.Text=="" || passwordBoxPassword.Password=="" || passwordBoxPassPotvrda.Password == "" || textBoxOpis.Text=="")
             {
-                errormessage.Text = "Molimo popunite sva polja";
+                errormessage.Text = "Sva polja su obavezna";
             }
             else if (textBoxTelefon.Text.Length>12 || textBoxTelefon.Text.Length < 9)
             {

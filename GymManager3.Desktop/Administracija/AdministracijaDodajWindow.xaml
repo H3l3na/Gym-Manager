@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop.Administracija"
-        mc:Ignorable="d"
-        Title="AdministracijaDodajWindow" Height="591.525" Width="848">
+        mc:Ignorable="d" Height="591.525" Width="848">
     <Grid Margin="0,0,2,-3">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
+                <GradientStop Color="LightGray" Offset="1" />
+                <GradientStop Color="LightBlue" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
@@ -42,7 +47,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="BrowseButton" Content="..." Click="BrowseButton_OnClick" Height="22" Width="80" Margin="545,372,213,198" Grid.ColumnSpan="2"/>
+        <Button x:Name="BrowseButton" Content="..." BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" Click="BrowseButton_OnClick" Height="22" Width="80" Margin="545,373,215,169.6" Grid.ColumnSpan="2"/>
         <!--<Button x:Name="SaveButton" Content="Save" Click="SaveButton_OnClick" Height="22" Width="80" Margin="462,434,296,87"/>
         <Button x:Name="LoadButton" Content="Load" Click="LoadButton_OnClick" Height="22" Width="80" Margin="462,472,296,49"/>-->
         <TextBox Height="23" HorizontalAlignment="Left" Margin="165,115,0,0" Name="textBoxIme" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
@@ -62,7 +67,7 @@
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,433,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="165,488,0,0" Name="passwordBoxPassPotvrda" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
         <!--<Button Name="btnLoadFromResource" Click="BtnLoadFromFile_Click"  Height="23" Margin="545,372,179,211">Load from Resource</Button>-->
-        <Button Content="Nazad" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click" Grid.ColumnSpan="2"/>
-        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="657,491,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
+        <Button Content="Nazad" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click" Grid.ColumnSpan="2"/>
+        <Button Content="Sačuvaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="657,491,0,0" VerticalAlignment="Top" Width="107" Click="btnSacuvaj_click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
