@@ -43,45 +43,54 @@ namespace GymManager3.MobileApp.ViewModels
             IsBusy = true;
             APIService.Username = Username;
             APIService.Password = Password;
-            try
+            if (Username == "" || Password == "")
             {
-                //PolaznikUsernameSearchRequest request = new PolaznikUsernameSearchRequest()
-                //{
-                //    KorisnickoIme = Username
-                //};
-                //PolazniciSearchRequest request = new PolazniciSearchRequest()
-                //{
-                //    KorisnickoIme=Username
-                //};
-                //await _service.Get<dynamic>(null);
-                //await _service.Get<dynamic>();
-                long t= await _serviceAuth.Auth<long>(Username, Password);
-                int id = unchecked((int)t);
-               // await Application.Current.MainPage.DisplayAlert("wait", id.ToString(), "ok");
-              //  int id = int.Parse(t);
-               // var entity = _service.Get<dynamic>(request);//await _service.Get<dynamic>(null);
-                 /*await _service.Get<dynamic>(request)*/;
+                Application.Current.MainPage.DisplayAlert("Greška", "Molimo popunite sva polja", "OK");
+            }
+            else
+            {
+                try
+                {
+                    //PolaznikUsernameSearchRequest request = new PolaznikUsernameSearchRequest()
+                    //{
+                    //    KorisnickoIme = Username
+                    //};
+                    //PolazniciSearchRequest request = new PolazniciSearchRequest()
+                    //{
+                    //    KorisnickoIme=Username
+                    //};
+                    //await _service.Get<dynamic>(null);
+                    //await _service.Get<dynamic>();
+                    long t = await _serviceAuth.Auth<long>(Username, Password);
+                    int id = unchecked((int)t);
+                    // await Application.Current.MainPage.DisplayAlert("wait", id.ToString(), "ok");
+                    //  int id = int.Parse(t);
+                    // var entity = _service.Get<dynamic>(request);//await _service.Get<dynamic>(null);
+                    /*await _service.Get<dynamic>(request)*/
+                    ;
 
-                if (id != 0)
-                {
-                    Application.Current.MainPage = new PolaznikMainPage(id);
-                }else
-                {
-                    t = await _serviceAuthTrener.Auth<long>(Username, Password);
-                    id = unchecked((int)t);
                     if (id != 0)
                     {
-                        Application.Current.MainPage = new TrenerMainPage(id);
+                        Application.Current.MainPage = new PolaznikMainPage(id);
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert("Greška", "Neispravni podaci", "OK");
+                        t = await _serviceAuthTrener.Auth<long>(Username, Password);
+                        id = unchecked((int)t);
+                        if (id != 0)
+                        {
+                            Application.Current.MainPage = new TrenerMainPage(id);
+                        }
+                        else
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Greška", "Neispravni su podaci", "OK");
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                }
             }
         }
     }

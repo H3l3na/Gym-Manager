@@ -3,6 +3,7 @@ using GymManager3.Model;
 using GymManager3.Model.Requests;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -82,68 +83,110 @@ namespace GymManager3.MobileApp.ViewModels
         }
         async Task Register()
         {
+            List<Model.Polaznik> listaPolaznika = await _service.Get<List<Model.Polaznik>>();
+            List<Model.Trener> listaTrenera = await _treneriService.Get<List<Model.Trener>>();
+            bool pronasaoPolaznika = false;
+            bool pronasaoTrenera = false;
             IsBusy = true;
             //APIService.Username = Username;
             //APIService.Password = Password;
-            if (Ime==null || Prezime == null || Username==null || Password==null || PasswordPotvrda==null || Mail==null || Telefon==null )
+            if (Ime=="" || Prezime == "" || Username=="" || Password=="" || PasswordPotvrda=="" || Mail=="" || Telefon=="" )
             {
                await  Application.Current.MainPage.DisplayAlert("Upozorenje", "Molimo unesite sva polja", "OK");
             }
-            if (Password != PasswordPotvrda)
+            else if (Password != PasswordPotvrda)
             {
                 await Application.Current.MainPage.DisplayAlert("Greska", "Passwordi se ne slazu", "OK");
             }
-            if (Uloga!=null && Uloga!="Trener" && Uloga != "Polaznik")
+            else if (Uloga!=null && Uloga!="Trener" && Uloga != "Polaznik")
             {
                 await Application.Current.MainPage.DisplayAlert("Greska", "Neispravan unos za polje 'Uloga'", "Pokusajte ponovo");
             }
-            if (Uloga == "Polaznik")
+            else if (!(IsValidEmail(Mail)))
             {
-                PolazniciInsertRequest request = new PolazniciInsertRequest()
+                await Application.Current.MainPage.DisplayAlert("Greška", "Email adresa nije validna", "OK");
+            }
+            else if (Uloga == "Polaznik")
+            {
+                foreach(Model.Polaznik p in listaPolaznika)
                 {
-                    Ime = Ime,
-                    Prezime = Prezime,
-                    KorisnickoIme = Username,
-                    Password = Password,
-                    PasswordPotvrda = PasswordPotvrda,
-                    Mail = Mail,
-                    Telefon = Telefon,
-                    Uloga = "Polaznik",
-                    //GradId = 1,
-                    //DatumRodjenja = DateTime.Now
-                };
-                try
-                {
-                    await _service.Insert<Model.Polaznik>(request);
-                    Application.Current.MainPage = new NewLoginPage();
+                    if (p.KorisnickoIme == Username)
+                    {
+                        pronasaoPolaznika = true;
+                    }
                 }
-                catch (Exception ex)
+                if (pronasaoPolaznika)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                    await Application.Current.MainPage.DisplayAlert("Greška", "Username je već u upotrebi", "OK");
+                }
+                else
+                {
+                    PolazniciInsertRequest request = new PolazniciInsertRequest()
+                    {
+                        Ime = Ime,
+                        Prezime = Prezime,
+                        KorisnickoIme = Username,
+                        Password = Password,
+                        PasswordPotvrda = PasswordPotvrda,
+                        Mail = Mail,
+                        Telefon = Telefon,
+                        Uloga = "Polaznik",
+                        //GradId = 1,
+                        //DatumRodjenja = DateTime.Now
+                    };
+                    try
+                    {
+                        await _service.Insert<Model.Polaznik>(request);
+                        Application.Current.MainPage = new NewLoginPage();
+                    }
+                    catch (Exception ex)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                    }
                 }
             }else if (Uloga == "Trener")
             {
-                TreneriInsertRequest trenerRequest = new TreneriInsertRequest()
+                foreach(Model.Trener t in listaTrenera)
                 {
-                    Ime = Ime,
-                    Prezime = Prezime,
-                    KorisnickoIme=Username,
-                    Password=Password,
-                    PasswordConfirmation=PasswordPotvrda,
-                    Mail=Mail,
-                    Telefon=Telefon,
-                    Uloga="Trener"
-                };
-                try
-                {
-                    await _treneriService.Insert<Model.Trener>(trenerRequest);
-                    Application.Current.MainPage = new NewLoginPage();
+                    if (t.KorisnickoIme == Username)
+                    {
+                        pronasaoTrenera = true;
+                    }
                 }
-                catch (Exception ex)
+                if (pronasaoTrenera)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                    await Application.Current.MainPage.DisplayAlert("Greška", "Username je već u upotrebi", "OK");
+                }
+                else
+                {
+                    TreneriInsertRequest trenerRequest = new TreneriInsertRequest()
+                    {
+                        Ime = Ime,
+                        Prezime = Prezime,
+                        KorisnickoIme = Username,
+                        Password = Password,
+                        PasswordConfirmation = PasswordPotvrda,
+                        Mail = Mail,
+                        Telefon = Telefon,
+                        Uloga = "Trener"
+                    };
+                    try
+                    {
+                        await _treneriService.Insert<Model.Trener>(trenerRequest);
+                        Application.Current.MainPage = new NewLoginPage();
+                    }
+                    catch (Exception ex)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Greška", ex.Message, "OK");
+                    }
                 }
             }
+        }
+
+ 
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
     }
 }

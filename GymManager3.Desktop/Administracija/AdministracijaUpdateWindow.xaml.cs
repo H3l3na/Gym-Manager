@@ -37,15 +37,6 @@ namespace GymManager3.Desktop.Administracija
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            List<Model.Administracija> listaAdmina = await _service.Get<List<Model.Administracija>>();
-            bool postojiUsername = false;
-            foreach (Model.Administracija a in listaAdmina)
-            {
-                if (textBoxUsername.Text != "" && textBoxUsername.Text == a.KorisnickoIme)
-                {
-                    postojiUsername = true;
-                }
-            }
             int value;
             if (textBoxJMBG.Text=="" || dtmRodjenja.SelectedDate==null || dtmZaposlenja.SelectedDate==null || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxAdresa.Text == "" || textBoxStaz.Text == "")
             {
@@ -59,19 +50,12 @@ namespace GymManager3.Desktop.Administracija
             {
                 errormessage.Text = "Polje JMBG mora imati 13 brojeva";
             }
-            else if (textBoxUsername.Text.Length > 10)
-            {
-                errormessage.Text = "Polje username ne smije biti duze od 10 karaktera";
-            }
             else if (!(int.TryParse(textBoxStaz.Text, out value)))
             {
                 errormessage.Text = "Polje staz mora biti broj";
             }else if (int.Parse(textBoxStaz.Text)>40 || int.Parse(textBoxStaz.Text) < 0)
             {
                 errormessage.Text = "Staz mora biti u rasponu od 0 do 40";
-            }else if (postojiUsername)
-            {
-                errormessage.Text = "Admin sa datim korisnickim imenom vec postoji";
             }else if (!(IsValidEmail(textBoxMail.Text)))
             {
                 errormessage.Text = "Email nije u validnom formatu";
@@ -89,7 +73,6 @@ namespace GymManager3.Desktop.Administracija
                     DatumRodjenja = dtmRodjenja.SelectedDate,
                     DatumZaposlenja = dtmZaposlenja.SelectedDate,
                     JMBG = textBoxJMBG.Text,
-                    Username = textBoxUsername.Text
                 };
                 await _service.Update<Model.Administracija>(id, request);
                 Application.Current.MainWindow = new MainWindow();
@@ -218,7 +201,6 @@ namespace GymManager3.Desktop.Administracija
                     dtmRodjenja.SelectedDate = admin.DatumRodjenja;
                     dtmZaposlenja.SelectedDate = admin.DatumZaposlenja;
                     textBoxJMBG.Text = admin.JMBG;
-                    textBoxUsername.Text = admin.KorisnickoIme;
                 }
             }
         }

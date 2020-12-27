@@ -19,5 +19,6 @@ namespace GymManager3.Model.Requests
         public DateTime? DatumZaposlenja { get; set; }
         //public string Spol { get; set; }
         public string Opis { get; set; }
+        public string Username { get; set; }
     }
 }

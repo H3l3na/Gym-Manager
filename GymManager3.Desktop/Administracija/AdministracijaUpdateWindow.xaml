@@ -54,8 +54,6 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,172,0,0" x:Name="DatumZaposlenja" Text="Datum zaposlenja" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="2"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="545,216,0,0" x:Name="textBoxJMBG" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,216,0,0" x:Name="JMBG" Text="JMBG" VerticalAlignment="Top" Width="103" Grid.ColumnSpan="2"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="442,264,0,0" x:Name="Username" Text="Korisnicko ime" VerticalAlignment="Top" Width="103" Grid.ColumnSpan="2"/>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="545,264,0,0" x:Name="textBoxUsername" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" />
         <!--<Button Content="Obriši" BorderThickness="2"  BorderBrush="PaleVioletRed" Background="PaleVioletRed" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="683,28,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_click" Grid.ColumnSpan="2"/>-->
     </Grid>
 </Window>

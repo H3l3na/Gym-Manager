@@ -35,15 +35,6 @@ namespace GymManager3.Desktop.Treneri
         }
         private async void btnSacuvaj_click(object sender, RoutedEventArgs e)
         {
-            List<Model.Trener> listaTrenera = await _service.Get<List<Model.Trener>>();
-            bool postojiUsername = false;
-            foreach (Model.Trener t in listaTrenera)
-            {
-                if (textBoxUsername.Text != "" && textBoxUsername.Text == t.KorisnickoIme)
-                {
-                    postojiUsername = true;
-                }
-            }
             if (dtmZaposlenja.SelectedDate==null || textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxMail.Text == "" || textBoxTelefon.Text == "" || textBoxAdresa.Text == "" || textBoxOpis.Text == "")
             {
                 errormessage.Text = "Sva polja su obavezna";
@@ -51,14 +42,8 @@ namespace GymManager3.Desktop.Treneri
             else if (textBoxTelefon.Text.Length > 12 || textBoxTelefon.Text.Length < 9)
             {
                 errormessage.Text = "Polje Telefon mora biti u rasponu od 9 do 12";
-            }else if (textBoxUsername.Text.Length > 10)
-            {
-                errormessage.Text = "Polje username ne smije biti duze od 10 karaktera";
             }
-            else if (postojiUsername)
-            {
-                errormessage.Text = "Trener sa datim korisnickim imenom vec postoji";
-            }else if (!(IsValidEmail(textBoxMail.Text)))
+            else if (!(IsValidEmail(textBoxMail.Text)))
             {
                 errormessage.Text = "Email nije u validnom formatu";
             }
@@ -72,7 +57,7 @@ namespace GymManager3.Desktop.Treneri
                     Telefon = textBoxTelefon.Text,
                     Adresa = textBoxAdresa.Text,
                     Opis = textBoxOpis.Text,
-                    DatumZaposlenja = dtmZaposlenja.SelectedDate
+                    DatumZaposlenja = dtmZaposlenja.SelectedDate,
                 };
                 await _service.Update<Model.Trener>(id, request);
                 Application.Current.MainWindow = new MainWindow();
@@ -186,7 +171,6 @@ namespace GymManager3.Desktop.Treneri
                     textBoxAdresa.Text = trener.Adresa;
                     textBoxOpis.Text = trener.Opis;
                     dtmZaposlenja.SelectedDate = trener.DatumZaposlenja;
-                    
                 }
             }
         }

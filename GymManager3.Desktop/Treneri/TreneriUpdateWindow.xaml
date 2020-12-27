@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymManager3.Desktop.Treneri"
         mc:Ignorable="d" Height="538.606" Width="800">
-    <Grid Margin="0,0,-6.4,-1.8">
+    <Grid Margin="0,0,-6.4,-2.2">
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.9,1">
                 <GradientStop Color="LightGray" Offset="1" />
@@ -40,9 +40,7 @@
       <!--  <ComboBox x:Name="cmbGradovi" DisplayMemberPath="Naziv" SelectedValuePath="GradId" Height="23" Width="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="167,470,0,0" Grid.ColumnSpan="2"></ComboBox>-->
         <!--<ComboBox x:Name="cmbSpol"  Height="23" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,115,0,0" Grid.Column="1"/>-->
         <Button Content="Nazad" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="75" Click="btnNazad_click"/>
-        <Button Content="Sačuvaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold"  HorizontalAlignment="Left" Margin="255.2,452,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click" Grid.Column="1"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,450,0,0" x:Name="Username" Text="Korisnicko ime" VerticalAlignment="Top" Width="100"/>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="166,450,0,0" x:Name="textBoxUsername" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" />
+        <Button Content="Sačuvaj" BorderThickness="2"  BorderBrush="White" Background="White" Foreground="Gray" FontWeight="Bold"  HorizontalAlignment="Left" Margin="253.2,410,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_click" Grid.Column="1"/>
         <!--<Button Content="Obriši" BorderThickness="2"  BorderBrush="PaleVioletRed" Background="PaleVioletRed" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="244.2,28,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_click" Grid.Column="1"/>-->
 
     </Grid>
